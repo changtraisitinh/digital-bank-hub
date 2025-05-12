@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: Banking Integration
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+
+
+midaz:
+  url: http://127.0.0.1:3000
+  page_size: 10
+  page_number: 1
+  organization_id: 0196b308-2cfd-74ec-9528-8e9a8834e329
+  ledger_id: 0196b30a-20e1-79be-8d3f-59c746f41461
+  account:
+    get_list_accounts:
+      path: /v1/organizations/{organizationId}/ledgers/{ledgerId}/accounts
+
+
+

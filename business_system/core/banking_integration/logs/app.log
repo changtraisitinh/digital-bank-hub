@@ -1,0 +1,1290 @@
+2025-05-12 14:13:20.819 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 31913 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 14:13:20.820 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:13:21.212 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 14:13:21.218 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:13:21.219 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:13:21.219 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 14:13:21.237 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:13:21.238 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 400 ms
+2025-05-12 14:13:21.261 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hiepnh.banking_integration.application.port.in.AccountInputPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-05-12 14:13:21.262 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-12 14:13:21.269 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 14:13:21.278 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hiepnh.banking_integration.adapter.controller.AccountController required a bean of type 'com.hiepnh.banking_integration.application.port.in.AccountInputPort' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hiepnh.banking_integration.application.port.in.AccountInputPort' in your configuration.
+
+2025-05-12 14:15:33.465 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 31963 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 14:15:33.466 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:15:33.869 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 14:15:33.875 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:15:33.876 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:15:33.876 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 14:15:33.896 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:15:33.896 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 411 ms
+2025-05-12 14:15:34.062 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:15:34.070 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 14:15:34.075 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.872 seconds (process running for 6.363)
+2025-05-12 14:39:52.259 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 14:39:52.269 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 14:49:31.465 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 34285 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 14:49:31.466 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:49:31.626 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'restTemplate' defined in class path resource [com/hiepnh/banking_integration/infrastructure/rest/RestTemplateConfig.class]: Cannot register bean definition [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=restTemplateConfig; factoryMethodName=restTemplate; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/hiepnh/banking_integration/infrastructure/rest/RestTemplateConfig.class]] for bean 'restTemplate' since there is already [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=appConfig; factoryMethodName=restTemplate; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/hiepnh/banking_integration/infrastructure/config/AppConfig.class]] bound.
+2025-05-12 14:49:31.630 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 14:49:31.639 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'restTemplate', defined in class path resource [com/hiepnh/banking_integration/infrastructure/rest/RestTemplateConfig.class], could not be registered. A bean with that name has already been defined in class path resource [com/hiepnh/banking_integration/infrastructure/config/AppConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2025-05-12 14:51:22.310 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 34362 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 14:51:22.311 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:51:22.707 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 14:51:22.713 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:51:22.714 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:51:22.714 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 14:51:22.733 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:51:22.733 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 405 ms
+2025-05-12 14:51:22.907 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:51:22.915 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 14:51:22.920 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.857 seconds (process running for 6.34)
+2025-05-12 14:59:32.650 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 14:59:32.657 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 14:59:44.639 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 34648 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 14:59:44.640 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:59:45.062 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 14:59:45.069 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:59:45.069 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:59:45.069 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 14:59:45.087 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:59:45.087 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 427 ms
+2025-05-12 14:59:45.262 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:59:45.270 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 14:59:45.275 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.891 seconds (process running for 6.395)
+2025-05-12 15:05:03.394 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:05:03.400 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:19:31.928 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 35544 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:19:31.929 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:19:32.332 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:19:32.340 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:19:32.341 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:19:32.341 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:19:32.360 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:19:32.360 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 413 ms
+2025-05-12 15:19:32.531 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:19:32.538 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:19:32.544 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.864 seconds (process running for 6.372)
+2025-05-12 15:21:12.947 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:21:12.953 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:21:24.801 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 35636 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:21:24.802 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:21:25.241 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:21:25.248 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:21:25.249 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:21:25.249 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:21:25.269 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:21:25.270 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 447 ms
+2025-05-12 15:21:25.449 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:21:25.455 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:21:25.460 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.955 seconds (process running for 6.446)
+2025-05-12 15:24:17.196 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:24:17.197 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:24:17.198 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 15:24:17.220 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.util.List<com.hiepnh.banking_integration.application.usecase.dto.AccountResponseDTO> com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(com.hiepnh.banking_integration.application.usecase.dto.AccountRequestDTO)]
+2025-05-12 15:24:45.522 [http-nio-8080-exec-4] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:24:45.561 [http-nio-8080-exec-4] ERROR c.h.b.a.gateway.CoreBankingGateway - Error while fetching accounts: Error while extracting response for type [class [Lcom.hiepnh.banking_integration.domain.entity.Account;] and content type [application/json]
+2025-05-12 15:24:45.561 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch accounts due to a client error.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:52)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 15:26:30.709 [http-nio-8080-exec-5] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:36:05.083 [http-nio-8080-exec-5] ERROR c.h.b.a.gateway.CoreBankingGateway - Error while fetching accounts: Error while extracting response for type [class [Lcom.hiepnh.banking_integration.domain.entity.Account;] and content type [application/json]
+2025-05-12 15:36:05.091 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch accounts due to a client error.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:52)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 15:36:05.153 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:36:05.158 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:36:17.145 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36209 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:36:17.146 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:36:17.542 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:36:17.549 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:36:17.550 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:36:17.550 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:36:17.568 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:36:17.568 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 404 ms
+2025-05-12 15:36:17.737 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:36:17.745 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:36:17.750 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.859 seconds (process running for 6.371)
+2025-05-12 15:36:33.905 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:36:33.905 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:36:33.906 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 15:36:45.296 [http-nio-8080-exec-1] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:36:45.831 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:36:45.887 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:36:45.922 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 15:36:45.925 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 15:39:09.645 [http-nio-8080-exec-1] ERROR c.h.b.a.gateway.CoreBankingGateway - Error while fetching accounts: Error while extracting response for type [class com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper] and content type [application/json]
+2025-05-12 15:39:09.649 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch accounts due to a client error.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:53)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 15:39:09.702 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:39:09.706 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:39:21.477 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36341 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:39:21.478 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:39:21.856 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:39:21.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:39:21.863 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:39:21.863 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:39:21.880 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:39:21.880 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
+2025-05-12 15:39:22.048 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:39:22.055 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:39:22.060 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.825 seconds (process running for 6.292)
+2025-05-12 15:39:44.003 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:39:44.010 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:40:13.798 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36389 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:40:13.799 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:40:14.217 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:40:14.223 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:40:14.224 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:40:14.224 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:40:14.242 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:40:14.242 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 427 ms
+2025-05-12 15:40:14.408 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:40:14.414 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:40:14.419 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.866 seconds (process running for 6.368)
+2025-05-12 15:40:32.529 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:40:32.532 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:40:32.532 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-12 15:40:35.994 [http-nio-8080-exec-1] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:40:36.262 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:40:36.319 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:40:36.350 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 15:40:36.353 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 15:40:43.913 [http-nio-8080-exec-1] ERROR c.h.b.a.gateway.CoreBankingGateway - Error while fetching accounts: Error while extracting response for type [class com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper] and content type [application/json]
+2025-05-12 15:41:31.351 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch accounts due to a client error.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:53)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 15:41:56.964 [http-nio-8080-exec-4] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:41:59.022 [http-nio-8080-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:41:59.023 [http-nio-8080-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:41:59.034 [http-nio-8080-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 15:41:59.035 [http-nio-8080-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 15:42:42.165 [http-nio-8080-exec-4] ERROR c.h.b.a.gateway.CoreBankingGateway - Error while fetching accounts: Error while extracting response for type [class com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper] and content type [application/json]
+2025-05-12 15:42:42.167 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch accounts due to a client error.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:53)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 15:42:42.227 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:42:42.231 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:43:01.967 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36514 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:43:01.968 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:43:02.364 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:43:02.370 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:43:02.371 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:43:02.371 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:43:02.388 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:43:02.389 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 403 ms
+2025-05-12 15:43:02.553 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:43:02.559 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:43:02.564 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.847 seconds (process running for 6.323)
+2025-05-12 15:43:06.017 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:43:06.017 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:43:06.018 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 15:43:10.099 [http-nio-8080-exec-1] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:43:10.960 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:43:11.018 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:43:11.046 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 15:43:11.048 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 15:43:58.927 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:43:58.933 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:44:10.516 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36568 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:44:10.517 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:44:10.912 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:44:10.919 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:44:10.920 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:44:10.920 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:44:10.937 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:44:10.938 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 403 ms
+2025-05-12 15:44:11.108 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:44:11.114 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:44:11.118 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.849 seconds (process running for 6.331)
+2025-05-12 15:44:22.362 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:44:22.362 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:44:22.363 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 15:44:25.825 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:44:26.379 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 15:44:26.437 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:44:26.471 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 15:44:26.475 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 15:51:48.031 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:51:48.035 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:51:59.903 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36872 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:51:59.904 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:52:00.302 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:52:00.309 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:52:00.310 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:52:00.310 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:52:00.328 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:52:00.328 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 407 ms
+2025-05-12 15:52:00.504 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:52:00.516 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:52:00.521 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.861 seconds (process running for 6.346)
+2025-05-12 15:52:17.688 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:52:17.688 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:52:17.689 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 15:52:21.313 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/${midaz.organizationId/ledgers/${midaz.ledgerId/accounts?page=1&limit=10
+2025-05-12 15:52:21.327 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/$%7Bmidaz.organizationId/ledgers/$%7Bmidaz.ledgerId/accounts?page=1&limit=10
+2025-05-12 15:52:21.339 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:52:21.349 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-12 15:52:21.353 [http-nio-8080-exec-2] ERROR c.h.b.a.gateway.CoreBankingGateway - HTTP error while fetching accounts: 400 Bad Request on GET request for "http://127.0.0.1:3000/v1/organizations/$%7Bmidaz.organizationId/ledgers/$%7Bmidaz.ledgerId/accounts": "{"title":"Invalid Path Parameter","message":"One or more path parameters are in an incorrect format. Please check the following parameters [organization_id, ledger_id] and ensure they meet the required format before trying again.","code":"0065"}"
+2025-05-12 15:52:21.356 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch accounts: 400 BAD_REQUEST
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:50)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 15:55:39.144 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:55:39.147 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:55:50.761 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37017 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:55:50.762 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:55:51.155 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:55:51.161 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:55:51.162 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:55:51.162 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:55:51.180 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:55:51.181 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 401 ms
+2025-05-12 15:55:51.354 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:55:51.362 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:55:51.366 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.85 seconds (process running for 6.32)
+2025-05-12 15:57:06.899 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 15:57:06.906 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 15:57:59.587 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37091 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 15:57:59.588 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 15:57:59.976 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 15:57:59.982 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:57:59.983 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 15:57:59.983 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 15:58:00.000 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 15:58:00.000 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 395 ms
+2025-05-12 15:58:00.181 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 15:58:00.188 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 15:58:00.193 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.84 seconds (process running for 6.275)
+2025-05-12 15:58:07.989 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 15:58:07.990 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 15:58:07.991 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 15:58:08.046 [http-nio-8080-exec-1] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/${midaz.organization_id/ledgers/${midaz.ledger_id/accounts?page=1&limit=10
+2025-05-12 15:58:08.053 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/$%7Bmidaz.organization_id/ledgers/$%7Bmidaz.ledger_id/accounts?page=1&limit=10
+2025-05-12 15:58:08.060 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 15:58:08.067 [http-nio-8080-exec-1] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-12 15:58:08.069 [http-nio-8080-exec-1] ERROR c.h.b.a.gateway.CoreBankingGateway - HTTP error while fetching accounts: 400 Bad Request on GET request for "http://127.0.0.1:3000/v1/organizations/$%7Bmidaz.organization_id/ledgers/$%7Bmidaz.ledger_id/accounts": "{"title":"Invalid Path Parameter","message":"One or more path parameters are in an incorrect format. Please check the following parameters [organization_id, ledger_id] and ensure they meet the required format before trying again.","code":"0065"}"
+2025-05-12 15:58:08.072 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch accounts: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch accounts: 400 BAD_REQUEST
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:50)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 16:00:32.683 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 16:00:32.686 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 16:01:25.785 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37235 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:01:25.786 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:01:26.182 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:01:26.188 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:01:26.189 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:01:26.189 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:01:26.206 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:01:26.206 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 403 ms
+2025-05-12 16:01:26.369 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:01:26.376 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 16:01:26.380 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.837 seconds (process running for 6.342)
+2025-05-12 16:01:32.506 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 16:01:32.507 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 16:01:32.507 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-12 16:01:32.560 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 16:01:32.567 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 16:01:32.574 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 16:01:32.584 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 16:01:32.585 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 16:03:53.143 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 16:03:53.147 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 16:04:04.710 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37322 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:04:04.712 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:04:05.121 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:04:05.127 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:04:05.128 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:04:05.128 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:04:05.145 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:04:05.146 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 407 ms
+2025-05-12 16:04:05.317 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:04:05.323 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 16:04:05.328 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.897 seconds (process running for 6.366)
+2025-05-12 16:04:07.989 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 16:04:07.990 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 16:04:07.991 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 16:04:08.048 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 16:04:45.064 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 16:04:45.068 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 16:04:56.672 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37360 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:04:56.673 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:04:57.058 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:04:57.064 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:04:57.065 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:04:57.065 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:04:57.082 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:04:57.082 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 392 ms
+2025-05-12 16:04:57.243 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:04:57.250 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 16:04:57.254 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.823 seconds (process running for 6.301)
+2025-05-12 16:05:04.861 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 16:05:04.861 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 16:05:04.862 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 16:05:04.918 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 16:05:04.940 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Response received: com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper@3fa1b875
+2025-05-12 16:42:23.663 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 16:42:23.669 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 16:42:35.603 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39281 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:42:35.604 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:42:36.006 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:42:36.012 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:42:36.013 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:42:36.014 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:42:36.031 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:42:36.032 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 405 ms
+2025-05-12 16:42:36.069 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+2025-05-12 16:42:36.070 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-12 16:42:36.076 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 16:42:36.085 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.hiepnh.banking_integration.BankingIntegrationApplication.main(BankingIntegrationApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 49 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'url' in value "${url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1649)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 60 common frames omitted
+2025-05-12 16:44:24.627 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39350 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:44:24.628 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:44:25.002 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:44:25.008 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:44:25.009 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:44:25.009 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:44:25.026 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:44:25.026 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2025-05-12 16:44:25.059 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.hiepnh.banking_integration.infrastructure.config.AppConfig' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-05-12 16:44:25.060 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-12 16:44:25.066 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 16:44:25.075 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway required a bean of type 'com.hiepnh.banking_integration.infrastructure.config.AppConfig' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hiepnh.banking_integration.infrastructure.config.AppConfig' in your configuration.
+
+2025-05-12 16:44:48.198 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39370 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:44:48.199 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:44:48.605 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:44:48.611 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:44:48.612 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:44:48.612 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:44:48.630 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:44:48.630 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 414 ms
+2025-05-12 16:44:48.666 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+2025-05-12 16:44:48.668 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-12 16:44:48.673 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 16:44:48.681 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.hiepnh.banking_integration.BankingIntegrationApplication.main(BankingIntegrationApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 49 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'url' in value "${url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1649)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 60 common frames omitted
+2025-05-12 16:48:47.009 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39515 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:48:47.010 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:48:47.409 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:48:47.415 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:48:47.415 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:48:47.416 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:48:47.434 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:48:47.435 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 406 ms
+2025-05-12 16:48:47.595 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:48:47.604 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 16:48:47.608 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.866 seconds (process running for 6.32)
+2025-05-12 16:48:53.402 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 16:48:53.402 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 16:48:53.403 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 16:48:53.458 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: nullnull?page=1&limit=10
+2025-05-12 16:48:53.462 [http-nio-8080-exec-2] ERROR c.h.b.a.gateway.CoreBankingGateway - Unexpected error while fetching accounts: URI is not absolute
+2025-05-12 16:48:53.465 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: An unexpected error occurred while fetching accounts.] with root cause
+java.lang.RuntimeException: An unexpected error occurred while fetching accounts.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:59)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 16:51:01.961 [http-nio-8080-exec-4] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: nullnull?page=1&limit=10
+2025-05-12 16:51:01.965 [http-nio-8080-exec-4] ERROR c.h.b.a.gateway.CoreBankingGateway - Unexpected error while fetching accounts: URI is not absolute
+2025-05-12 16:51:01.966 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: An unexpected error occurred while fetching accounts.] with root cause
+java.lang.RuntimeException: An unexpected error occurred while fetching accounts.
+	at com.hiepnh.banking_integration.adapter.gateway.CoreBankingGateway.fetchAccounts(CoreBankingGateway.java:59)
+	at com.hiepnh.banking_integration.application.usecase.AccountUseCase.listAccounts(AccountUseCase.java:33)
+	at com.hiepnh.banking_integration.adapter.controller.AccountController.listAccounts(AccountController.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-12 16:51:02.021 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 16:51:02.026 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 16:51:13.906 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39613 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:51:13.907 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:51:14.285 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:51:14.291 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:51:14.292 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:51:14.292 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:51:14.309 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:51:14.309 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 385 ms
+2025-05-12 16:51:14.347 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+2025-05-12 16:51:14.348 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-12 16:51:14.354 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 16:51:14.362 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.hiepnh.banking_integration.BankingIntegrationApplication.main(BankingIntegrationApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 49 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'url' in value "${url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1649)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 60 common frames omitted
+2025-05-12 16:52:31.566 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39678 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:52:31.567 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:52:31.956 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:52:31.962 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:52:31.963 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:52:31.963 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:52:31.981 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:52:31.981 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 398 ms
+2025-05-12 16:52:32.016 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+2025-05-12 16:52:32.017 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-05-12 16:52:32.023 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-12 16:52:32.030 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at com.hiepnh.banking_integration.BankingIntegrationApplication.main(BankingIntegrationApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main/com/hiepnh/banking_integration/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 35 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'appConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1451)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 49 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'url' in value "${url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1649)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 60 common frames omitted
+2025-05-12 16:53:08.390 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 39703 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:53:08.391 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:53:08.819 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:53:08.825 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:53:08.826 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:53:08.827 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:53:08.847 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:53:08.847 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 439 ms
+2025-05-12 16:53:09.014 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:53:09.021 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 16:53:09.026 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.883 seconds (process running for 6.352)
+2025-05-12 16:53:15.788 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 16:53:15.788 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 16:53:15.789 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 16:53:17.583 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 16:53:17.596 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-12 16:53:17.608 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-12 16:53:17.627 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-12 16:53:17.627 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
+2025-05-12 16:53:17.629 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Response received: com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper@7c2a5a63
