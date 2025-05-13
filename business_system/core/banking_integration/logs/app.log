@@ -1288,3 +1288,49 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 2025-05-12 16:53:17.627 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
 2025-05-12 16:53:17.627 [http-nio-8080-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper]
 2025-05-12 16:53:17.629 [http-nio-8080-exec-2] INFO  c.h.b.a.gateway.CoreBankingGateway - Response received: com.hiepnh.banking_integration.domain.entity.AccountResponseWrapper@7c2a5a63
+2025-05-12 16:59:10.856 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 16:59:10.862 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 16:59:22.617 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 40019 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 16:59:22.618 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 16:59:23.010 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 16:59:23.017 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:59:23.017 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 16:59:23.017 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 16:59:23.034 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 16:59:23.035 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 399 ms
+2025-05-12 16:59:23.201 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 16:59:23.207 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 16:59:23.212 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.84 seconds (process running for 6.321)
+2025-05-12 17:01:58.382 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 17:01:58.383 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 17:01:58.385 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 17:01:58.400 [http-nio-8080-exec-1] ERROR c.h.b.i.c.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/test/http-client-error.
+2025-05-12 17:03:05.495 [http-nio-8080-exec-4] ERROR c.h.b.i.c.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/test/rest-client-error.
+2025-05-12 19:14:19.553 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 19:14:19.560 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 19:14:31.466 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 41120 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 19:14:31.467 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 19:14:31.851 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 19:14:31.857 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 19:14:31.858 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 19:14:31.858 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 19:14:31.876 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 19:14:31.876 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 394 ms
+2025-05-12 19:14:32.046 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 19:14:32.053 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 19:14:32.057 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.827 seconds (process running for 6.292)
+2025-05-12 19:29:57.397 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 19:29:57.410 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-12 19:30:23.149 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 41769 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-05-12 19:30:23.150 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 19:30:23.545 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-12 19:30:23.551 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 19:30:23.552 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 19:30:23.552 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12 19:30:23.573 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 19:30:23.573 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 406 ms
+2025-05-12 19:30:23.769 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 19:30:23.776 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-12 19:30:23.781 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.877 seconds (process running for 20.506)
+2025-05-12 19:30:29.159 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-12 19:30:29.165 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

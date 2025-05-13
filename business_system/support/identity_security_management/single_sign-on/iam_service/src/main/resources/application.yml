@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/iam_service
+    username: postgres
+    password: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/iam-realm
+
+
+  logging:
+    level:
+      org.springframework.security: DEBUG
+
+keycloak:
+  auth-server-url: http://localhost:8180
+  realm: iam-realm
+  resource: iam-service-client
+  credentials:
+    secret: 12345abcd;;
+  principal-attribute: preferred_username
