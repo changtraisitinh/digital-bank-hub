@@ -1,0 +1,1143 @@
+# @ballerine/common
+
+## 0.9.96
+
+### Patch Changes
+
+- version bump
+
+## 0.9.95
+
+### Patch Changes
+
+- Common bump
+
+## 0.9.94
+
+### Patch Changes
+
+- version bump
+
+## 0.9.93
+
+### Patch Changes
+
+- bump
+
+## 0.9.92
+
+### Patch Changes
+
+- bump
+
+## 0.9.91
+
+### Patch Changes
+
+- version bump
+
+## 0.9.90
+
+### Patch Changes
+
+- bump
+
+## 0.9.89
+
+### Patch Changes
+
+- Bump
+
+## 0.9.88
+
+### Patch Changes
+
+- bump
+
+## 0.9.87
+
+### Patch Changes
+
+- Moved country specific logic to common
+
+## 0.9.86
+
+### Patch Changes
+
+- bump
+
+## 0.9.85
+
+### Patch Changes
+
+- Bump
+
+## 0.9.84
+
+### Patch Changes
+
+- bump
+
+## 0.9.83
+
+### Patch Changes
+
+- version bump
+
+## 0.9.82
+
+### Patch Changes
+
+- version bump
+
+## 0.9.81
+
+### Patch Changes
+
+- bump
+
+## 0.9.80
+
+### Patch Changes
+
+- version bump
+
+## 0.9.79
+
+### Patch Changes
+
+- version bump
+
+## 0.9.78
+
+### Patch Changes
+
+- bump
+
+## 0.9.77
+
+### Patch Changes
+
+- version bump
+
+## 0.9.76
+
+### Patch Changes
+
+- version bump
+
+## 0.9.75
+
+### Patch Changes
+
+- Added ZZ Documents
+
+## 0.9.74
+
+### Patch Changes
+
+- used only one constant from common
+
+## 0.9.73
+
+### Patch Changes
+
+- Fix ReportSchema
+
+## 0.9.72
+
+### Patch Changes
+
+- Update ReportSchema
+
+## 0.9.71
+
+### Patch Changes
+
+- Uses the new report shape
+
+## 0.9.70
+
+### Patch Changes
+
+- updated packages
+
+## 0.9.69
+
+### Patch Changes
+
+- updated common and core
+
+## 0.9.68
+
+### Patch Changes
+
+- version bump
+
+## 0.9.67
+
+### Patch Changes
+
+- version bump
+
+## 0.9.66
+
+### Patch Changes
+
+- version bump
+  s Please enter a summary for your changes.
+
+## 0.9.65
+
+### Patch Changes
+
+- bump
+
+## 0.9.64
+
+### Patch Changes
+
+- bump
+
+## 0.9.63
+
+### Patch Changes
+
+- version bump
+
+## 0.9.62
+
+### Patch Changes
+
+- Updated risk evaluation schema
+
+## 0.9.61
+
+### Patch Changes
+
+- Fixed withQualityControl in plugins
+
+## 0.9.60
+
+### Patch Changes
+
+- Updated button with disabled state
+
+## 0.9.59
+
+### Patch Changes
+
+- core
+
+## 0.9.58
+
+### Patch Changes
+
+- Bump
+
+## 0.9.57
+
+### Patch Changes
+
+- Updated merchant screening schema
+
+## 0.9.56
+
+### Patch Changes
+
+- version bump
+
+## 0.9.55
+
+### Patch Changes
+
+- bump
+
+## 0.9.54
+
+### Patch Changes
+
+- Reworked getOrderedSteps & fixed tests
+- bump
+
+## 0.9.53
+
+### Patch Changes
+
+- Created a non JMESPath sanctions plugin using JS
+
+## 0.9.52
+
+### Patch Changes
+
+- version bump
+
+## 0.9.51
+
+### Patch Changes
+
+- Updated aml schema
+
+## 0.9.50
+
+### Patch Changes
+
+- Cump
+
+## 0.9.49
+
+### Patch Changes
+
+- version bump
+
+## 0.9.48
+
+### Patch Changes
+
+- Change
+
+## 0.9.47
+
+### Patch Changes
+
+- Refactored collection flow utils
+
+## 0.9.46
+
+### Patch Changes
+
+- Bump
+
+## 0.9.45
+
+### Patch Changes
+
+- bump
+
+## 0.9.44
+
+### Patch Changes
+
+- Added collection flow manager & updated schema
+
+## 0.9.43
+
+### Patch Changes
+
+- updated schema
+
+## 0.9.42
+
+### Patch Changes
+
+- fix match schema
+
+## 0.9.41
+
+### Patch Changes
+
+- schema fix
+
+## 0.9.40
+
+### Patch Changes
+
+- update plugin schema and ballerine plugins
+
+## 0.9.39
+
+### Patch Changes
+
+- bump
+
+## 0.9.38
+
+### Patch Changes
+
+- bump
+
+## 0.9.37
+
+### Patch Changes
+
+- version bump
+
+## 0.9.36
+
+### Patch Changes
+
+- version bump
+
+## 0.9.35
+
+### Patch Changes
+
+- bump
+
+## 0.9.34
+
+### Patch Changes
+
+- Bump
+
+## 0.9.33
+
+### Patch Changes
+
+- Bump
+
+## 0.9.32
+
+### Patch Changes
+
+- d
+
+## 0.9.31
+
+### Patch Changes
+
+- version bump
+
+## 0.9.30
+
+### Patch Changes
+
+- Bump
+
+## 0.9.29
+
+### Patch Changes
+
+- version bump fix
+
+## 0.9.28
+
+### Patch Changes
+
+- Version bump
+
+## 0.9.27
+
+### Patch Changes
+
+- bump
+
+## 0.9.26
+
+### Patch Changes
+
+- pushing fixes
+
+## 0.9.25
+
+### Patch Changes
+
+- version bump
+
+## 0.9.24
+
+### Patch Changes
+
+- merchant screening changes
+
+## 0.9.23
+
+### Patch Changes
+
+- added merchant screening to swagger
+
+## 0.9.22
+
+### Patch Changes
+
+- version bump
+
+## 0.9.21
+
+### Patch Changes
+
+- update version
+
+## 0.9.20
+
+### Patch Changes
+
+- Moved components from the backoffice to common and ui
+
+## 0.9.19
+
+### Patch Changes
+
+- Bump
+
+## 0.9.18
+
+### Patch Changes
+
+- Common version bump
+
+## 0.9.17
+
+### Patch Changes
+
+- Added "ZZ" to document issuer country
+
+## 0.9.16
+
+### Patch Changes
+
+- Bump
+
+## 0.9.15
+
+### Patch Changes
+
+- Bump
+
+## 0.9.14
+
+### Patch Changes
+
+- bump
+
+## 0.9.13
+
+### Patch Changes
+
+- Bump
+
+## 0.9.12
+
+### Patch Changes
+
+- Bump
+
+## 0.9.11
+
+### Patch Changes
+
+- Bump
+- Bump
+
+## 0.9.10
+
+### Patch Changes
+
+- document changes
+
+## 0.9.9
+
+### Patch Changes
+
+- Added a sort direction type
+
+## 0.9.8
+
+### Patch Changes
+
+- Now exporting country codes
+
+## 0.9.7
+
+### Patch Changes
+
+- update for sanctions screening
+
+## 0.9.6
+
+### Patch Changes
+
+- Context schema update
+
+## 0.9.5
+
+### Patch Changes
+
+- updated enums
+
+## 0.9.4
+
+### Patch Changes
+
+- updated document schemas
+
+## 0.9.3
+
+### Patch Changes
+
+- Added workflow definition theme schemas
+
+## 0.9.2
+
+### Patch Changes
+
+- update schemas
+
+## 0.9.1
+
+### Patch Changes
+
+- bumo
+
+## 0.9.0
+
+### Minor Changes
+
+- 9fe7a5c10: Bump
+
+### Patch Changes
+
+- ver bump
+- 9fe7a5c10: bump
+- 9fe7a5c10: Added base64 provider type
+- 9fe7a5c10: bump
+- 9fe7a5c10: Version bump
+
+## 0.9.0-11210907c.0
+
+### Minor Changes
+
+- Bump
+
+## 0.8.0
+
+### Minor Changes
+
+- version bump
+
+## 0.7.49
+
+### Patch Changes
+
+- version bump
+
+## 0.7.48
+
+### Patch Changes
+
+- Updated context schema
+
+## 0.7.47
+
+### Patch Changes
+
+- Version bump existing changes
+
+## 0.7.46
+
+### Patch Changes
+
+- version bump
+
+## 0.7.45
+
+### Patch Changes
+
+- Updated common enums
+
+## 0.7.44
+
+### Patch Changes
+
+- Fixes for concurrency fixes
+
+## 0.7.43
+
+### Patch Changes
+
+- Ver bump
+
+## 0.7.42
+
+### Patch Changes
+
+- updated document schema validation and text
+
+## 0.7.41
+
+### Patch Changes
+
+- updating versions
+
+## 0.7.40
+
+### Patch Changes
+
+- version bump
+
+## 0.7.39
+
+### Patch Changes
+
+- version bump
+
+## 0.7.38
+
+### Patch Changes
+
+- Added process tracker changes
+
+## 0.7.37
+
+### Patch Changes
+
+- added variants to common
+
+## 0.7.36
+
+### Patch Changes
+
+- upgraded common package variants
+
+## 0.7.35
+
+### Patch Changes
+
+- version bump
+
+## 0.7.34
+
+### Patch Changes
+
+- updated DefaultContextSchema type to use Typebox over deprecated generation script
+
+## 0.7.33
+
+### Patch Changes
+
+- added default context for defintion testing
+
+## 0.7.32
+
+### Patch Changes
+
+- add example context for defintion validation
+
+## 0.7.31
+
+### Patch Changes
+
+- updated definition validation
+
+## 0.7.30
+
+### Patch Changes
+
+- Version bump
+
+## 0.7.29
+
+### Patch Changes
+
+- 340d9d4e: added xlsx and xls to file type schema
+- ea423a22: updated validation to allow file type on document page
+
+## 0.7.28
+
+### Patch Changes
+
+- ea423a22: updated validation to allow file type on document page
+
+## 0.7.27
+
+### Patch Changes
+
+- added types and functionality to documents
+- 59afd0b4: updated types and functionalities
+
+## 0.7.26
+
+### Patch Changes
+
+- bfded451: added functionality of replacing null with undefined
+- updated version of defintion
+
+## 0.7.25
+
+### Patch Changes
+
+- updated schemas
+
+## 0.7.24
+
+### Patch Changes
+
+- Removed imageUrl property from ZZ document schemas
+- d5cca1e8: added defintion validation
+- f4b5c0df: added defintion validation
+
+## 0.7.23
+
+### Patch Changes
+
+- 8c888cec: Updated tsconfig and types
+
+## 0.7.22
+
+### Patch Changes
+
+- Added ZZ schemas
+- Change document schemas
+
+## 0.7.21
+
+### Patch Changes
+
+- version bump
+
+## 0.7.20
+
+### Patch Changes
+
+- Bump ver
+
+## 0.7.19
+
+### Patch Changes
+
+- Fixed default context schema
+
+## 0.7.18
+
+### Patch Changes
+
+- Updated default context schema
+
+## 0.7.17
+
+### Patch Changes
+
+- AsiaVerify integrations
+
+## 0.7.16
+
+### Patch Changes
+
+- 801fc639: pre
+- 801fc639: Pre ver
+- 801fc639: bump pre
+- 801fc639: Version bump pre
+- 801fc639: Pre bump
+- 801fc639: Pre bump
+- 801fc639: Bump
+- 801fc639: pre
+- Version bump
+- 801fc639: Pre release
+- 801fc639: Bumo
+
+## 0.7.15
+
+### Patch Changes
+
+- 306ca466: businessName now may accept spaces
+
+## 0.7.14
+
+### Patch Changes
+
+- Bump
+
+## 0.7.13
+
+### Patch Changes
+
+- b1cebf50: pre
+- b1cebf50: Pre ver
+- b1cebf50: bump pre
+- b1cebf50: Version bump pre
+- Bump
+- b1cebf50: Pre bump
+- b1cebf50: Pre bump
+- b1cebf50: Bump
+- b1cebf50: pre
+- b1cebf50: Pre release
+- b1cebf50: Bumo
+
+## 0.7.13-3e08f108.9
+
+### Patch Changes
+
+- Version bump pre
+
+## 0.7.13-3e08f108.8
+
+### Patch Changes
+
+- Bump
+
+## 0.7.13-3e08f108.7
+
+### Patch Changes
+
+- Bumo
+
+## 0.7.13-3e08f108.6
+
+### Patch Changes
+
+- Pre ver
+
+## 0.7.13-3e08f108.5
+
+### Patch Changes
+
+- Pre bump
+
+## 0.7.13-3e08f108.4
+
+### Patch Changes
+
+- bump pre
+
+## 0.7.13-3e08f108.3
+
+### Patch Changes
+
+- Pre bump
+
+## 0.7.13-3e08f108.2
+
+### Patch Changes
+
+- Pre release
+
+## 0.7.13-3e08f108.1
+
+### Patch Changes
+
+- pre
+
+## 0.7.13-3e08f108.0
+
+### Patch Changes
+
+- pre
+
+## 0.7.12
+
+### Patch Changes
+
+- Bump minor version
+
+## 0.7.11
+
+### Patch Changes
+
+- Version minor bump
+
+## 0.7.10
+
+### Patch Changes
+
+- efedc9cb: Update document schemas
+- Version bump
+
+## 0.7.5
+
+### Patch Changes
+
+- Fix schema
+
+## 0.7.4
+
+### Patch Changes
+
+- Add business_utility_bill document
+
+## 0.7.3
+
+### Patch Changes
+
+- Update document schemas
+
+## 0.7.2
+
+### Patch Changes
+
+- Fix
+
+## 0.7.1
+
+### Patch Changes
+
+- Merge
+
+## 0.7.0
+
+### Minor Changes
+
+- Fixes
+
+## 0.6.0
+
+### Minor Changes
+
+- Fixes
+
+## 0.5.25
+
+### Patch Changes
+
+- c2a13806: Added StateTags
+
+## 0.5.24
+
+### Patch Changes
+
+- 204b5479: updated document schemas
+
+## 0.5.23
+
+### Patch Changes
+
+- Removed verifiySignature util
+
+## 0.5.22
+
+### Patch Changes
+
+- Added `verifySignature` function
+
+## 0.5.20
+
+### Patch Changes
+
+- GH schemas update
+
+## 0.5.19
+
+### Patch Changes
+
+- cce4a663: Fixed type in GH schema
+
+## 0.5.18
+
+### Patch Changes
+
+- updated GH schemas
+
+## 0.5.17
+
+### Patch Changes
+
+- Package update
+
+## 0.5.16
+
+### Patch Changes
+
+- Update packages
+
+## 0.5.15
+
+### Patch Changes
+
+- fixed GH document schema
+
+## 0.5.14
+
+### Patch Changes
+
+- Added company structure GH document schema
+- - Remove required fields from document schemas
+
+## 0.5.13
+
+### Patch Changes
+
+- added Autocomplete,DropdownInput,Multiselect,DatePicker,Checkbox,PhoneNumber components
+- Upgrade packages
+
+## 0.5.12
+
+### Patch Changes
+
+- Update versions
+
+## 0.5.11
+
+### Patch Changes
+
+- Packages update
+
+## 0.5.10
+
+### Patch Changes
+
+- Update packages
+
+## 0.5.9
+
+### Patch Changes
+
+- New UI package
+
+## 0.5.8
+
+### Patch Changes
+
+- Package update
+
+## 0.5.7
+
+### Patch Changes
+
+- Update packages
+
+## 0.5.6
+
+### Patch Changes
+
+- change default context schema to ts
+
+## 0.5.5
+
+### Patch Changes
+
+- Add doc types
+
+## 0.5.4
+
+### Patch Changes
+
+- Schema Changes (Docs)
+
+## 0.5.3
+
+### Patch Changes
+
+- Update Common
+
+## 0.5.2
+
+### Patch Changes
+
+- New version
+
+## 0.5.1
+
+### Patch Changes
+
+- schema changes
+
+## 0.5.0
+
+### Minor Changes
+
+- be5c9bc4: added error with name validation
+
+### Patch Changes
+
+- Adding scheams
+
+## 0.4.3
+
+### Patch Changes
+
+- a2bed5e: Release
+
+## 0.4.2
+
+### Patch Changes
+
+- f0eafe7: added a common package

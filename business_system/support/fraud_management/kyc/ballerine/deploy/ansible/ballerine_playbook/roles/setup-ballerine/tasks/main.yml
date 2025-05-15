@@ -1,0 +1,27 @@
+---
+- name: Gather the package facts
+  package_facts:
+    manager: auto
+
+- import_tasks: install-docker.yml
+
+- import_tasks: start-docker.yml
+
+- import_tasks: clone-ballerine.yml
+
+- import_tasks: setup-init-config.yml
+  tags: packer
+
+- import_tasks: setup-ballerine.yml
+
+- import_tasks: setup-ballerine-runtime.yml
+  tags: packer
+
+- import_tasks: deploy-ballerine.yml
+  tags: deploy
+
+- import_tasks: setup-user-data.yml
+  tags: packer
+
+- import_tasks: cleanup-packer-build.yml
+  tags: packer

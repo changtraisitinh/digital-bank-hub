@@ -1,0 +1,61 @@
+import { ctw, WithTestId } from '@/common';
+import { Input, TextArea } from '@/components/atoms';
+import { FieldProps } from '@rjsf/utils';
+import { useCallback } from 'react';
+
+export const TextField = ({
+  id,
+  name,
+  uiSchema,
+  formData,
+  disabled,
+  schema,
+  testId,
+  className,
+  onChange,
+  onBlur,
+}: WithTestId<FieldProps<string | number>>) => {
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const serializedValue =
+        schema.type === 'integer' || schema.type === 'number'
+          ? event.target.value
+            ? Number(event.target.value)
+            : undefined
+          : event.target.value;
+
+      onChange(serializedValue);
+    },
+    [onChange, schema],
+  );
+
+  const handleBlur = useCallback(() => {
+    // @ts-ignore
+    onBlur && onBlur(id, formData);
+  }, [id, onBlur, formData]);
+
+  const inputProps = {
+    id,
+    name,
+    value: formData || '',
+    placeholder: uiSchema?.['ui:placeholder'],
+    disabled: disabled || uiSchema?.disabled,
+    onChange: handleChange,
+    onBlur: handleBlur,
+  };
+
+  return uiSchema?.['ui:widget'] === 'textarea' ? (
+    <TextArea
+      {...inputProps}
+      data-testid={testId}
+      className={ctw('placeholder:text-gray-400', className)}
+    />
+  ) : (
+    <Input
+      {...inputProps}
+      type={schema.type === 'number' ? 'number' : 'text'}
+      data-testid={testId}
+      className={ctw('placeholder:text-gray-400', className)}
+    />
+  );
+};
