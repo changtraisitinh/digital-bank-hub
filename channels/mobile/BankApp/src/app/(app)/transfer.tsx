@@ -6,7 +6,7 @@ import { Inputs } from '@/components/inputs';
 import { Typography } from '@/components/typography';
 import { FocusAwareStatusBar, SafeAreaView, ScrollView } from '@/components/ui';
 
-export default function Style() {
+export default function Transfer() {
   return (
     <>
       <FocusAwareStatusBar />
