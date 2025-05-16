@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 import React, { useEffect, useRef } from 'react';
 import {
   Animated,
@@ -154,7 +155,7 @@ export default function HomeScreen() {
         <QuickActionButton
           icon="arrow-forward-circle-outline"
           title="Transfer"
-          onPress={() => {}}
+          onPress={handleTransfer}
         />
         <QuickActionButton
           icon="qr-code-outline"
@@ -322,7 +323,7 @@ const styles = StyleSheet.create({
     marginVertical: 4,
   },
   accountBalance: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#333',
     marginTop: 8,
@@ -445,3 +446,8 @@ const styles = StyleSheet.create({
     color: '#333',
   },
 });
+
+// Handle transfer navigation
+const handleTransfer = () => {
+  router.push('/(app)/transfer');
+};

@@ -32,7 +32,20 @@ export default function TabLayout() {
     return <Redirect href="/login" />;
   }
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          borderTopWidth: 0,
+          elevation: 0,
+          shadowOpacity: 0,
+        },
+        tabBarActiveTintColor: '#2e7d32',
+        tabBarInactiveTintColor: '#666',
+        animation: 'fade', // Use fade animation instead of slide
+        animationDuration: 200,
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{

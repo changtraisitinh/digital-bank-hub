@@ -89,6 +89,21 @@ export default function Transfer() {
     recipient.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Handle continue button press
+  const handleContinue = () => {
+    if (toAccount && amount) {
+      router.push({
+        pathname: '/transfer/confirmation',
+        params: {
+          fromAccount: fromAccount.id,
+          toAccount: toAccount.id,
+          amount: amount,
+          note: note,
+        },
+      });
+    }
+  };
+
   return (
     <>
       <FocusAwareStatusBar />
@@ -350,6 +365,7 @@ export default function Transfer() {
               (!toAccount || !amount) && styles.ctaButtonDisabled,
             ]}
             disabled={!toAccount || !amount}
+            onPress={handleContinue}
           >
             <Text style={styles.ctaButtonText}>Continue</Text>
           </TouchableOpacity>

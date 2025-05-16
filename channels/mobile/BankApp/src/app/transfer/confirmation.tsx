@@ -459,8 +459,9 @@ const styles = StyleSheet.create({
   summaryCard: {
     backgroundColor: 'white',
     borderRadius: 12,
-    padding: 20,
-    marginBottom: 16,
+    padding: 24,
+    marginBottom: 20,
+    minHeight: 320,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -468,21 +469,26 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   amountText: {
-    fontSize: 32,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: '#e53935', // Red for debit
+    color: '#e53935',
     textAlign: 'center',
-    marginBottom: 16,
+    marginTop: 32, // Added margin top
+    marginBottom: 5,
+    flexWrap: 'wrap',
+    // flexShrink: 1,
+    paddingHorizontal: 16,
   },
   divider: {
     height: 1,
     backgroundColor: '#e0e0e0',
-    marginVertical: 16,
+    marginVertical: 20, // Increased margin
   },
   detailRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    marginBottom: 16, // Increased margin
+    paddingVertical: 4, // Added vertical padding
   },
   detailLabel: {
     fontSize: 16,
