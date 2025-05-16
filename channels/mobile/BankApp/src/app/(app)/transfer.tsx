@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
+  ActivityIndicator,
   Image,
   ScrollView as RNScrollView,
   StyleSheet,
@@ -9,6 +10,7 @@ import {
   View,
 } from 'react-native';
 
+import { useGetAccountList } from '@/api';
 import {
   FocusAwareStatusBar,
   SafeAreaView,
@@ -70,6 +72,7 @@ export default function Transfer() {
   const [note, setNote] = useState('');
   const [showRecipientSearch, setShowRecipientSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [filteredRecipients, setFilteredRecipients] = useState([]);
 
   // Daily limit
   const dailyLimit = 5000;
@@ -85,9 +88,41 @@ export default function Transfer() {
     setShowRecipientSearch(false);
   };
 
-  const filteredRecipients = recentRecipients.filter((recipient) =>
-    recipient.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Use the account list mutation
+  const getAccountList = useGetAccountList();
+
+  useEffect(() => {
+    // Log response data when API call completes
+    if (getAccountList.data) {
+      console.log('✅ [API Response] getAccountList:', getAccountList.data);
+
+      // Transform API data to match required recipient format
+      const formattedRecipients = getAccountList.data.map((item, index) => ({
+        id: item.id || `recipient_${index}`,
+        name: item.name || 'Unknown',
+        accountNumber: item.accountNumber || '**** **** **** ****',
+        bank: item.bank || 'Unknown Bank',
+        avatar: `https://i.pravatar.cc/150?img=${index + 1}`,
+        isFavorite: item.isFavorite || false,
+      }));
+
+      setFilteredRecipients(formattedRecipients);
+    }
+    if (getAccountList.isError) {
+      console.error('❌ [API Error] getAccountList:', getAccountList.error);
+    }
+  }, [getAccountList.data, getAccountList.isError, getAccountList.error]);
+
+  useEffect(() => {
+    // Fetch recipients when component mounts
+    getAccountList.mutate({
+      accountId: '1', // Replace with actual account ID
+    });
+  }, []);
+
+  // const filteredRecipients = recentRecipients.filter((recipient) =>
+  //   recipient.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   // Handle continue button press
   const handleContinue = () => {
@@ -240,7 +275,9 @@ export default function Transfer() {
               ) : (
                 <TouchableOpacity
                   style={styles.recipientSelector}
-                  onPress={() => setShowRecipientSearch(true)}
+                  onPress={() => {
+                    setShowRecipientSearch(true);
+                  }}
                 >
                   <Text style={styles.recipientSelectorText}>
                     Select recipient
@@ -267,36 +304,50 @@ export default function Transfer() {
                   onChangeText={setSearchQuery}
                 />
                 <RNScrollView style={styles.recipientList}>
-                  {filteredRecipients.map((recipient) => (
-                    <TouchableOpacity
-                      key={recipient.id}
-                      style={styles.recipientItem}
-                      onPress={() => handleRecipientSelect(recipient)}
-                    >
-                      <View style={styles.recipientInfo}>
-                        <Image
-                          source={{ uri: recipient.avatar }}
-                          style={styles.recipientAvatar}
-                        />
-                        <View>
-                          <Text style={styles.recipientName}>
-                            {recipient.name}
-                          </Text>
-                          <Text style={styles.recipientBank}>
-                            {recipient.bank}
-                          </Text>
-                        </View>
-                      </View>
-                      {recipient.isFavorite && (
-                        <Text style={styles.favoriteIconActive}>★</Text>
-                      )}
-                    </TouchableOpacity>
-                  ))}
-                  <TouchableOpacity style={styles.addNewRecipient}>
-                    <Text style={styles.addNewRecipientText}>
-                      + Add New Recipient
-                    </Text>
-                  </TouchableOpacity>
+                  {getAccountList.status === 'pending' ? (
+                    <View style={styles.loadingContainer}>
+                      <ActivityIndicator size="large" color="#2e7d32" />
+                    </View>
+                  ) : getAccountList.isError ? (
+                    <View style={styles.errorContainer}>
+                      <Text style={styles.errorText}>
+                        Failed to load recipients
+                      </Text>
+                    </View>
+                  ) : (
+                    <>
+                      {filteredRecipients.map((recipient) => (
+                        <TouchableOpacity
+                          key={recipient.id}
+                          style={styles.recipientItem}
+                          onPress={() => handleRecipientSelect(recipient)}
+                        >
+                          <View style={styles.recipientInfo}>
+                            <Image
+                              source={{ uri: recipient.avatar }}
+                              style={styles.recipientAvatar}
+                            />
+                            <View>
+                              <Text style={styles.recipientName}>
+                                {recipient.name}
+                              </Text>
+                              <Text style={styles.recipientBank}>
+                                {recipient.bank}
+                              </Text>
+                            </View>
+                          </View>
+                          {recipient.isFavorite && (
+                            <Text style={styles.favoriteIconActive}>★</Text>
+                          )}
+                        </TouchableOpacity>
+                      ))}
+                      <TouchableOpacity style={styles.addNewRecipient}>
+                        <Text style={styles.addNewRecipientText}>
+                          + Add New Recipient
+                        </Text>
+                      </TouchableOpacity>
+                    </>
+                  )}
                 </RNScrollView>
               </View>
             )}
