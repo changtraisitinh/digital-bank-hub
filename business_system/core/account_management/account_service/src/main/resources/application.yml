@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Banking Integration
+    name: Account Service
 
 server:
   port: 8001

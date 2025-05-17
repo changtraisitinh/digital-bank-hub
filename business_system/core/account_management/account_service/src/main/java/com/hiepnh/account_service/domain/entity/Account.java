@@ -13,6 +13,8 @@ public class Account {
     private String type;
     private Status status;
 
+    @Getter
+    @Setter
     public static class Status {
         private String code;
         private String description;

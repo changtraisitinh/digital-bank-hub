@@ -1,288 +1,52 @@
-2025-05-16 13:56:23.155 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 94124 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 13:56:23.156 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 13:56:23.156 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 13:56:23.538 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
-2025-05-16 13:56:23.546 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
-2025-05-16 13:56:23.547 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 13:56:23.547 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 13:56:23.574 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 13:56:23.574 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 398 ms
-2025-05-16 13:56:23.746 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
-2025-05-16 13:56:23.753 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-05-16 13:56:23.764 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-16 13:56:23.774 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8081 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
-
-2025-05-16 13:56:59.176 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 94180 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 13:56:59.177 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 13:56:59.177 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 13:56:59.561 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 13:56:59.568 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 13:56:59.569 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 13:56:59.569 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 13:56:59.594 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 13:56:59.595 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 398 ms
-2025-05-16 13:56:59.766 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
-2025-05-16 13:56:59.779 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
-2025-05-16 13:56:59.785 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.861 seconds (process running for 6.381)
-2025-05-16 14:12:29.086 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-16 14:12:29.096 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-16 14:12:41.148 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 95573 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:12:41.149 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:12:41.149 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:12:41.553 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:12:41.560 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:12:41.561 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:12:41.561 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:12:41.582 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:12:41.582 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 415 ms
-2025-05-16 14:12:41.748 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:12:41.756 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
-2025-05-16 14:12:41.760 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.87 seconds (process running for 6.385)
-2025-05-16 14:13:47.137 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-16 14:13:47.151 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-16 14:13:58.913 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 95687 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:13:58.915 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:13:58.916 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:13:59.306 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:13:59.312 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:13:59.313 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:13:59.313 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:13:59.331 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:13:59.331 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 398 ms
-2025-05-16 14:13:59.356 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hiepnh.account_service.application.port.in.AccountInputPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-05-16 14:13:59.357 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-05-16 14:13:59.363 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-16 14:13:59.374 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.hiepnh.account_service.adapter.controller.AccountController required a bean of type 'com.hiepnh.account_service.application.port.in.AccountInputPort' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.hiepnh.account_service.application.port.in.AccountInputPort' in your configuration.
-
-2025-05-16 14:17:21.866 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 95988 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:17:21.867 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:17:21.868 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:17:22.276 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:17:22.283 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:17:22.284 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:17:22.284 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:17:22.304 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:17:22.304 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 418 ms
-2025-05-16 14:17:22.328 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hiepnh.account_service.application.port.in.AccountInputPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-05-16 14:17:22.329 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-05-16 14:17:22.335 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-16 14:17:22.344 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.hiepnh.account_service.adapter.controller.AccountController required a bean of type 'com.hiepnh.account_service.application.port.in.AccountInputPort' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.hiepnh.account_service.application.port.in.AccountInputPort' in your configuration.
-
-2025-05-16 14:20:25.570 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 96315 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:20:25.572 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:20:25.572 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:20:25.988 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:20:25.995 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:20:25.996 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:20:25.996 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:20:26.017 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:20:26.017 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 427 ms
-2025-05-16 14:20:26.042 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hiepnh.account_service.application.port.out.AccountOutputPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-05-16 14:20:26.044 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-05-16 14:20:26.050 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-16 14:20:26.060 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.hiepnh.account_service.application.usecase.AccountUseCase required a bean of type 'com.hiepnh.account_service.application.port.out.AccountOutputPort' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.hiepnh.account_service.application.port.out.AccountOutputPort' in your configuration.
-
-2025-05-16 14:21:08.673 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 96380 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:21:08.674 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:21:08.674 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:21:09.098 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:21:09.105 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:21:09.105 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:21:09.105 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:21:09.125 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:21:09.125 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 431 ms
-2025-05-16 14:21:09.151 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hiepnh.account_service.application.port.out.AccountOutputPort' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-05-16 14:21:09.152 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-05-16 14:21:09.158 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-16 14:21:09.168 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.hiepnh.account_service.application.usecase.AccountUseCase required a bean of type 'com.hiepnh.account_service.application.port.out.AccountOutputPort' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.hiepnh.account_service.application.port.out.AccountOutputPort' in your configuration.
-
-2025-05-16 14:22:54.686 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 96518 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:22:54.687 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:22:54.688 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:22:55.089 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:22:55.096 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:22:55.097 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:22:55.097 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:22:55.115 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:22:55.116 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 409 ms
-2025-05-16 14:22:55.143 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/adapter/controller/AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'accountUseCase' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/application/usecase/AccountUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'coreBankingGateway' defined in file [/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main/com/hiepnh/account_service/adapter/gateway/CoreBankingGateway.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2025-05-16 14:22:55.145 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-05-16 14:22:55.151 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-16 14:22:55.161 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in com.hiepnh.account_service.adapter.gateway.CoreBankingGateway required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
-
-2025-05-16 14:23:47.615 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 96598 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-16 14:23:47.616 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-16 14:23:47.616 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-16 14:23:48.085 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-16 14:23:48.093 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:23:48.094 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-16 14:23:48.094 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-16 14:23:48.114 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-16 14:23:48.115 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 477 ms
-2025-05-16 14:23:48.289 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
-2025-05-16 14:23:48.297 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
-2025-05-16 14:23:48.301 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.953 seconds (process running for 6.491)
-2025-05-16 14:25:54.520 [http-nio-8001-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-16 14:25:54.521 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-16 14:25:54.523 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2025-05-16 14:25:54.604 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 14:25:54.613 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 14:25:54.621 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 14:25:54.676 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 14:25:54.677 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 14:25:54.680 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@17ae9825
-2025-05-16 14:33:37.962 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 14:33:37.965 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 14:33:37.966 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 14:33:37.981 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 14:33:37.981 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 14:33:37.983 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@3c3a7999
-2025-05-16 14:56:35.525 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 14:56:35.527 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 14:56:35.527 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 14:56:35.540 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 14:56:35.540 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 14:56:35.542 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@3e0d50ec
-2025-05-16 15:33:21.441 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:33:21.444 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:33:21.444 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:33:21.461 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:33:21.462 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:33:21.463 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@5ddd6621
-2025-05-16 15:36:38.012 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:36:38.015 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:36:38.016 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:36:38.053 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:36:38.054 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:36:38.056 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@30e51d83
-2025-05-16 15:43:34.372 [http-nio-8001-exec-4] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:43:34.382 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:43:34.384 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:43:34.404 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:43:34.405 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:43:34.406 [http-nio-8001-exec-4] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@68926414
-2025-05-16 15:44:58.664 [http-nio-8001-exec-6] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:44:58.668 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:44:58.670 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:44:58.681 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:44:58.682 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:44:58.685 [http-nio-8001-exec-6] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@3a37af5b
-2025-05-16 15:47:26.150 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:47:26.154 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:47:26.155 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:47:26.170 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:47:26.171 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:47:26.174 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@30cab95d
-2025-05-16 15:48:31.927 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:48:31.932 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:48:31.938 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:48:31.953 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:48:31.953 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:48:31.956 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@62018656
-2025-05-16 15:50:50.619 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:50:50.621 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:50:50.621 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:50:50.633 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:50:50.633 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:50:50.634 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@7f304cf3
-2025-05-16 15:50:53.195 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:50:53.196 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:50:53.196 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:50:53.202 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:50:53.203 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:50:53.203 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@9817d8d
-2025-05-16 15:53:00.261 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:53:00.264 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-16 15:53:00.266 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-16 15:53:00.276 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-16 15:53:00.277 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-16 15:53:00.277 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@32fd806e
+2025-05-17 21:30:10.504 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 66393 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
+2025-05-17 21:30:10.507 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-17 21:30:10.508 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-17 21:30:10.964 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
+2025-05-17 21:30:10.970 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2025-05-17 21:30:10.971 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-17 21:30:10.971 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-17 21:30:10.995 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-17 21:30:10.995 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 469 ms
+2025-05-17 21:30:11.169 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2025-05-17 21:30:11.176 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
+2025-05-17 21:30:11.181 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.956 seconds (process running for 1.441)
+2025-05-17 21:30:16.735 [http-nio-8001-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 21:30:16.735 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-17 21:30:16.736 [http-nio-8001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-17 21:30:16.791 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-17 21:30:16.800 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-17 21:30:16.808 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-17 21:30:16.830 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-17 21:30:16.831 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-17 21:30:16.833 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@13e95e5c
+2025-05-17 21:30:33.357 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-17 21:30:33.358 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-17 21:30:33.359 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-17 21:30:33.366 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-17 21:30:33.367 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-17 21:30:33.369 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@3b729b09
+2025-05-17 21:31:25.099 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17 21:31:25.125 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-17 21:37:12.849 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 67100 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
+2025-05-17 21:37:12.850 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-17 21:37:12.851 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-17 21:37:13.321 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
+2025-05-17 21:37:13.327 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2025-05-17 21:37:13.328 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-17 21:37:13.328 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-17 21:37:13.347 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-17 21:37:13.347 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 477 ms
+2025-05-17 21:37:13.522 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2025-05-17 21:37:13.529 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
+2025-05-17 21:37:13.535 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.96 seconds (process running for 1.48)
+2025-05-17 21:37:19.855 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 21:37:19.855 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-17 21:37:19.856 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-17 21:37:19.921 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-17 21:37:19.928 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-17 21:37:19.937 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-17 21:37:19.952 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-17 21:37:19.953 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-17 21:37:19.955 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@2c8f703b
+2025-05-17 21:44:49.748 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17 21:44:49.756 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
