@@ -5,11 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Send {
-
+public class Amount {
     private int scale;
     private int value;
     private String asset;
-    private Source source;
-    private Distribute distribute;
 }

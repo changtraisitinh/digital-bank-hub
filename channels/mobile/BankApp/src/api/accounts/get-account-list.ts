@@ -28,7 +28,7 @@ export const useGetAccountList = createMutation<
 >({
   mutationFn: async (variables) => {
     const requestConfig = {
-      url: Env.API_URL + 'api/v1/accounts/list',
+      url: Env.API_URL + 'account/api/v1/accounts/list',
       method: 'POST',
       data: variables,
     };

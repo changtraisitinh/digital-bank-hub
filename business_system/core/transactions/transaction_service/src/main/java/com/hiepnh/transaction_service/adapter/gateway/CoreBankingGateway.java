@@ -25,10 +25,12 @@ import java.util.List;
 public class CoreBankingGateway implements TransactionOutputPort {
     private final RestTemplate restTemplate;
     private final AppConfig appConfig;
+    private final ObjectMapper objectMapper;
 
-    public CoreBankingGateway(RestTemplate restTemplate, AppConfig appConfig) {
+    public CoreBankingGateway(RestTemplate restTemplate, AppConfig appConfig, ObjectMapper objectMapper) {
         this.restTemplate = restTemplate;
         this.appConfig = appConfig;
+        this.objectMapper = objectMapper;
     }
 
     @Override
@@ -41,6 +43,8 @@ public class CoreBankingGateway implements TransactionOutputPort {
                     .toUriString();
 
             logger.info("Fetching transactions from URL: {}", url);
+
+            logger.info("Request body: {}", objectMapper.writeValueAsString(transactionCreateRequestDTO));
 
             ObjectMapper objectMapper = new ObjectMapper();
             TransactionCreateResponseWrapper responseWrapper = restTemplate.postForObject(url, transactionCreateRequestDTO, TransactionCreateResponseWrapper.class);

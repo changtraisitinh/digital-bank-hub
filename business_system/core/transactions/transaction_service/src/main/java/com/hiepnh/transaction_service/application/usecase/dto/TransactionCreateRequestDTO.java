@@ -7,11 +7,10 @@ import lombok.Setter;
 
 import java.util.List;
 
-
+@Getter
+@Setter
 public class TransactionCreateRequestDTO {
-    private String chartOfAccountsGroupName;
     private String description;
-    private String metadata;
     private Send send;
 
 }
