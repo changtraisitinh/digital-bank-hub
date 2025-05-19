@@ -4,7 +4,38 @@ import { createMutation } from 'react-query-kit';
 import { client } from '../common';
 import { type Transaction } from './types';
 
-type Variables = { title: string; body: string; userId: number };
+type Variables = {
+  description: string;
+  send: {
+    scale: number;
+    value: number;
+    asset: string;
+    source: {
+      from: [
+        {
+          amount: {
+            scale: number;
+            value: number;
+            asset: string;
+          };
+          account: string;
+        },
+      ];
+    };
+    distribute: {
+      to: [
+        {
+          amount: {
+            scale: number;
+            value: number;
+            asset: string;
+          };
+          account: string;
+        },
+      ];
+    };
+  };
+};
 type Response = Transaction;
 
 export const useCreateTransaction = createMutation<

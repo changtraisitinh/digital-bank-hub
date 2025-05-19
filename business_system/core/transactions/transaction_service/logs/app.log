@@ -498,3 +498,78 @@ java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST
 2025-05-19 14:21:06.802 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Response 201 CREATED
 2025-05-19 14:21:06.803 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.transaction_service.domain.entity.TransactionCreateResponseWrapper]
 2025-05-19 14:21:06.808 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Response received: {"id":"0196e76a-eded-7e36-9ccd-bb1470c8aedd","description":"chuyen tien 2","template":"","status":{"code":"CREATED","description":"CREATED"},"amount":"100000","amountScale":"0","assetCode":"VND","chartOfAccountsGroupName":"","source":["@hiepnh"],"destination":["@thuydt"],"pledgeId":null,"organizationId":"0196b308-2cfd-74ec-9528-8e9a8834e329","createdAt":"2025-05-19T07:21:06.797931917Z","updatedAt":"2025-05-19T07:21:06.797931959Z","deletedAt":null,"from":null,"to":null,"asset":null,"fee":null,"scale":null,"value":null,"hash":null,"errorMessage":null}
+2025-05-19 14:32:56.305 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:32:56.310 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":"chuyen tien 2","send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":100000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":100000,"asset":"Customer"}}]}}}
+2025-05-19 14:32:56.311 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:32:56.311 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:32:56.311 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@72bfb3e1] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:32:56.324 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Response 201 CREATED
+2025-05-19 14:32:56.325 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.transaction_service.domain.entity.TransactionCreateResponseWrapper]
+2025-05-19 14:32:56.330 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Response received: {"id":"0196e775-c182-7a54-893e-f4a8a3c40540","description":"chuyen tien 2","template":"","status":{"code":"CREATED","description":"CREATED"},"amount":"100000","amountScale":"0","assetCode":"VND","chartOfAccountsGroupName":"","source":["@hiepnh"],"destination":["@thuydt"],"pledgeId":null,"organizationId":"0196b308-2cfd-74ec-9528-8e9a8834e329","createdAt":"2025-05-19T07:32:56.322677593Z","updatedAt":"2025-05-19T07:32:56.322677635Z","deletedAt":null,"from":null,"to":null,"asset":null,"fee":null,"scale":null,"value":null,"hash":null,"errorMessage":null}
+2025-05-19 14:48:39.543 [http-nio-8002-exec-3] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:48:39.544 [http-nio-8002-exec-3] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":null,"send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":100000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":100000,"asset":"Customer"}}]}}}
+2025-05-19 14:48:39.545 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:48:39.546 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:48:39.546 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@2932e3d8] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:48:39.551 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-19 14:48:39.560 [http-nio-8002-exec-3] ERROR c.h.t.a.gateway.CoreBankingGateway - HTTP error while fetching transactions: 400 Bad Request on POST request for "http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json": "{"title":"Unexpected Fields in the Request","message":"The request body contains more fields than expected. Please send only the allowed fields as per the documentation. The unexpected fields are listed in the fields object.","code":"0053","fields":{"description":null}}"
+2025-05-19 14:48:39.569 [http-nio-8002-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:67)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:50:20.695 [http-nio-8002-exec-4] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:50:20.697 [http-nio-8002-exec-4] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":"Chuyện tiền ","send":{"scale":0,"value":1000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":1000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":1000,"asset":"Customer"}}]}}}
+2025-05-19 14:50:20.699 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:50:20.699 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:50:20.700 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@796b8697] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:50:20.721 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Response 201 CREATED
+2025-05-19 14:50:20.721 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.transaction_service.domain.entity.TransactionCreateResponseWrapper]
+2025-05-19 14:50:20.726 [http-nio-8002-exec-4] INFO  c.h.t.a.gateway.CoreBankingGateway - Response received: {"id":"0196e785-b123-7b89-a6ef-ed67322bf0df","description":"Chuyện tiền ","template":"","status":{"code":"CREATED","description":"CREATED"},"amount":"1000","amountScale":"0","assetCode":"VND","chartOfAccountsGroupName":"","source":["@hiepnh"],"destination":["@thuydt"],"pledgeId":null,"organizationId":"0196b308-2cfd-74ec-9528-8e9a8834e329","createdAt":"2025-05-19T07:50:20.70775684Z","updatedAt":"2025-05-19T07:50:20.707756923Z","deletedAt":null,"from":null,"to":null,"asset":null,"fee":null,"scale":null,"value":null,"hash":null,"errorMessage":null}

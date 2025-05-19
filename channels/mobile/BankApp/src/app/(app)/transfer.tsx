@@ -131,7 +131,14 @@ export default function Transfer() {
         pathname: '/transfer/confirmation',
         params: {
           fromAccount: fromAccount.id,
+          fromAccountName: fromAccount.name,
+          fromAccountNumber: fromAccount.number,
+          fromAccountBalance: fromAccount.balance,
           toAccount: toAccount.id,
+          toAccountName: toAccount.name,
+          toAccountNumber: toAccount.accountNumber,
+          toAccountBalance: toAccount.balance,
+          toAccountBank: toAccount.bank,
           amount: amount,
           note: note,
         },
@@ -234,7 +241,7 @@ export default function Transfer() {
                   <Text style={styles.accountNumber}>{fromAccount.number}</Text>
                 </View>
                 <Text style={styles.accountBalance}>
-                  ${fromAccount.balance.toFixed(2)}
+                  {fromAccount.balance.toFixed(0)}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -356,7 +363,7 @@ export default function Transfer() {
             <View style={styles.formGroup}>
               <Text style={styles.formLabel}>Amount</Text>
               <View style={styles.amountInputContainer}>
-                <Text style={styles.currencySymbol}>$</Text>
+                <Text style={styles.currencySymbol}></Text>
                 <TextInput
                   style={styles.amountInput}
                   placeholder="0.00"
@@ -382,8 +389,8 @@ export default function Transfer() {
             {/* Transaction Limits & Notices */}
             <View style={styles.noticeContainer}>
               <Text style={styles.limitText}>
-                Daily limit: ${remainingLimit.toFixed(2)} remaining of $
-                {dailyLimit.toFixed(2)}
+                Daily limit: {remainingLimit.toFixed(0)} remaining of VND
+                {dailyLimit.toFixed(0)}
               </Text>
               <Text style={styles.processingTimeText}>
                 Estimated processing time: 1-3 business days

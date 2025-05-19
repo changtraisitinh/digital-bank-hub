@@ -13,6 +13,7 @@ import {
   View,
 } from 'react-native';
 
+import { useCreateTransaction } from '@/api';
 import {
   FocusAwareStatusBar,
   SafeAreaView,
@@ -41,15 +42,15 @@ export default function TransferConfirmation() {
 
   // Mock transfer details (in real app, these would come from params or context)
   const transferDetails = {
-    amount: 250.0,
-    currency: 'USD',
-    recipientName: 'John Doe',
+    amount: parseFloat(params.amount as string) || 0,
+    currency: 'VND',
+    recipientName: params.toAccountName,
     recipientBank: 'Chase',
     recipientAccount: '•••• 4567',
     fromAccount: 'My Checking •••• 1234',
     fee: 0.0,
     deliveryTime: 'Instantly',
-    note: 'Rent payment for June',
+    note: params.note || '',
   };
 
   // States
@@ -63,6 +64,8 @@ export default function TransferConfirmation() {
   // Animation values
   const checkmarkScale = new Animated.Value(0);
   const successOpacity = new Animated.Value(0);
+
+  const createTransaction = useCreateTransaction();
 
   // Check if biometric authentication is available
   useEffect(() => {
@@ -131,6 +134,41 @@ export default function TransferConfirmation() {
         }),
       ]).start();
     }, 2000);
+
+    const variables = {
+      description: params.note,
+      send: {
+        scale: 0,
+        value: params.amount,
+        asset: 'VND',
+        source: {
+          from: [
+            {
+              amount: {
+                scale: 0,
+                value: params.amount,
+                asset: 'Customer',
+              },
+              account: '@hiepnh',
+            },
+          ],
+        },
+        distribute: {
+          to: [
+            {
+              amount: {
+                scale: 0,
+                value: params.amount,
+                asset: 'Customer',
+              },
+              account: '@thuydt',
+            },
+          ],
+        },
+      },
+    };
+
+    createTransaction.mutate(variables);
   };
 
   // Generate a random transaction ID
@@ -187,7 +225,7 @@ export default function TransferConfirmation() {
               {/* Transaction Summary */}
               <View style={styles.summaryCard}>
                 <Text style={styles.amountText}>
-                  -${transferDetails.amount.toFixed(2)}{' '}
+                  -{transferDetails.amount.toFixed(0)}{' '}
                   {transferDetails.currency}
                 </Text>
 
@@ -216,14 +254,14 @@ export default function TransferConfirmation() {
                 <View style={styles.detailRow}>
                   <Text style={styles.detailLabel}>Fee</Text>
                   <Text style={styles.detailValue}>
-                    ${transferDetails.fee.toFixed(2)}
+                    {transferDetails.fee.toFixed(0)}
                   </Text>
                 </View>
 
                 <View style={styles.detailRow}>
                   <Text style={styles.detailLabel}>Total</Text>
                   <Text style={styles.totalValue}>
-                    ${(transferDetails.amount + transferDetails.fee).toFixed(2)}
+                    {(transferDetails.amount + transferDetails.fee).toFixed(0)}
                   </Text>
                 </View>
 
@@ -358,7 +396,7 @@ export default function TransferConfirmation() {
               >
                 <Text style={styles.successTitle}>Transfer Successful!</Text>
                 <Text style={styles.successMessage}>
-                  Your transfer of ${transferDetails.amount.toFixed(2)} to{' '}
+                  Your transfer of {transferDetails.amount.toFixed(0)} to{' '}
                   {transferDetails.recipientName} has been processed.
                 </Text>
               </Animated.View>
@@ -381,7 +419,7 @@ export default function TransferConfirmation() {
                 <View style={styles.receiptDetail}>
                   <Text style={styles.receiptLabel}>Amount</Text>
                   <Text style={styles.receiptValue}>
-                    ${transferDetails.amount.toFixed(2)}{' '}
+                    {transferDetails.amount.toFixed(0)}{' '}
                     {transferDetails.currency}
                   </Text>
                 </View>
