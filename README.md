@@ -22,6 +22,13 @@ The repository is organized into several key domains:
 - **channels/**  
   Implements various customer interaction channels:
   - `mobile/`: Mobile banking app source code.
+
+![Home](assets/home.png)
+![Transfer](assets/transfer.png)
+![Card](assets/card.png)
+![Insight](assets/insight.png)
+![Bill Payment](assets/bill-payment.png)
+
   - `web_online/`, `private_portal/`: Web-based banking portals.
   - `atm/`, `bank_teller/`, `call_center/`, `kiosk/`: Other banking channels.
 

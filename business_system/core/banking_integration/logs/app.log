@@ -242,3 +242,10 @@
 2025-05-19 15:44:24.275 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
 2025-05-19 15:44:24.351 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
 2025-05-19 15:44:24.351 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 17:12:53.757 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 17:12:53.759 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 17:12:53.760 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 17:12:54.251 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 17:12:54.253 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 17:13:37.335 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 17:13:37.342 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

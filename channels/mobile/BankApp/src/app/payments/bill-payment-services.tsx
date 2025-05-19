@@ -158,7 +158,7 @@ export default function BillPaymentServices() {
                 </View>
                 <View style={styles.billActions}>
                   <Text style={styles.billAmount}>
-                    ${bill.amount.toFixed(2)}
+                    {bill.amount.toFixed(0)}
                   </Text>
                   <TouchableOpacity
                     style={styles.payButton}

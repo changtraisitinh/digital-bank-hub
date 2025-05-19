@@ -139,3 +139,11 @@
 2025-05-19 16:25:35.803 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
 2025-05-19 16:25:35.804 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
 2025-05-19 16:25:35.807 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@382ec437
+2025-05-19 17:12:51.278 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 17:12:51.281 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 17:12:51.282 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 17:12:51.314 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 17:12:51.315 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 17:12:51.316 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@1d4f79f1
+2025-05-19 17:13:50.121 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 17:13:50.134 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
