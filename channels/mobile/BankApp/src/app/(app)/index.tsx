@@ -80,7 +80,7 @@ export default function HomeScreen() {
       {/* Header with greeting */}
       <View style={styles.header}>
         <View>
-          <Text style={styles.greeting}>Hello, John</Text>
+          <Text style={styles.greeting}>Hello, HiepNH</Text>
           <Text style={styles.subGreeting}>Welcome back!</Text>
         </View>
         <TouchableOpacity style={styles.notificationButton}>
@@ -139,7 +139,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
         <View style={styles.accountDetails}>
-          <Text style={styles.accountName}>John Doe</Text>
+          <Text style={styles.accountName}>HiepNH</Text>
           <Text style={styles.accountNumber}>**** **** **** 1234</Text>
           <Text style={styles.accountBalance}>$12,345.67</Text>
         </View>
@@ -167,7 +167,9 @@ export default function HomeScreen() {
         <QuickActionButton
           icon="document-text-outline"
           title="Pay Bills"
-          onPress={() => {}}
+          onPress={() => {
+            handleBillPayment();
+          }}
         />
       </View>
 
@@ -456,4 +458,8 @@ const handleTransfer = () => {
 
 const handleMyQR = () => {
   router.push('/transfer/my-qr');
+};
+
+const handleBillPayment = () => {
+  router.push('/payments/bill-payment-services');
 };
