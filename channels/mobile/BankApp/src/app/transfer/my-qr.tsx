@@ -1,5 +1,5 @@
 import { useRouter } from 'expo-router';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Alert,
   Image,
@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 
+import { useGenerateQRCode } from '@/api';
 import {
   FocusAwareStatusBar,
   SafeAreaView,
@@ -42,7 +43,36 @@ export default function MyQRScreen() {
   const [showAmountModal, setShowAmountModal] = useState(false);
   const [amount, setAmount] = useState('');
   const [qrValue, setQrValue] = useState(`account:${selectedAccount.id}`);
+  const [qrImage, setQrImage] = useState<string | null>(null);
   const qrRef = useRef();
+
+  const generateQRCode = useGenerateQRCode();
+
+  // Check if biometric authentication is available
+  useEffect(() => {
+    let variables = {
+      bankCode: '970415',
+      accountNumber: '113366668888',
+      accountName: 'QUY UNG HO NGAN HANG',
+      amount: '99000',
+    };
+
+    generateQRCode.refetch(variables);
+  }, []);
+
+  // Handle QR code data when it's received
+  useEffect(() => {
+    if (generateQRCode.data) {
+      // Convert ArrayBuffer to base64 using array manipulation
+      const bytes = new Uint8Array(generateQRCode.data);
+      let binary = '';
+      for (let i = 0; i < bytes.byteLength; i++) {
+        binary += String.fromCharCode(bytes[i]);
+      }
+      const base64 = btoa(binary);
+      setQrImage(`data:image/jpeg;base64,${base64}`);
+    }
+  }, [generateQRCode.data]);
 
   // Handle account selection
   const handleAccountSelect = (account) => {
@@ -139,7 +169,7 @@ export default function MyQRScreen() {
             </View>
             <View style={styles.accountRight}>
               <Text style={styles.accountBalance}>
-                Available: ${selectedAccount.balance.toFixed(2)}
+                Available: {selectedAccount.balance.toFixed(0)}
               </Text>
               <Text style={styles.chevron}>▼</Text>
             </View>
@@ -147,16 +177,28 @@ export default function MyQRScreen() {
 
           {/* QR Code Section */}
           <View style={styles.qrContainer}>
-            <QRCode
-              value={qrValue}
-              size={200}
-              color="#000"
-              backgroundColor="#fff"
-              logo={require('../../../assets/images/partners/napas.png')}
-              logoSize={40}
-              logoBackgroundColor="#fff"
-              getRef={(ref) => (qrRef.current = ref)}
-            />
+            {qrImage ? (
+              <Image
+                source={{ uri: qrImage }}
+                style={{
+                  width: 200,
+                  height: 200,
+                  borderRadius: 8,
+                }}
+                resizeMode="contain"
+              />
+            ) : (
+              <QRCode
+                value={qrValue}
+                size={200}
+                color="#000"
+                backgroundColor="#fff"
+                logo={require('../../../assets/images/partners/napas.png')}
+                logoSize={40}
+                logoBackgroundColor="#fff"
+                getRef={(ref) => (qrRef.current = ref)}
+              />
+            )}
             <Text style={styles.qrHelperText}>
               Scan this QR to receive payments
             </Text>

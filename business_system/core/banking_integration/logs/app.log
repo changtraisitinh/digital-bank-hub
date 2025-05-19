@@ -71,3 +71,164 @@
 2025-05-19 11:24:24.251 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
 2025-05-19 11:24:24.911 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
 2025-05-19 11:24:24.913 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:00:39.123 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:00:40.157 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:00:42.185 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:00:46.202 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:01:08.038 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:03:34.077 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:07:09.045 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:07:10.068 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:07:12.090 [http-nio-8003-exec-5] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:07:16.118 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:08:07.798 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:08:08.850 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:08:10.861 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:08:14.885 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:09:59.303 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:15:05.040 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:15:07.066 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:15:11.084 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:15:19.636 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:15:19.638 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:15:19.639 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:15:20.120 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:15:20.122 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:16:45.826 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:16:46.855 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:16:46.856 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:16:46.857 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:16:49.303 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:16:49.305 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:18:46.783 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:18:46.785 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:18:46.787 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:18:46.788 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:18:47.213 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:18:47.214 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:18:47.804 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:18:48.369 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:18:49.390 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:18:51.406 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:18:55.442 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:20:05.512 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:20:05.513 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:20:05.516 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:20:05.517 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:20:06.036 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:20:06.042 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:23:00.560 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:23:00.560 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:23:00.567 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:23:00.567 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:23:00.568 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:23:00.570 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:23:01.247 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:23:01.248 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:23:01.337 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:23:01.338 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:23:13.516 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:23:13.517 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:23:13.517 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:23:13.519 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:23:13.519 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:23:13.519 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:23:13.928 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:23:13.929 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:23:14.009 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:23:14.010 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:24:58.236 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:24:58.237 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:24:58.239 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:24:58.239 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:24:58.239 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:24:58.241 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:24:58.662 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:24:58.664 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:24:58.675 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:24:58.675 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:26:00.129 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:26:00.128 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:26:00.131 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:26:00.131 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:26:00.131 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:26:00.131 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:26:03.084 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:26:03.093 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:26:03.696 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:26:03.697 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:28:54.795 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:28:54.795 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:28:54.798 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:28:54.798 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:28:54.799 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:28:54.799 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:28:55.181 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:28:55.182 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:28:55.256 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:28:55.257 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:29:59.373 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:29:59.375 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:29:59.373 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:29:59.377 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:29:59.376 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:29:59.378 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:29:59.852 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:29:59.855 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:29:59.902 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:29:59.905 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:30:32.729 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:30:32.731 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:30:32.731 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:30:32.735 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:30:32.736 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:30:32.736 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:30:33.165 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:30:33.165 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:30:33.170 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:30:33.171 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:31:12.360 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:31:12.360 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:31:12.361 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:31:12.361 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:31:12.361 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:31:12.361 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:31:12.758 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:31:12.760 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:31:12.819 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:31:12.820 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:31:17.913 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:31:17.913 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:31:17.915 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:31:17.915 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:31:17.914 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:31:17.918 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:31:18.351 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:31:18.352 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:31:18.363 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:31:18.363 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:35:42.054 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:35:42.054 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:35:42.061 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:35:42.061 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:35:42.608 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:35:42.609 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-05-19 15:35:43.089 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:35:45.112 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:35:49.129 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:36:20.152 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:36:20.159 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:36:21.189 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:36:23.211 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:36:27.227 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:36:31.730 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:37:40.309 [http-nio-8003-exec-5] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:37:41.328 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:37:43.346 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:37:47.390 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:38:06.944 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
+2025-05-19 15:38:07.985 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-05-19 15:38:07.987 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:38:07.987 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-05-19 15:38:08.464 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:38:08.466 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
