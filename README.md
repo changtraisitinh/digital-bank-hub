@@ -23,11 +23,16 @@ The repository is organized into several key domains:
   Implements various customer interaction channels:
   - `mobile/`: Mobile banking app source code.
 
-![Home](assets/home.png)
-![Transfer](assets/transfer.png)
-![Card](assets/card.png)
-![Insight](assets/insight.png)
-![Bill Payment](assets/bill-payment.png)
+<!-- Galaxy panel style for images -->
+<div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+
+  <img src="assets/home.png" alt="Home" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/transfer.png" alt="Transfer" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/card.png" alt="Card" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/insight.png" alt="Insight" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/bill-payment.png" alt="Bill Payment" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+
+</div>
 
   - `web_online/`, `private_portal/`: Web-based banking portals.
   - `atm/`, `bank_teller/`, `call_center/`, `kiosk/`: Other banking channels.
