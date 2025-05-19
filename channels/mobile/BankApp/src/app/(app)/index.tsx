@@ -160,7 +160,9 @@ export default function HomeScreen() {
         <QuickActionButton
           icon="qr-code-outline"
           title="My QR"
-          onPress={() => {}}
+          onPress={() => {
+            handleMyQR();
+          }}
         />
         <QuickActionButton
           icon="document-text-outline"
@@ -450,4 +452,8 @@ const styles = StyleSheet.create({
 // Handle transfer navigation
 const handleTransfer = () => {
   router.push('/(app)/transfer');
+};
+
+const handleMyQR = () => {
+  router.push('/transfer/my-qr');
 };

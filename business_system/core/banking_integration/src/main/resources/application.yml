@@ -3,7 +3,7 @@ spring:
     name: Banking Integration
 
 server:
-  port: 8080
+  port: 8003
 
 logging:
   level:
@@ -21,4 +21,7 @@ midaz:
       path: /v1/organizations/{organizationId}/ledgers/{ledgerId}/accounts
 
 
-
+vietqr:
+    url_gen_qr: https://api.vietqr.io/v2/generate
+    client_id: c2127e24-dd81-4fdd-9a9b-16fad3ed76af
+    api_key: d4277711-6c12-4cab-8fd7-f1cdf3a26d03
