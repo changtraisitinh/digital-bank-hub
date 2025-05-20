@@ -45,6 +45,9 @@ The repository is organized into several key domains:
 - **technical_system/**  
   Infrastructure management, deployment scripts, and technical utilities.
 
+  - Infastructure
+    - Nginx, Nginx UI
+
 ---
 
 ## Getting Started
@@ -67,3 +70,4 @@ The repository is organized into several key domains:
 
 
 # About 
+Developed by HiepNH
