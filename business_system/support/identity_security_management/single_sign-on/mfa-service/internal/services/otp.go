@@ -35,7 +35,7 @@ func (s *OTPService) GenerateOTP(email string) (string, error) {
 
 	secret := key.Secret()
 	_, err = s.db.Exec(
-		"INSERT INTO users (email, secret, otp_generated_at) VALUES ($1, $2, $3) "+
+		"INSERT INTO mfa_users (email, secret, otp_generated_at) VALUES ($1, $2, $3) "+
 			"ON CONFLICT (email) DO UPDATE SET secret = $2, otp_generated_at = $3",
 		email, secret, time.Now(),
 	)
@@ -47,7 +47,7 @@ func (s *OTPService) VerifyOTP(email, otp string) (bool, time.Time, time.Time, e
 	var otpGeneratedAt time.Time
 
 	err := s.db.QueryRow(
-		"SELECT secret, otp_generated_at FROM users WHERE email = $1",
+		"SELECT secret, otp_generated_at FROM mfa_users WHERE email = $1",
 		email,
 	).Scan(&secret, &otpGeneratedAt)
 	if err != nil {
@@ -60,9 +60,4 @@ func (s *OTPService) VerifyOTP(email, otp string) (bool, time.Time, time.Time, e
 
 	valid := totp.Validate(otp, secret)
 	return valid, time.Now(), otpGeneratedAt, nil
-}
-
-// GetIssuer returns the issuer name used for OTP generation
-func (s *OTPService) GetIssuer() string {
-	return s.issuer
 }

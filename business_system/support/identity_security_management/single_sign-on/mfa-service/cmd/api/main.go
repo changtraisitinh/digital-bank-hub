@@ -175,10 +175,12 @@ func (s *Server) handleGenerateOTP(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("Generated OTP:", otp)
+
 	fmt.Println("Secret:", secret)
+	fmt.Println("Generated OTP:", otp)
 
 	// Send the OTP to the user via email or SMS (not implemented here)
+	//TODO: Implement sending OTP via email or SMS
 
 	// Generate JWT
 	token, err := s.jwtService.GenerateJWT(email)

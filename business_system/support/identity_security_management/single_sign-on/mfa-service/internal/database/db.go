@@ -17,7 +17,7 @@ func InitDB(log *logrus.Logger) (*sql.DB, error) {
 	}
 
 	createTableSQL := `
-        CREATE TABLE IF NOT EXISTS users (
+        CREATE TABLE IF NOT EXISTS mfa_users (
             id SERIAL PRIMARY KEY,
             email VARCHAR(255) UNIQUE NOT NULL,
             secret VARCHAR(255) NOT NULL,

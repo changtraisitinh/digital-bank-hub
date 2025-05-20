@@ -17,10 +17,10 @@ The repository is organized into several key domains:
 <!-- Galaxy panel style for images -->
 <div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
 
-  <img src="assets/architecture/core_banking_modernization.png" alt="Home" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/architecture/logical_architectre.png" alt="Transfer" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/architecture/retail_banking_business_architecture.png" alt="Card" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/architecture/core_platform_conceptual_architecture.png" alt="Insight" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/core_banking_modernization.png" alt="Home" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/logical_architectre.png" alt="Transfer" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/retail_banking_business_architecture.png" alt="Card" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/core_platform_conceptual_architecture.png" alt="Insight" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
 
 </div>
 
