@@ -14,6 +14,17 @@ The repository is organized into several key domains:
 - **architecture/**  
   Contains high-level system architecture, design documents, and reference diagrams.
 
+<!-- Galaxy panel style for images -->
+<div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+
+  <img src="assets/architecture/core_banking_modernization.png" alt="Home" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/logical_architectre.png" alt="Transfer" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/retail_banking_business_architecture.png" alt="Card" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/core_platform_conceptual_architecture.png" alt="Insight" width="500" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+
+</div>
+
+
 - **business_system/**  
   Houses the business logic and domain-driven modules:
   - `core/`: Account management, transactions, customer info, product management, etc.
@@ -26,11 +37,11 @@ The repository is organized into several key domains:
 <!-- Galaxy panel style for images -->
 <div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
 
-  <img src="assets/home.png" alt="Home" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/transfer.png" alt="Transfer" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/card.png" alt="Card" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/insight.png" alt="Insight" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/bill-payment.png" alt="Bill Payment" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/mobile/home.png" alt="Home" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/mobile/transfer.png" alt="Transfer" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/mobile/card.png" alt="Card" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/mobile/insight.png" alt="Insight" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/mobile/bill-payment.png" alt="Bill Payment" width="160" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
 
 </div>
 
