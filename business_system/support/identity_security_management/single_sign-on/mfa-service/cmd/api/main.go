@@ -175,14 +175,10 @@ func (s *Server) handleVerifyOTP(w http.ResponseWriter, r *http.Request) {
 	ctx, cancel := context.WithTimeout(r.Context(), requestTimeout)
 	defer cancel()
 
-	}
+	email := r.URL.Query().Get("email")
+	otp := r.URL.Query().Get("otp")
 
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		utils.RespondWithError(w, http.StatusBadRequest, "Invalid request format")
-		return
-	}
-
-	if req.Email == "" || req.OTP == "" {
+	if email == "" || otp == "" {
 		utils.RespondWithError(w, http.StatusBadRequest, "Email and OTP are required")
 		return
 	}
@@ -196,7 +192,7 @@ func (s *Server) handleVerifyOTP(w http.ResponseWriter, r *http.Request) {
 		utils.RespondWithError(w, http.StatusGatewayTimeout, "Request timeout")
 		return
 	default:
-		valid, verifiedAt, generatedAt, err = s.otpService.VerifyOTP(req.Email, req.OTP)
+		valid, verifiedAt, generatedAt, err = s.otpService.VerifyOTP(email, otp)
 		if err != nil {
 			s.log.WithError(err).Error("Failed to verify OTP")
 			utils.RespondWithError(w, http.StatusInternalServerError, "Failed to verify OTP")
@@ -210,7 +206,7 @@ func (s *Server) handleVerifyOTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	utils.RespondWithJSON(w, statusCode, models.OTPVerificationResponse{
-		Email:       req.Email,
+		Email:       email,
 		Valid:       valid,
 		VerifiedAt:  verifiedAt,
 		GeneratedAt: generatedAt,
