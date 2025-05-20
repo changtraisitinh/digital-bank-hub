@@ -12,6 +12,13 @@ type JWTService struct {
 	logger *logrus.Logger
 }
 
+var jwtKey = []byte("my_secret_key")
+
+type Claims struct {
+	Email string `json:"email"`
+	jwt.StandardClaims
+}
+
 func NewJWTService(key []byte, logger *logrus.Logger) *JWTService {
 	return &JWTService{
 		jwtKey: key,
@@ -43,4 +50,21 @@ func (s *JWTService) ValidateToken(tokenStr string) (*models.Claims, error) {
 	}
 
 	return claims, nil
+}
+
+func (s *JWTService) GenerateJWT(email string) (string, error) {
+	expirationTime := time.Now().Add(5 * time.Minute)
+	claims := &Claims{
+		Email: email,
+		StandardClaims: jwt.StandardClaims{
+			ExpiresAt: expirationTime.Unix(),
+		},
+	}
+
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	tokenString, err := token.SignedString(jwtKey)
+	if err != nil {
+		return "", err
+	}
+	return tokenString, nil
 }

@@ -3,6 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/pquerna/otp/totp"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -152,22 +154,44 @@ func (s *Server) handleGenerateOTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	var secret string
+	var err error
+
 	select {
 	case <-ctx.Done():
 		utils.RespondWithError(w, http.StatusGatewayTimeout, "Request timeout")
 		return
 	default:
-		if err := s.otpService.GenerateOTP(email); err != nil {
+		secret, err = s.otpService.GenerateOTP(email)
+		if err != nil {
 			s.log.WithError(err).Error("Failed to generate OTP")
 			utils.RespondWithError(w, http.StatusInternalServerError, "Failed to generate OTP")
 			return
 		}
 	}
 
+	// Generate the OTP
+	otp, err := totp.GenerateCode(secret, time.Now())
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Generated OTP:", otp)
+	fmt.Println("Secret:", secret)
+
+	// Send the OTP to the user via email or SMS (not implemented here)
+
+	// Generate JWT
+	token, err := s.jwtService.GenerateJWT(email)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Generated JWT:", token)
+
 	utils.RespondWithJSON(w, http.StatusOK, models.OTPResponse{
 		Message: "OTP generated successfully",
 		Email:   email,
 		Status:  true,
+		Jwt:     token,
 	})
 }
 

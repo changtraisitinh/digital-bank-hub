@@ -19,6 +19,7 @@ type OTPResponse struct {
 	Message string `json:"message"`
 	Email   string `json:"email"`
 	Status  bool   `json:"status"`
+	Jwt     string `json:"jwt"`
 }
 
 type OTPVerificationResponse struct {

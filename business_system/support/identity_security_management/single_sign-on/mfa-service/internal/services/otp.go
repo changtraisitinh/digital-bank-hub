@@ -24,13 +24,13 @@ func NewOTPService(db *sql.DB, logger *logrus.Logger, issuer string) *OTPService
 	}
 }
 
-func (s *OTPService) GenerateOTP(email string) error {
+func (s *OTPService) GenerateOTP(email string) (string, error) {
 	key, err := totp.Generate(totp.GenerateOpts{
 		Issuer:      s.issuer,
 		AccountName: email,
 	})
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	secret := key.Secret()
@@ -39,7 +39,7 @@ func (s *OTPService) GenerateOTP(email string) error {
 			"ON CONFLICT (email) DO UPDATE SET secret = $2, otp_generated_at = $3",
 		email, secret, time.Now(),
 	)
-	return err
+	return secret, err
 }
 
 func (s *OTPService) VerifyOTP(email, otp string) (bool, time.Time, time.Time, error) {
@@ -60,4 +60,9 @@ func (s *OTPService) VerifyOTP(email, otp string) (bool, time.Time, time.Time, e
 
 	valid := totp.Validate(otp, secret)
 	return valid, time.Now(), otpGeneratedAt, nil
+}
+
+// GetIssuer returns the issuer name used for OTP generation
+func (s *OTPService) GetIssuer() string {
+	return s.issuer
 }
