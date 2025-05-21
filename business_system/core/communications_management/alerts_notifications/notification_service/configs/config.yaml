@@ -1,0 +1,15 @@
+server:
+  port: "8005"
+  mode: "debug"
+
+database:
+  host: "localhost"
+  port: "5432"
+  user: "postgres"
+  password: "postgres"
+  dbname: "dibank_notification"
+  sslmode: "disable"
+
+logging:
+  level: "debug"
+  format: "json"

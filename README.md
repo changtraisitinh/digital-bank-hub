@@ -17,10 +17,10 @@ The repository is organized into several key domains:
 <!-- Galaxy panel style for images -->
 <div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
 
-  <img src="assets/architecture/core_banking_modernization.png" alt="Home" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/architecture/logical_architectre.png" alt="Transfer" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/architecture/retail_banking_business_architecture.png" alt="Card" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
-  <img src="assets/architecture/core_platform_conceptual_architecture.png" alt="Insight" width="700" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/core_banking_modernization.png" alt="Home" width="800" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/logical_architectre.png" alt="Transfer" width="800" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/retail_banking_business_architecture.png" alt="Card" width="800" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
+  <img src="assets/architecture/core_platform_conceptual_architecture.png" alt="Insight" width="800" style="border-radius: 16px; box-shadow: 0 2px 8px #ccc; margin: 8px;"/>
 
 </div>
 
@@ -50,14 +50,20 @@ The repository is organized into several key domains:
 
 - **core_banking/**  
   The heart of the platform, including:
-  - `midaz/`: The open-source ledger and transaction engine (see [core_banking/midaz/README.md](core_banking/midaz/README.md) for details).
+  - [Midaz](https://github.com/LerianStudio/midaz): The open-source ledger and transaction enginemi.
   - `midaz-console/`: Management and monitoring tools for the core banking engine.
 
 - **technical_system/**  
   Infrastructure management, deployment scripts, and technical utilities.
 
   - Infastructure
-    - Nginx, Nginx UI
+    - [Nginx](https://nginx.org/)
+    - [Nginx UI](https://nginxui.com/)
+    - [K8s]
+    - [K9s]
+  - Third Partners
+    - [Stripe](https://docs.stripe.com/)
+    - [Stripe React Native](https://stripe.dev/stripe-react-native/api-reference/index.html)
 
 ---
 

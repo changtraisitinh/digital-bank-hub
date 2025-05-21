@@ -23,14 +23,14 @@ logging:
     org.springframework.web.client.RestTemplate: DEBUG
 
 jwt:
-  secret: your_jwt_secret_key
+  secret: 60e8481da26b0bf2c0f322c89e9fb1634faee3948565be2c938edee1adc04b36
   expiration: 86400000 # 24 hours
   refresh-token:
     expiration: 604800000 # 7 days
 
 security:
   mfa:
-    issuer: your-app-name
+    issuer: Auth-Service
     length: 6
     validity: 30
 
