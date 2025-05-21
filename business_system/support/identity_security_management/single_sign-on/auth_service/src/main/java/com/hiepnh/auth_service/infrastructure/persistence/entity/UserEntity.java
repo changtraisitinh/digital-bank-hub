@@ -17,6 +17,9 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Column(name = "username", unique = true, nullable = false)
+    private String username;
+
     @Column(unique = true, nullable = false)
     private String email;
 
@@ -34,10 +37,9 @@ public class UserEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @Version
-    @Column(name = "version", nullable = false)
-    @Builder.Default
-    private Long version = LocalDateTime.now().toEpochSecond(ZoneOffset.UTC);
+//    @Version
+//    @Column(name = "version", nullable = false)
+//    private Long version;
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @ToString.Exclude
@@ -56,20 +58,15 @@ public class UserEntity {
             id = UUID.randomUUID();
         }
         if (createdAt == null) {
-            createdAt = LocalDateTime.now();
+            createdAt = now;
         }
         if (updatedAt == null) {
-            updatedAt = createdAt;
+            updatedAt = now;
         }
-        if (version == null) {
-            version = now.toEpochSecond(ZoneOffset.UTC);
-        }
-        createdAt = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
-        version = LocalDateTime.now().toEpochSecond(ZoneOffset.UTC);
     }
 }

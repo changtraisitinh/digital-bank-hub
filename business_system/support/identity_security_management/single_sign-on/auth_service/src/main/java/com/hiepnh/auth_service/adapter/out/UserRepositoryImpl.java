@@ -7,7 +7,9 @@ import com.hiepnh.auth_service.infrastructure.persistence.mapper.EntityMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -24,9 +26,42 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
+    @Transactional
     public User save(User user) {
         UserEntity entity = mapper.toUserEntity(user);
-        return mapper.toUser(jpaRepository.save(entity));
+        if (user.getId() != null) {
+            // Existing entity - fetch to preserve version
+            UserEntity existing = jpaRepository.findById(user.getId())
+                    .orElseThrow(() -> new IllegalArgumentException("User with ID " + user.getId() + " not found"));
+            // Update fields from the input user
+            existing.setUsername(user.getUsername());
+            existing.setEmail(user.getEmail());
+            existing.setPhone(user.getPhone());
+            existing.setFullName(user.getFullName());
+            existing.setStatus(user.getStatus());
+            existing.setUpdatedAt(LocalDateTime.now());
+
+            // Handle credential update
+            if (user.getCredential() != null) {
+                if (existing.getCredential() == null) {
+                    existing.setCredential(mapper.toCredentialEntity(user.getCredential()));
+                    existing.getCredential().setUser(existing);
+                } else {
+                    existing.getCredential().setPasswordHash(user.getCredential().getPasswordHash());
+                }
+            }
+
+            // Do NOT set version manually
+            entity = existing;
+        } else {
+            // For new user, ensure credential is properly set
+            if (user.getCredential() != null) {
+                entity.setCredential(mapper.toCredentialEntity(user.getCredential()));
+                entity.getCredential().setUser(entity);
+            }
+        }
+        entity = jpaRepository.save(entity);
+        return mapper.toUser(entity);
     }
 
     @Override
