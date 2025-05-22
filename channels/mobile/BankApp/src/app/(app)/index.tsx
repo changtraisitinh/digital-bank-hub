@@ -83,9 +83,6 @@ export default function HomeScreen() {
           <Text style={styles.greeting}>Hello, HiepNH</Text>
           <Text style={styles.subGreeting}>Welcome back!</Text>
         </View>
-        <TouchableOpacity style={styles.notificationButton}>
-          <Ionicons name="notifications-outline" size={24} color="#333" />
-        </TouchableOpacity>
       </View>
 
       {/* Galaxy Panel (Auto-scrolling promotions) */}
