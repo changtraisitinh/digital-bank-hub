@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import React, { useEffect, useRef } from 'react';
 import {
   Animated,
@@ -79,6 +80,7 @@ const userCards = [
 export default function Cards() {
   const scrollX = useRef(new Animated.Value(0)).current;
   const productsScrollRef = useRef(null);
+  const router = useRouter();
 
   // Auto scroll for card products
   useEffect(() => {
@@ -125,6 +127,12 @@ export default function Cards() {
       style={[styles.userCardItem, { backgroundColor: card.color }]}
       onPress={() => {
         /* Handle card details view */
+        router.push({
+          pathname: '/cards/card-info',
+          params: {
+            id: card.id,
+          },
+        });
       }}
     >
       <View style={styles.cardBackground}>

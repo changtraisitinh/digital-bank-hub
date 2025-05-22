@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: Authentication Service
+
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/dibank_auth
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    validate-on-migrate: true
+
+server:
+  port: 8004
+
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
+
+jwt:
+  secret: 60e8481da26b0bf2c0f322c89e9fb1634faee3948565be2c938edee1adc04b36
+  expiration: 86400000 # 24 hours
+  refresh-token:
+    expiration: 604800000 # 7 days
+
+security:
+  mfa:
+    issuer: Auth-Service
+    length: 6
+    validity: 30
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+    doc-expansion: none
+    disable-swagger-default-url: true
+    display-request-duration: true
+    filter: true
+  default-produces-media-type: application/json
+  show-actuator: false
+  packages-to-scan: com.hiepnh.auth_service
+
+midaz:
+  url: http://host.docker.internal:3001
+  page_size: 10
+  page_number: 1
+  organization_id: 0196b308-2cfd-74ec-9528-8e9a8834e329
+  ledger_id: 0196b30a-20e1-79be-8d3f-59c746f41461
+  transaction:
+    get_list_transactions:
+      path: /v1/organizations/{organizationId}/ledgers/{ledgerId}/transactions
+    create_transaction:
+      path: /v1/organizations/{organizationId}/ledgers/{ledgerId}/transactions/json
+
+
+
