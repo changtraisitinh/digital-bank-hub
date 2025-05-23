@@ -3,7 +3,7 @@ spring:
     name: Authentication Service
 
   datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/dibank_auth
+    url: jdbc:postgresql://host.minikube.internal:5432/dibank_auth
     username: postgres
     password: postgres
   jpa:

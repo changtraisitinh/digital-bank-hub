@@ -1,4 +1,42 @@
 HELP.md
+README.md
+LICENSE
+
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.log
+
+### Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Gradle ###
+.gradle/
+!**/src/main/**/.gradle/
+!**/src/test/**/.gradle/
+!gradle/
+!**/src/main/**/gradle/
+!**/src/test/**/gradle/
+.gradlew
+.gradlew.bat
+!**/src/main/**/.gradlew*
+!**/src/test/**/.gradlew*
+!**/src/main/**/.gradle*
+!**/src/test/**/.gradle*
+!**/src/main/**/.gradle/
+/buildSrc/build/
+/buildSrc/libs/
+/buildSrc/src/build/
+/buildSrc/src/libs/
+/buildSrc/src/main/build/
+/buildSrc/src/main/libs/
+!**/src/main/**/buildSrc/build/
+!**/src/test/**/buildSrc/build/
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar

@@ -7,6 +7,7 @@ import com.hiepnh.auth_service.domain.model.User;
 import com.hiepnh.auth_service.domain.repository.UserRepository;
 import com.hiepnh.auth_service.domain.repository.SessionRepository;
 import com.hiepnh.auth_service.infrastructure.security.JwtTokenProvider;
+import com.hiepnh.auth_service.domain.exception.AuthenticationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -61,12 +62,20 @@ public class AuthenticationService {
 
     @Transactional
     public AuthResponse login(LoginRequest request) {
-        User user = userRepository.findByEmail(request.getEmail())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userRepository.findByUsername(request.getUsername())
+                .orElseThrow(() -> new AuthenticationException(
+                    "User not found with username: " + request.getUsername(),
+                    "USER_NOT_FOUND",
+                    400
+                ));
 
         // Verify password and generate tokens
         if (!passwordEncoder.matches(request.getPassword(), user.getCredential().getPasswordHash())) {
-            throw new RuntimeException("Invalid credentials");
+            throw new AuthenticationException(
+                "Invalid username or password",
+                "INVALID_CREDENTIALS",
+                400
+            );
         }
 
         if (mfaService.isMfaEnabled(user.getId())) {
@@ -83,6 +92,7 @@ public class AuthenticationService {
                 .accessToken(accessToken)
                 .refreshToken(refreshToken)
                 .tokenType("Bearer")
+                .status(200)
                 .build();
     }
 
@@ -169,3 +179,4 @@ public class AuthenticationService {
         userRepository.save(user);
     }
 }
+

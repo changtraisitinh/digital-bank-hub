@@ -46,12 +46,10 @@ kubectl apply -f deployment/local/auth-service.yaml
 kubectl apply -f deployment/local/auth-ingress.yaml
 
 # Add local DNS entry (requires sudo)
-echo "127.0.0.1 ${SERVICE_NAME}.local" | sudo tee -a /etc/hosts
+#echo "127.0.0.1 ${SERVICE_NAME}.local" | sudo tee -a /etc/hosts
 
 # Wait for deployment
 #kubectl rollout status deployment/${SERVICE_NAME}
 
 
 # Verify port is accessible
-echo "Waiting for service to be accessible..."
-timeout 30 bash -c 'until curl -s http://localhost:8004 > /dev/null; do sleep 1; done' || echo "Service not responding on port 8004"

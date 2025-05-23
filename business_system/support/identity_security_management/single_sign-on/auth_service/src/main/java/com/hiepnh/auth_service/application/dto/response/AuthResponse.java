@@ -11,4 +11,5 @@ public class AuthResponse {
     private String tokenType;
     private boolean mfaRequired;
     private String mfaToken;
+    private int status;
 }

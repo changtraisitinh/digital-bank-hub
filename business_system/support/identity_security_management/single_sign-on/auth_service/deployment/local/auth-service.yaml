@@ -3,6 +3,9 @@ kind: Service
 metadata:
   name: dibank-auth-service
   namespace: default
+  labels:
+    app: dibank-auth-service
+    group: dibank
 spec:
   type: NodePort
   ports:
@@ -12,3 +15,4 @@ spec:
       protocol: TCP
   selector:
     app: dibank-auth-service
+    group: dibank

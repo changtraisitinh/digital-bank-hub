@@ -32,14 +32,16 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/**").permitAll()
-                        .requestMatchers("/swagger-ui/**").permitAll()
-                        .requestMatchers("/api-docs/**").permitAll()
-                        .requestMatchers("/swagger-ui.html").permitAll()
-                        .requestMatchers("/v3/api-docs/**").permitAll()
+                        .requestMatchers("/auth/api/v1/auth/**").permitAll()
+                        .requestMatchers("/auth/swagger-ui/**").permitAll()
+                        .requestMatchers("/auth/api-docs/**").permitAll()
+                        .requestMatchers("/auth/swagger-ui.html").permitAll()
+                        .requestMatchers("/auth/v3/api-docs/**").permitAll()
+                        .requestMatchers("/**").permitAll()
                         .anyRequest().authenticated()
                 );
 
         return http.build();
     }
 }
+

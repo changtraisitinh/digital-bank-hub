@@ -1,0 +1,149 @@
+2025-05-19 09:39:40.719 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 26393 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
+2025-05-19 09:39:40.720 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 09:39:40.721 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 09:39:41.161 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
+2025-05-19 09:39:41.168 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2025-05-19 09:39:41.169 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 09:39:41.169 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 09:39:41.190 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 09:39:41.190 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 450 ms
+2025-05-19 09:39:41.365 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2025-05-19 09:39:41.373 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
+2025-05-19 09:39:41.378 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.926 seconds (process running for 6.467)
+2025-05-19 09:43:58.618 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 09:43:58.619 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 09:43:58.622 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-05-19 09:43:58.699 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 09:43:58.708 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 09:43:58.717 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 09:43:58.750 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 09:43:58.751 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 09:43:58.753 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@6ffc480d
+2025-05-19 10:33:57.468 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 10:33:57.477 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 10:33:57.481 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 10:33:57.559 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 10:33:57.560 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 10:33:57.565 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@3911e684
+2025-05-19 14:32:40.719 [http-nio-8001-exec-4] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:32:40.726 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:32:40.728 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:32:40.745 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:32:40.747 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:32:40.749 [http-nio-8001-exec-4] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@6d211eca
+2025-05-19 14:40:50.465 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:40:50.467 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:40:50.467 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:40:50.484 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:40:50.485 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:40:50.488 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@56b11168
+2025-05-19 14:41:58.693 [http-nio-8001-exec-6] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:41:58.694 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:41:58.695 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:41:58.703 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:41:58.703 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:41:58.705 [http-nio-8001-exec-6] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@64a86e92
+2025-05-19 14:44:11.622 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:11.628 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:11.629 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:44:11.648 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:44:11.649 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:44:11.652 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@7b608e5
+2025-05-19 14:44:15.184 [http-nio-8001-exec-8] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:15.185 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:15.185 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:44:15.195 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:44:15.196 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:44:15.197 [http-nio-8001-exec-8] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@1b4e2550
+2025-05-19 14:44:24.955 [http-nio-8001-exec-9] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:24.960 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:24.964 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:44:24.968 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:44:24.968 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:44:24.969 [http-nio-8001-exec-9] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@44528d57
+2025-05-19 14:44:35.776 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:35.777 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:35.777 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:44:35.782 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:44:35.782 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:44:35.782 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@5188de46
+2025-05-19 14:44:53.832 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:53.834 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:53.834 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:44:53.842 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:44:53.842 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:44:53.843 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@49e0026c
+2025-05-19 14:44:58.273 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:58.274 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:44:58.274 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:44:58.280 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:44:58.281 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:44:58.282 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@4078e872
+2025-05-19 14:48:14.845 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:48:14.847 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:48:14.847 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:48:14.857 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:48:14.857 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:48:14.858 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@138895f0
+2025-05-19 14:50:01.265 [http-nio-8001-exec-4] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:50:01.267 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:50:01.268 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:50:01.287 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:50:01.288 [http-nio-8001-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:50:01.289 [http-nio-8001-exec-4] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@63e6ed1e
+2025-05-19 14:53:45.217 [http-nio-8001-exec-6] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:45.217 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:45.221 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:45.222 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:45.222 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:53:45.223 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:53:45.236 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:53:45.237 [http-nio-8001-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:53:45.236 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:53:45.238 [http-nio-8001-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:53:45.239 [http-nio-8001-exec-5] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@5876e5ce
+2025-05-19 14:53:45.241 [http-nio-8001-exec-6] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@6a6f9c77
+2025-05-19 14:53:48.916 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:48.917 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:48.917 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:53:48.917 [http-nio-8001-exec-8] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:48.918 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:53:48.918 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:53:48.923 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:53:48.924 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:53:48.924 [http-nio-8001-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:53:48.924 [http-nio-8001-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:53:48.924 [http-nio-8001-exec-8] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@11b64e20
+2025-05-19 14:53:48.926 [http-nio-8001-exec-7] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@971f663
+2025-05-19 14:59:22.935 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:59:22.935 [http-nio-8001-exec-9] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:59:22.937 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:59:22.937 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 14:59:22.937 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:59:22.937 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:59:22.950 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:59:22.950 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 14:59:22.950 [http-nio-8001-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:59:22.950 [http-nio-8001-exec-9] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 14:59:22.951 [http-nio-8001-exec-10] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@5f4f3a07
+2025-05-19 14:59:22.951 [http-nio-8001-exec-9] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@4a956bad
+2025-05-19 15:44:19.974 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 15:44:19.984 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 15:44:19.987 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 15:44:20.024 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 15:44:20.024 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 15:44:20.028 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@79aa4510
+2025-05-19 16:25:35.776 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 16:25:35.778 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 16:25:35.778 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 16:25:35.803 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 16:25:35.804 [http-nio-8001-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 16:25:35.807 [http-nio-8001-exec-2] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@382ec437
+2025-05-19 17:12:51.278 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 17:12:51.281 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
+2025-05-19 17:12:51.282 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 17:12:51.314 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 17:12:51.315 [http-nio-8001-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
+2025-05-19 17:12:51.316 [http-nio-8001-exec-3] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@1d4f79f1
+2025-05-19 17:13:50.121 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 17:13:50.134 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

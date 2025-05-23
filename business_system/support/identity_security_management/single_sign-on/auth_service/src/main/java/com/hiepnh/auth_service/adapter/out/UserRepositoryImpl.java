@@ -26,6 +26,12 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
+    public Optional<User> findByUsername(String username) {
+        return jpaRepository.findByUsername(username)
+                .map(mapper::toUser);
+    }
+
+    @Override
     @Transactional
     public User save(User user) {
         UserEntity entity = mapper.toUserEntity(user);
@@ -74,4 +80,5 @@ public class UserRepositoryImpl implements UserRepository {
 @Repository
 interface UserJpaRepository extends JpaRepository<UserEntity, UUID> {
     Optional<UserEntity> findByEmail(String email);
+    Optional<UserEntity> findByUsername(String username);
 }

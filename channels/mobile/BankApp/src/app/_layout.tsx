@@ -31,51 +31,15 @@ SplashScreen.setOptions({
   fade: true,
 });
 
-const firebaseConfig = {
-  // Your Firebase configuration object
-  // This should come from your Firebase Console
-  apiKey: 'AIzaSyCRFCyt9_G6_NimvmvaFy1KA6IX62fS_4c',
-  authDomain: 'dibankapp.firebaseapp.com',
-  projectId: 'dibankapp',
-  storageBucket: 'dibankapp.firebasestorage.app',
-  messagingSenderId: '173595877623',
-  appId: '1:173595877623:web:eb0fbcb68d1756256a33f2',
-  measurementId: 'G-2X367W6YBM',
-};
-
-// Initialize Firebase at the app startup using the new modular API
-// const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-// const messaging = getMessaging(app);
-
 export default function RootLayout() {
-  // useEffect(() => {
-  //   // Request permission for notifications
-  //   const requestUserPermission = async () => {
-  //     const authStatus = await requestPermission();
-  //     const enabled =
-  //       authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-  //       authStatus === messaging.AuthorizationStatus.PROVISIONAL;
-
-  //     if (enabled) {
-  //       // Get FCM token using the new modular API
-  //       const token = await getToken(messaging);
-  //       console.log('FCM Token:', token);
-  //       // Here you would typically send this token to your backend
-  //     }
-  //   };
-
-  //   // Handle notifications when app is in foreground using the new modular API
-  //   const unsubscribe = onMessage(messaging, async (remoteMessage) => {
-  //     Alert.alert(
-  //       remoteMessage.notification?.title || 'New Message',
-  //       remoteMessage.notification?.body
-  //     );
-  //   });
-
-  //   requestUserPermission();
-
-  //   return unsubscribe;
-  // }, []);
+  React.useEffect(() => {
+    // Keep the splash screen visible while we fetch resources
+    SplashScreen.preventAutoHideAsync();
+    // Hide the splash screen once data is loaded
+    setTimeout(() => {
+      SplashScreen.hideAsync();
+    }, 500);
+  });
 
   return (
     <Providers>

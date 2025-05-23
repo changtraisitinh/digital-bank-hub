@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components */
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
-import { Redirect, router, SplashScreen, Tabs, useRouter } from 'expo-router';
+import { Redirect, SplashScreen, Tabs, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 
@@ -13,7 +13,6 @@ import {
   Transfer as TransferIcon,
 } from '@/components/ui/icons';
 import { useAuth, useIsFirstTime } from '@/lib';
-import { notificationService } from '@/lib/notification-service';
 
 export default function TabLayout() {
   const router = useRouter();
@@ -247,30 +246,3 @@ export default function TabLayout() {
 //     </Link>
 //   );
 // };
-
-useEffect(() => {
-  // Initialize notifications
-  const initNotifications = async () => {
-    await notificationService.initialize();
-
-    // Handle notification opened app
-    notificationService.onNotificationOpenedApp((remoteMessage) => {
-      console.log('Notification caused app to open:', remoteMessage);
-      // Handle navigation based on notification
-      if (remoteMessage.data?.screen) {
-        router.push(remoteMessage.data.screen);
-      }
-    });
-
-    // Check if app was opened from notification
-    notificationService.getInitialNotification((remoteMessage) => {
-      console.log('App opened from quit state:', remoteMessage);
-      // Handle navigation based on notification
-      if (remoteMessage.data?.screen) {
-        router.push(remoteMessage.data.screen);
-      }
-    });
-  };
-
-  initNotifications();
-}, [router]);
