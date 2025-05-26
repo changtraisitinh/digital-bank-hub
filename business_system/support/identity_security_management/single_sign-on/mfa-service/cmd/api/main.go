@@ -20,7 +20,7 @@ import (
 )
 
 const (
-	defaultPort     = ":8000"
+	defaultPort     = ":8100"
 	readTimeout     = 10 * time.Second
 	writeTimeout    = 10 * time.Second
 	shutdownTimeout = 15 * time.Second

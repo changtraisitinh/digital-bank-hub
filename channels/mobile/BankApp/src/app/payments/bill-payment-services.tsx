@@ -53,8 +53,18 @@ export default function BillPaymentServices() {
   };
 
   const handlePayBill = (billId: string) => {
-    // Implement bill payment
-    router.push(`/payments/pay-bill/${billId}`);
+    console.log('billId', billId);
+    const category = billCategories.find((cat) => cat.id === billId);
+
+    console.log('category', category);
+
+    if (category) {
+      const serviceName = category.name.toLowerCase();
+      router.push(`/payments/services/${serviceName}`);
+    } else {
+      // Handle unknown category
+      alert('Unknown bill category');
+    }
   };
 
   return (
@@ -99,7 +109,10 @@ export default function BillPaymentServices() {
               <TouchableOpacity
                 key={category.id}
                 style={styles.categoryItem}
-                onPress={() => router.push(`/payments/category/${category.id}`)}
+                onPress={() => {
+                  const serviceName = category.name.toLowerCase();
+                  router.push(`/payments/services/${serviceName}`);
+                }}
               >
                 <View style={styles.categoryIcon}>
                   <Text style={styles.categoryIconText}>{category.icon}</Text>

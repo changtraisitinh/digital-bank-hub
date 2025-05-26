@@ -1,21 +1,29 @@
-2025-05-23 15:17:50.312 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 76653 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-23 15:17:50.315 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-23 15:17:50.315 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-23 15:17:50.771 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
-2025-05-23 15:17:50.779 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
-2025-05-23 15:17:50.780 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-23 15:17:50.780 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-23 15:17:50.802 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-23 15:17:50.803 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 467 ms
-2025-05-23 15:17:50.995 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
-2025-05-23 15:17:51.003 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8001 (http) with context path '/'
-2025-05-23 15:17:51.008 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.969 seconds (process running for 6.464)
-2025-05-23 15:24:59.333 [http-nio-8001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-23 15:24:59.334 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-23 15:24:59.336 [http-nio-8001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2025-05-23 15:24:59.406 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Fetching accounts from URL: http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-23 15:24:59.417 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP GET http://127.0.0.1:3000/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/accounts?page=1&limit=10
-2025-05-23 15:24:59.428 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-23 15:24:59.549 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-23 15:24:59.550 [http-nio-8001-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.account_service.domain.entity.AccountResponseWrapper]
-2025-05-23 15:24:59.553 [http-nio-8001-exec-1] INFO  c.h.a.a.gateway.CoreBankingGateway - Response received: com.hiepnh.account_service.domain.entity.AccountResponseWrapper@56093d95
+2025-05-26 10:25:18.089 [http-nio-8001-Acceptor] ERROR o.apache.tomcat.util.net.NioEndpoint - Error setting socket options
+java.net.SocketException: Invalid argument
+	at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
+	at java.base/sun.nio.ch.Net.setSocketOption(Net.java:447)
+	at java.base/sun.nio.ch.Net.setSocketOption(Net.java:385)
+	at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:287)
+	at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:212)
+	at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:250)
+	at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:215)
+	at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:474)
+	at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:72)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:148)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-26 10:27:55.959 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 85645 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
+2025-05-26 10:27:55.959 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-26 10:27:55.960 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 10:27:56.381 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8101 (http)
+2025-05-26 10:27:56.387 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
+2025-05-26 10:27:56.388 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 10:27:56.388 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-26 10:27:56.409 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 10:27:56.409 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 430 ms
+2025-05-26 10:27:56.594 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
+2025-05-26 10:27:56.601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8101 (http) with context path '/'
+2025-05-26 10:27:56.606 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.926 seconds (process running for 6.633)
+2025-05-26 10:39:34.201 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 10:39:34.212 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-26 10:42:59.487 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-26 10:42:59.521 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

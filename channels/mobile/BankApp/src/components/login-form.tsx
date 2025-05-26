@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import { KeyboardAvoidingView, TouchableOpacity } from 'react-native';
+import { Animated, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
 import * as z from 'zod';
 
 import { Button, ControlledInput, Text, View } from '@/components/ui';
@@ -37,6 +37,43 @@ export const LoginForm = ({ onSubmit = () => {} }: LoginFormProps) => {
     resolver: zodResolver(schema),
   });
   const [showPassword, setShowPassword] = useState(false);
+  const [loginAttempts, setLoginAttempts] = useState(0);
+  const [errorShake] = useState(new Animated.Value(0));
+
+  const handleLoginAttempt: SubmitHandler<FormType> = async (data) => {
+    try {
+      await onSubmit(data);
+    } catch (error) {
+      setLoginAttempts((prev) => prev + 1);
+      // Trigger shake animation
+      Animated.sequence([
+        Animated.timing(errorShake, {
+          toValue: 10,
+          duration: 100,
+          useNativeDriver: true,
+        }),
+        Animated.timing(errorShake, {
+          toValue: -10,
+          duration: 100,
+          useNativeDriver: true,
+        }),
+        Animated.timing(errorShake, {
+          toValue: 0,
+          duration: 100,
+          useNativeDriver: true,
+        }),
+      ]).start();
+    }
+  };
+
+  const getErrorMessage = () => {
+    if (loginAttempts === 0) return '';
+    if (loginAttempts === 1)
+      return 'Incorrect username or password. Please try again.';
+    if (loginAttempts === 2)
+      return 'Invalid login attempt. You have 1 attempt left before your account is temporarily locked.';
+    return 'This is your last attempt. Your account will be locked for 15 minutes after the next failed attempt.';
+  };
 
   return (
     <KeyboardAvoidingView
@@ -55,7 +92,27 @@ export const LoginForm = ({ onSubmit = () => {} }: LoginFormProps) => {
           </Text>
         </View>
 
-        <View className="space-y-4">
+        <Animated.View
+          style={{
+            transform: [{ translateX: errorShake }],
+          }}
+          className="space-y-4"
+        >
+          {loginAttempts > 0 && (
+            <View className="mb-4 rounded-lg border border-red-200 bg-red-50 p-4">
+              <Text className="flex-row items-center font-medium text-red-700">
+                🔒 {getErrorMessage()}
+              </Text>
+              {loginAttempts >= 2 && (
+                <TouchableOpacity className="mt-2">
+                  <Text className="text-primary font-medium">
+                    Use Biometric Login
+                  </Text>
+                </TouchableOpacity>
+              )}
+            </View>
+          )}
+
           <ControlledInput
             testID="username-input"
             control={control}
@@ -71,7 +128,7 @@ export const LoginForm = ({ onSubmit = () => {} }: LoginFormProps) => {
             control={control}
             name="password"
             label="Password"
-            placeholder="Enter your password"
+            placeholder="••••••••"
             secureTextEntry={!showPassword}
             autoCapitalize="none"
             autoCorrect={false}
@@ -94,10 +151,10 @@ export const LoginForm = ({ onSubmit = () => {} }: LoginFormProps) => {
           <Button
             testID="login-button"
             label="Sign In"
-            onPress={handleSubmit(onSubmit)}
+            onPress={handleSubmit(handleLoginAttempt)}
             className="mt-6"
           />
-        </View>
+        </Animated.View>
       </View>
     </KeyboardAvoidingView>
   );

@@ -1,0 +1,577 @@
+2025-05-19 09:40:16.477 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 26490 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 09:40:16.478 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 09:40:16.478 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 09:40:16.920 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 09:40:16.927 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 09:40:16.928 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 09:40:16.928 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 09:40:16.948 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 09:40:16.948 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 450 ms
+2025-05-19 09:40:17.155 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 09:40:17.163 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 09:40:17.168 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.958 seconds (process running for 6.5)
+2025-05-19 13:57:38.555 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 13:57:38.559 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 13:57:38.573 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2025-05-19 13:57:38.685 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 13:57:38.702 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 13:57:38.718 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:57:38.722 [http-nio-8002-exec-1] ERROR c.h.t.a.gateway.CoreBankingGateway - Error while fetching transactions: No HttpMessageConverter for com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO
+2025-05-19 13:57:38.727 [http-nio-8002-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch transactions due to a client error.
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:66)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:01:04.243 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:01:04.246 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:01:04.247 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:01:04.248 [http-nio-8002-exec-2] ERROR c.h.t.a.gateway.CoreBankingGateway - Error while fetching transactions: No HttpMessageConverter for com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO
+2025-05-19 14:01:04.252 [http-nio-8002-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch transactions due to a client error.
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:66)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:01:04.307 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:01:04.315 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:01:17.503 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 87437 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:01:17.503 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:01:17.504 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:01:17.938 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:01:17.944 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:01:17.945 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:01:17.945 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:01:17.964 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:01:17.964 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 441 ms
+2025-05-19 14:01:18.140 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:01:18.149 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:01:18.154 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.931 seconds (process running for 7.24)
+2025-05-19 14:07:24.630 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:07:24.639 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:07:36.636 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 92541 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:07:36.637 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:07:36.637 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:07:37.078 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:07:37.086 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:07:37.087 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:07:37.087 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:07:37.108 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:07:37.108 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 452 ms
+2025-05-19 14:07:37.303 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:07:37.311 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:07:37.317 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.935 seconds (process running for 6.472)
+2025-05-19 14:07:48.437 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 14:07:48.437 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 14:07:48.438 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-19 14:07:52.087 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:07:52.089 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@3b08e4b0
+2025-05-19 14:07:52.096 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:07:52.107 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:07:52.111 [http-nio-8002-exec-1] ERROR c.h.t.a.gateway.CoreBankingGateway - Error while fetching transactions: No HttpMessageConverter for com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO
+2025-05-19 14:07:52.115 [http-nio-8002-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions due to a client error.] with root cause
+java.lang.RuntimeException: Failed to fetch transactions due to a client error.
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:68)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:09:02.098 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:09:02.111 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:09:14.044 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 92799 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:09:14.045 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:09:14.045 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:09:14.480 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:09:14.486 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:09:14.487 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:09:14.487 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:09:14.507 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:09:14.507 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 444 ms
+2025-05-19 14:09:14.687 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:09:14.695 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:09:14.700 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.921 seconds (process running for 6.409)
+2025-05-19 14:11:38.653 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:11:38.661 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:11:50.573 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 93370 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:11:50.574 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:11:50.574 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:11:50.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:11:50.993 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:11:50.994 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:11:50.994 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:11:51.014 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:11:51.015 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 423 ms
+2025-05-19 14:11:51.206 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:11:51.214 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:11:51.218 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.897 seconds (process running for 6.392)
+2025-05-19 14:11:53.876 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 14:11:53.876 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 14:11:53.876 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-19 14:11:53.925 [http-nio-8002-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.hiepnh.transaction_service.domain.model.create_transaction.From` from Array value (token `JsonToken.START_ARRAY`)]
+2025-05-19 14:12:53.774 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:12:53.803 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:13:05.806 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 93564 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:13:05.807 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:13:05.807 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:13:06.221 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:13:06.227 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:13:06.228 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:13:06.228 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:13:06.246 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:13:06.247 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 417 ms
+2025-05-19 14:13:06.420 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:13:06.427 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:13:06.432 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.873 seconds (process running for 6.486)
+2025-05-19 14:13:10.218 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 14:13:10.218 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 14:13:10.219 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-19 14:13:12.443 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:13:12.455 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"chartOfAccountsGroupName":null,"description":"chuyen tien 2","metadata":null,"send":{"scale":"0","value":"100000","asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":"0","value":"100000","asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":"0","value":"100000","asset":"Customer"}}]}}}
+2025-05-19 14:13:12.463 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:13:12.472 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:13:12.473 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@221bee86] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:13:12.489 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-19 14:13:12.493 [http-nio-8002-exec-1] ERROR c.h.t.a.gateway.CoreBankingGateway - HTTP error while fetching transactions: 400 Bad Request on POST request for "http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json": "{"title":"Unmarshalling error","message":"invalid value for field 'send.scale': expected type 'int64', but got 'string'","code":"0094"}"
+2025-05-19 14:13:12.497 [http-nio-8002-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:67)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:18:29.761 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:18:29.767 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:18:41.719 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 94206 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:18:41.720 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:18:41.721 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:18:42.139 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:18:42.146 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:18:42.147 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:18:42.147 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:18:42.169 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:18:42.169 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 431 ms
+2025-05-19 14:18:42.366 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:18:42.373 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:18:42.377 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.905 seconds (process running for 6.417)
+2025-05-19 14:18:45.839 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 14:18:45.839 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 14:18:45.840 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-19 14:18:47.777 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:18:47.790 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"chartOfAccountsGroupName":null,"description":"chuyen tien 2","metadata":null,"send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":"0","value":"100000","asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":"0","value":"100000","asset":"Customer"}}]}}}
+2025-05-19 14:18:47.804 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:18:47.810 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:18:47.811 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@7c368995] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:18:47.826 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-19 14:18:47.829 [http-nio-8002-exec-1] ERROR c.h.t.a.gateway.CoreBankingGateway - HTTP error while fetching transactions: 400 Bad Request on POST request for "http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json": "{"title":"Unmarshalling error","message":"invalid value for field 'send.source.from.amount.scale': expected type 'int64', but got 'string'","code":"0094"}"
+2025-05-19 14:18:47.833 [http-nio-8002-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:67)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:19:18.412 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:19:18.416 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:19:30.333 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 94355 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:19:30.334 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:19:30.335 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:19:30.743 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:19:30.749 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:19:30.750 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:19:30.750 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:19:30.769 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:19:30.769 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 417 ms
+2025-05-19 14:19:30.938 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:19:30.945 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:19:30.950 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.872 seconds (process running for 6.367)
+2025-05-19 14:19:33.587 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 14:19:33.587 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 14:19:33.588 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-19 14:19:35.135 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:19:35.148 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"chartOfAccountsGroupName":null,"description":"chuyen tien 2","metadata":null,"send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":100000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":100000,"asset":"Customer"}}]}}}
+2025-05-19 14:19:35.157 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:19:35.165 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:19:35.166 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@49e5eac6] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:19:35.180 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-19 14:19:35.183 [http-nio-8002-exec-1] ERROR c.h.t.a.gateway.CoreBankingGateway - HTTP error while fetching transactions: 400 Bad Request on POST request for "http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json": "{"title":"Unexpected Fields in the Request","message":"The request body contains more fields than expected. Please send only the allowed fields as per the documentation. The unexpected fields are listed in the fields object.","code":"0053","fields":{"chartOfAccountsGroupName":null}}"
+2025-05-19 14:19:35.187 [http-nio-8002-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:67)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:20:33.673 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 14:20:33.679 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-19 14:20:45.687 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 94533 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-05-19 14:20:45.688 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-19 14:20:45.688 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 14:20:46.093 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
+2025-05-19 14:20:46.100 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:20:46.101 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 14:20:46.101 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-19 14:20:46.122 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 14:20:46.123 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 417 ms
+2025-05-19 14:20:46.300 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
+2025-05-19 14:20:46.307 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
+2025-05-19 14:20:46.311 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.873 seconds (process running for 6.366)
+2025-05-19 14:21:00.398 [http-nio-8002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 14:21:00.398 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 14:21:00.399 [http-nio-8002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-19 14:21:06.726 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:21:06.740 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":"chuyen tien 2","send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":100000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":100000,"asset":"Customer"}}]}}}
+2025-05-19 14:21:06.749 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:21:06.757 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:21:06.757 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@246babd8] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:21:06.802 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Response 201 CREATED
+2025-05-19 14:21:06.803 [http-nio-8002-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.transaction_service.domain.entity.TransactionCreateResponseWrapper]
+2025-05-19 14:21:06.808 [http-nio-8002-exec-1] INFO  c.h.t.a.gateway.CoreBankingGateway - Response received: {"id":"0196e76a-eded-7e36-9ccd-bb1470c8aedd","description":"chuyen tien 2","template":"","status":{"code":"CREATED","description":"CREATED"},"amount":"100000","amountScale":"0","assetCode":"VND","chartOfAccountsGroupName":"","source":["@hiepnh"],"destination":["@thuydt"],"pledgeId":null,"organizationId":"0196b308-2cfd-74ec-9528-8e9a8834e329","createdAt":"2025-05-19T07:21:06.797931917Z","updatedAt":"2025-05-19T07:21:06.797931959Z","deletedAt":null,"from":null,"to":null,"asset":null,"fee":null,"scale":null,"value":null,"hash":null,"errorMessage":null}
+2025-05-19 14:32:56.305 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:32:56.310 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":"chuyen tien 2","send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":100000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":100000,"asset":"Customer"}}]}}}
+2025-05-19 14:32:56.311 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:32:56.311 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:32:56.311 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@72bfb3e1] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:32:56.324 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Response 201 CREATED
+2025-05-19 14:32:56.325 [http-nio-8002-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.transaction_service.domain.entity.TransactionCreateResponseWrapper]
+2025-05-19 14:32:56.330 [http-nio-8002-exec-2] INFO  c.h.t.a.gateway.CoreBankingGateway - Response received: {"id":"0196e775-c182-7a54-893e-f4a8a3c40540","description":"chuyen tien 2","template":"","status":{"code":"CREATED","description":"CREATED"},"amount":"100000","amountScale":"0","assetCode":"VND","chartOfAccountsGroupName":"","source":["@hiepnh"],"destination":["@thuydt"],"pledgeId":null,"organizationId":"0196b308-2cfd-74ec-9528-8e9a8834e329","createdAt":"2025-05-19T07:32:56.322677593Z","updatedAt":"2025-05-19T07:32:56.322677635Z","deletedAt":null,"from":null,"to":null,"asset":null,"fee":null,"scale":null,"value":null,"hash":null,"errorMessage":null}
+2025-05-19 14:48:39.543 [http-nio-8002-exec-3] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:48:39.544 [http-nio-8002-exec-3] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":null,"send":{"scale":0,"value":100000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":100000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":100000,"asset":"Customer"}}]}}}
+2025-05-19 14:48:39.545 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:48:39.546 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:48:39.546 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@2932e3d8] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:48:39.551 [http-nio-8002-exec-3] DEBUG o.s.web.client.RestTemplate - Response 400 BAD_REQUEST
+2025-05-19 14:48:39.560 [http-nio-8002-exec-3] ERROR c.h.t.a.gateway.CoreBankingGateway - HTTP error while fetching transactions: 400 Bad Request on POST request for "http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json": "{"title":"Unexpected Fields in the Request","message":"The request body contains more fields than expected. Please send only the allowed fields as per the documentation. The unexpected fields are listed in the fields object.","code":"0053","fields":{"description":null}}"
+2025-05-19 14:48:39.569 [http-nio-8002-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST] with root cause
+java.lang.RuntimeException: Failed to fetch transactions: 400 BAD_REQUEST
+	at com.hiepnh.transaction_service.adapter.gateway.CoreBankingGateway.createTransaction(CoreBankingGateway.java:67)
+	at com.hiepnh.transaction_service.adapter.controller.TransactionController.createTransaction(TransactionController.java:32)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-19 14:50:20.695 [http-nio-8002-exec-4] INFO  c.h.t.a.gateway.CoreBankingGateway - Fetching transactions from URL: http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:50:20.697 [http-nio-8002-exec-4] INFO  c.h.t.a.gateway.CoreBankingGateway - Request body: {"description":"Chuyện tiền ","send":{"scale":0,"value":1000,"asset":"VND","source":{"from":[{"account":"@hiepnh","amount":{"scale":0,"value":1000,"asset":"Customer"}}]},"distribute":{"to":[{"account":"@thuydt","amount":{"scale":0,"value":1000,"asset":"Customer"}}]}}}
+2025-05-19 14:50:20.699 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST http://127.0.0.1:3001/v1/organizations/0196b308-2cfd-74ec-9528-8e9a8834e329/ledgers/0196b30a-20e1-79be-8d3f-59c746f41461/transactions/json
+2025-05-19 14:50:20.699 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 14:50:20.700 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [com.hiepnh.transaction_service.application.usecase.dto.TransactionCreateRequestDTO@796b8697] with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-05-19 14:50:20.721 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Response 201 CREATED
+2025-05-19 14:50:20.721 [http-nio-8002-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [com.hiepnh.transaction_service.domain.entity.TransactionCreateResponseWrapper]
+2025-05-19 14:50:20.726 [http-nio-8002-exec-4] INFO  c.h.t.a.gateway.CoreBankingGateway - Response received: {"id":"0196e785-b123-7b89-a6ef-ed67322bf0df","description":"Chuyện tiền ","template":"","status":{"code":"CREATED","description":"CREATED"},"amount":"1000","amountScale":"0","assetCode":"VND","chartOfAccountsGroupName":"","source":["@hiepnh"],"destination":["@thuydt"],"pledgeId":null,"organizationId":"0196b308-2cfd-74ec-9528-8e9a8834e329","createdAt":"2025-05-19T07:50:20.70775684Z","updatedAt":"2025-05-19T07:50:20.707756923Z","deletedAt":null,"from":null,"to":null,"asset":null,"fee":null,"scale":null,"value":null,"hash":null,"errorMessage":null}
+2025-05-19 17:13:39.715 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-19 17:13:39.726 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

@@ -8,6 +8,16 @@ import { type SignUp } from './types';
 
 type Variables = {
   username: string;
+  email: string;
+  password: string;
+  fullName: string;
+  phone: string;
+  address: string;
+  dob: string;
+  gender: string;
+  avatarUrl: string;
+  nationality: string;
+  occupation: string;
 };
 type Response = SignUp;
 
@@ -28,7 +38,7 @@ export const useSignUp = createMutation<Response, Variables, AxiosError>({
   mutationFn: async (variables) => {
     // Updated mutationFn with logging and Env.API_URL
     const requestConfig = {
-      url: Env.API_URL + 'transaction/api/v1/transactions/create', // Used Env.API_URL
+      url: Env.API_URL + 'authapi/v1/auth/register', // Used Env.API_URL
       method: 'POST',
       data: variables,
     };

@@ -47,6 +47,7 @@
     "@expo/metro-runtime": "^4.0.1",
     "@gorhom/bottom-sheet": "^5.0.5",
     "@hookform/resolvers": "^3.9.0",
+    "@react-native-picker/picker": "^2.11.0",
     "@shopify/flash-list": "1.7.1",
     "@tanstack/react-query": "^5.52.1",
     "app-icon-badge": "^0.1.2",

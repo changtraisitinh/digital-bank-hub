@@ -8,7 +8,9 @@ import com.hiepnh.auth_service.domain.repository.UserRepository;
 import com.hiepnh.auth_service.domain.repository.SessionRepository;
 import com.hiepnh.auth_service.infrastructure.security.JwtTokenProvider;
 import com.hiepnh.auth_service.domain.exception.AuthenticationException;
+import com.hiepnh.auth_service.infrastructure.utils.LogUtils;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.event.Level;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -26,6 +28,7 @@ public class AuthenticationService {
     private final JwtTokenProvider jwtTokenProvider;
     private final AuthenticationManager authenticationManager;
     private final MfaService mfaService;
+
 
     @Transactional
     public AuthResponse register(RegisterRequest request) {
@@ -62,38 +65,55 @@ public class AuthenticationService {
 
     @Transactional
     public AuthResponse login(LoginRequest request) {
-        User user = userRepository.findByUsername(request.getUsername())
-                .orElseThrow(() -> new AuthenticationException(
-                    "User not found with username: " + request.getUsername(),
-                    "USER_NOT_FOUND",
-                    400
-                ));
 
-        // Verify password and generate tokens
-        if (!passwordEncoder.matches(request.getPassword(), user.getCredential().getPasswordHash())) {
-            throw new AuthenticationException(
-                "Invalid username or password",
-                "INVALID_CREDENTIALS",
-                400
-            );
-        }
+        LogUtils.log(this.getClass(), Level.INFO, "LOGIN_ATTEMPT",
+                "Login attempt for username: " + request.getUsername());
 
-        if (mfaService.isMfaEnabled(user.getId())) {
+        try {
+            User user = userRepository.findByUsername(request.getUsername())
+                    .orElseThrow(() -> new AuthenticationException(
+                            "User not found with username: " + request.getUsername(),
+                            "USER_NOT_FOUND",
+                            400
+                    ));
+
+            // Verify password and generate tokens
+            if (!passwordEncoder.matches(request.getPassword(), user.getCredential().getPasswordHash())) {
+                LogUtils.log(this.getClass(), Level.WARN, "LOGIN_FAILED",
+                        "Invalid credentials for username: " + request.getUsername());
+                throw new AuthenticationException(
+                        "Invalid username or password",
+                        "INVALID_CREDENTIALS",
+                        400
+                );
+            }
+
+            if (mfaService.isMfaEnabled(user.getId())) {
+                LogUtils.log(this.getClass(), Level.INFO, "MFA_REQUIRED",
+                        "MFA required for user: " + user.getUsername());
+                return AuthResponse.builder()
+                        .mfaRequired(true)
+                        .mfaToken(mfaService.generateMfaToken(user))
+                        .build();
+            }
+
+            String accessToken = jwtTokenProvider.generateToken(user);
+            String refreshToken = jwtTokenProvider.generateRefreshToken(user);
+
+            LogUtils.log(this.getClass(), Level.INFO, "LOGIN_SUCCESS",
+                    "Successful login for user: " + user.getUsername());
+
             return AuthResponse.builder()
-                    .mfaRequired(true)
-                    .mfaToken(mfaService.generateMfaToken(user))
+                    .accessToken(accessToken)
+                    .refreshToken(refreshToken)
+                    .tokenType("Bearer")
+                    .status(200)
                     .build();
+
+        } catch (Exception e) {
+            LogUtils.logError(this.getClass(), "LOGIN_ERROR", "Authentication failed", e);
+            throw e;
         }
-
-        String accessToken = jwtTokenProvider.generateToken(user);
-        String refreshToken = jwtTokenProvider.generateRefreshToken(user);
-
-        return AuthResponse.builder()
-                .accessToken(accessToken)
-                .refreshToken(refreshToken)
-                .tokenType("Bearer")
-                .status(200)
-                .build();
     }
 
     @Transactional

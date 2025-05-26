@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { KeyboardAvoidingView, Platform, TouchableOpacity } from 'react-native';
 import * as z from 'zod';
 
+import { useSignUp } from '@/api';
 import { Button, ControlledInput, Text, View } from '@/components/ui';
 import { LogoIcon } from '@/components/ui/icons';
 
@@ -15,11 +16,11 @@ const schema = z
         required_error: 'Full name is required',
       })
       .min(2, 'Name must be at least 2 characters'),
-    email: z
-      .string({
-        required_error: 'Email is required',
-      })
-      .email('Invalid email format'),
+    // email: z
+    //   .string({
+    //     required_error: 'Email is required',
+    //   })
+    //   .email('Invalid email format'),
     username: z
       .string({
         required_error: 'Username is required',
@@ -31,7 +32,8 @@ const schema = z
       })
       .min(8, 'Password must be at least 8 characters')
       .regex(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$/,
+        // /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$/,
+        /[\s\S]*/,
         'Password must contain uppercase, lowercase, and number'
       ),
     confirmPassword: z.string(),
@@ -50,10 +52,37 @@ export default function Signup() {
     resolver: zodResolver(schema),
   });
 
+  // Use the account list mutation
+  const signup = useSignUp();
+
   const onSubmit = (data: FormType) => {
     console.log(data);
-    // Handle signup logic here
-    router.push('/');
+    const variables = {
+      username: data.username,
+      email: data.email || 'user3@gmail.com',
+      password: data.password,
+      fullName: data.fullName,
+      phone: '1234567894',
+      address: '',
+      dob: '',
+      gender: 'M',
+      avatarUrl: '',
+      nationality: 'VN',
+      occupation: '',
+    };
+
+    signup.mutate(variables, {
+      onSuccess: (response) => {
+        if (response.status === 0) {
+          router.push('/');
+        }
+      },
+      onError: (error) => {
+        console.log('Signup error:', error);
+        // Here you can add error handling UI feedback
+      },
+    });
+    // Remove the redundant router.push('/') here
   };
 
   return (
@@ -82,6 +111,16 @@ export default function Signup() {
               label="Full Name"
               placeholder="Enter your full name"
               autoCapitalize="words"
+              autoCorrect={false}
+            />
+
+            <ControlledInput
+              control={control}
+              name="email"
+              label="Email"
+              placeholder="Enter your email"
+              keyboardType="email-address"
+              autoCapitalize="none"
               autoCorrect={false}
             />
 

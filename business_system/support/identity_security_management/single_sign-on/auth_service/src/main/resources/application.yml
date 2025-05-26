@@ -16,7 +16,7 @@ spring:
     validate-on-migrate: true
 
 server:
-  port: 8004
+  port: 8104
 
 logging:
   level:

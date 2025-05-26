@@ -19,9 +19,7 @@ const { width } = Dimensions.get('window');
 export default function Login() {
   const router = useRouter();
   const signIn = useAuth.use.signIn();
-  const [authMethod, setAuthMethod] = useState<'biometric' | 'pin'>(
-    'biometric'
-  );
+  const [authMethod, setAuthMethod] = useState<'biometric' | 'pin'>('pin');
 
   // Use the account list mutation
   const login = useSignIn();

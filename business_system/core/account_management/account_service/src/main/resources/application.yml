@@ -3,7 +3,7 @@ spring:
     name: Account Service
 
 server:
-  port: 8001
+  port: 8101
 
 logging:
   level:

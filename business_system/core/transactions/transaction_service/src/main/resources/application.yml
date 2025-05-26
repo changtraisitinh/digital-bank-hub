@@ -3,7 +3,7 @@ spring:
     name: Transaction Service
 
 server:
-  port: 8002
+  port: 8102
 
 logging:
   level:

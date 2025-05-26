@@ -1,0 +1,28 @@
+2025-05-26 10:24:08.707 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 85058 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
+2025-05-26 10:24:08.710 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-26 10:24:08.710 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-26 10:24:09.118 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8001 (http)
+2025-05-26 10:24:09.125 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+2025-05-26 10:24:09.126 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-26 10:24:09.126 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-26 10:24:09.144 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-26 10:24:09.145 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 415 ms
+2025-05-26 10:24:09.314 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+2025-05-26 10:24:09.317 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-26 10:24:09.325 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-26 10:24:09.334 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
