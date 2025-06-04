@@ -1,251 +1,213 @@
-2025-05-19 10:47:18.369 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 23966 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
-2025-05-19 10:47:18.370 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-19 10:47:18.937 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-05-19 10:47:18.944 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-05-19 10:47:18.944 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 10:47:18.944 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-19 10:47:18.964 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 10:47:18.964 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 574 ms
-2025-05-19 10:47:19.142 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-05-19 10:47:19.150 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-05-19 10:47:19.156 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 1.064 seconds (process running for 6.58)
-2025-05-19 10:48:56.779 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-19 10:48:56.795 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-19 10:49:09.341 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 28058 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
-2025-05-19 10:49:09.342 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-19 10:49:09.777 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-05-19 10:49:09.783 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2025-05-19 10:49:09.784 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 10:49:09.784 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-19 10:49:09.805 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 10:49:09.805 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 444 ms
-2025-05-19 10:49:09.990 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2025-05-19 10:49:09.997 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-05-19 10:49:10.002 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 1.041 seconds (process running for 6.57)
-2025-05-19 10:50:25.781 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-19 10:50:25.790 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-19 10:53:20.661 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 30872 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
-2025-05-19 10:53:20.662 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-19 10:53:21.086 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
-2025-05-19 10:53:21.093 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
-2025-05-19 10:53:21.093 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 10:53:21.093 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-19 10:53:21.115 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 10:53:21.115 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 434 ms
-2025-05-19 10:53:21.338 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
-2025-05-19 10:53:21.347 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
-2025-05-19 10:53:21.352 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.958 seconds (process running for 6.467)
-2025-05-19 10:58:49.985 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 10:58:49.987 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 10:58:49.988 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2025-05-19 10:58:50.004 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Request method 'GET' is not supported
-2025-05-19 11:11:28.424 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-19 11:11:28.435 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-19 11:11:40.630 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 33383 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
-2025-05-19 11:11:40.631 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-19 11:11:41.078 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
-2025-05-19 11:11:41.084 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
-2025-05-19 11:11:41.085 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-19 11:11:41.085 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-19 11:11:41.105 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-19 11:11:41.106 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 456 ms
-2025-05-19 11:11:41.287 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
-2025-05-19 11:11:41.298 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
-2025-05-19 11:11:41.303 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.96 seconds (process running for 6.604)
-2025-05-19 11:13:05.131 [http-nio-8003-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-19 11:13:05.132 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-05-19 11:13:05.134 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2025-05-19 11:13:05.268 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 11:13:05.285 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 11:13:05.293 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=, accountNo=, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 11:13:05.748 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 11:13:05.749 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 11:13:05.777 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Cannot invoke "java.util.Map.get(Object)" because "data" is null
-2025-05-19 11:13:50.220 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 11:13:50.223 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 11:13:50.225 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 11:13:50.666 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 11:13:50.667 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 11:24:24.249 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 11:24:24.251 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 11:24:24.251 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 11:24:24.911 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 11:24:24.913 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:00:39.123 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:00:40.157 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:00:42.185 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:00:46.202 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:01:08.038 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:03:34.077 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:07:09.045 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:07:10.068 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:07:12.090 [http-nio-8003-exec-5] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:07:16.118 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:08:07.798 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:08:08.850 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:08:10.861 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:08:14.885 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:09:59.303 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:15:05.040 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:15:07.066 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:15:11.084 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:15:19.636 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:15:19.638 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:15:19.639 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:15:20.120 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:15:20.122 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:16:45.826 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:16:46.855 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:16:46.856 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:16:46.857 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:16:49.303 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:16:49.305 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:18:46.783 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:18:46.785 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:18:46.787 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:18:46.788 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:18:47.213 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:18:47.214 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:18:47.804 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:18:48.369 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:18:49.390 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:18:51.406 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:18:55.442 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:20:05.512 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:20:05.513 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:20:05.516 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:20:05.517 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:20:06.036 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:20:06.042 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:23:00.560 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:23:00.560 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:23:00.567 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:23:00.567 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:23:00.568 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:23:00.570 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:23:01.247 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:23:01.248 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:23:01.337 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:23:01.338 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:23:13.516 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:23:13.517 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:23:13.517 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:23:13.519 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:23:13.519 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:23:13.519 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:23:13.928 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:23:13.929 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:23:14.009 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:23:14.010 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:24:58.236 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:24:58.237 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:24:58.239 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:24:58.239 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:24:58.239 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:24:58.241 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:24:58.662 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:24:58.664 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:24:58.675 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:24:58.675 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:26:00.129 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:26:00.128 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:26:00.131 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:26:00.131 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:26:00.131 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:26:00.131 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:26:03.084 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:26:03.093 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:26:03.696 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:26:03.697 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:28:54.795 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:28:54.795 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:28:54.798 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:28:54.798 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:28:54.799 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:28:54.799 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:28:55.181 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:28:55.182 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:28:55.256 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:28:55.257 [http-nio-8003-exec-6] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:29:59.373 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:29:59.375 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:29:59.373 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:29:59.377 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:29:59.376 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:29:59.378 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:29:59.852 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:29:59.855 [http-nio-8003-exec-7] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:29:59.902 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:29:59.905 [http-nio-8003-exec-9] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:30:32.729 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:30:32.731 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:30:32.731 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:30:32.735 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:30:32.736 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:30:32.736 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:30:33.165 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:30:33.165 [http-nio-8003-exec-10] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:30:33.170 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:30:33.171 [http-nio-8003-exec-8] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:31:12.360 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:31:12.360 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:31:12.361 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:31:12.361 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:31:12.361 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:31:12.361 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:31:12.758 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:31:12.760 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:31:12.819 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:31:12.820 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:31:17.913 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:31:17.913 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:31:17.915 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:31:17.915 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:31:17.914 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:31:17.918 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:31:18.351 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:31:18.352 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:31:18.363 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:31:18.363 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:35:42.054 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:35:42.054 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:35:42.061 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:35:42.061 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:35:42.608 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:35:42.609 [http-nio-8003-exec-5] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:35:43.089 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:35:45.112 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:35:49.129 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:36:20.152 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:36:20.159 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:36:21.189 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:36:23.211 [http-nio-8003-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:36:27.227 [http-nio-8003-exec-3] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:36:31.730 [http-nio-8003-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:37:40.309 [http-nio-8003-exec-5] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:37:41.328 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:37:43.346 [http-nio-8003-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:37:47.390 [http-nio-8003-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:38:06.944 [http-nio-8003-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'bankCode' for method parameter type String is not present
-2025-05-19 15:38:07.985 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:38:07.987 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:38:07.987 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:38:08.464 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:38:08.466 [http-nio-8003-exec-1] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:44:23.835 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:44:23.835 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 15:44:23.838 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:44:23.838 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 15:44:23.839 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:44:23.839 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 15:44:24.273 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:44:24.275 [http-nio-8003-exec-4] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 15:44:24.351 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 15:44:24.351 [http-nio-8003-exec-2] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 17:12:53.757 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
-2025-05-19 17:12:53.759 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
-2025-05-19 17:12:53.760 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=99000, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
-2025-05-19 17:12:54.251 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
-2025-05-19 17:12:54.253 [http-nio-8003-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
-2025-05-19 17:13:37.335 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-19 17:13:37.342 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:16:15.716 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 35707 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:16:15.719 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:16:16.178 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:16:16.186 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:16:16.187 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:16:16.187 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:16:16.209 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:16:16.209 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 470 ms
+2025-06-04 14:16:16.426 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:16:16.434 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:16:16.439 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.986 seconds (process running for 6.782)
+2025-06-04 14:17:43.150 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:17:43.151 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:17:43.161 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2025-06-04 14:18:06.889 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:18:06.892 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:18:18.972 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 35913 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:18:18.974 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:18:19.392 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:18:19.399 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:18:19.400 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:18:19.400 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:18:19.420 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:18:19.421 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 428 ms
+2025-06-04 14:18:19.615 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:18:19.623 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:18:19.627 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.909 seconds (process running for 6.432)
+2025-06-04 14:18:22.360 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:18:22.360 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:18:22.361 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-04 14:19:56.621 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:19:56.628 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:20:08.748 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36082 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:20:08.749 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:20:09.169 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:20:09.175 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:20:09.176 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:20:09.176 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:20:09.196 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:20:09.197 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 428 ms
+2025-06-04 14:20:09.394 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:20:09.406 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:20:09.412 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.918 seconds (process running for 6.424)
+2025-06-04 14:20:25.097 [http-nio-8003-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:20:25.097 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:20:25.098 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-04 14:20:25.914 [http-nio-8003-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Type definition error: [simple type, class com.stripe.net.StripeResponse]
+2025-06-04 14:20:58.702 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:20:58.705 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:21:10.583 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36173 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:21:10.584 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:21:11.001 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:21:11.008 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:21:11.008 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:21:11.009 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:21:11.029 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:21:11.029 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 428 ms
+2025-06-04 14:21:11.224 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:21:11.231 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:21:11.236 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.907 seconds (process running for 6.413)
+2025-06-04 14:21:13.883 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:21:13.883 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:21:13.883 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-04 14:21:14.537 [http-nio-8003-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Type definition error: [simple type, class com.stripe.net.StripeResponse]
+2025-06-04 14:24:22.835 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:24:22.842 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:24:34.894 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 36624 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:24:34.895 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:24:35.330 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:24:35.336 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:24:35.337 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:24:35.338 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:24:35.359 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:24:35.359 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 446 ms
+2025-06-04 14:24:35.559 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:24:35.566 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:24:35.570 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.939 seconds (process running for 6.449)
+2025-06-04 14:24:37.377 [http-nio-8003-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:24:37.378 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:24:37.378 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-04 14:26:30.611 [http-nio-8003-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Required request parameter 'currency' for method parameter type String is not present
+2025-06-04 14:28:50.186 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:28:50.191 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:29:02.141 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37011 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:29:02.142 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:29:02.563 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:29:02.570 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:29:02.570 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:29:02.570 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:29:02.593 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:29:02.593 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 433 ms
+2025-06-04 14:29:02.807 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:29:02.815 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:29:02.820 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.927 seconds (process running for 6.414)
+2025-06-04 14:29:05.038 [http-nio-8003-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:29:05.038 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:29:05.039 [http-nio-8003-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-04 14:32:03.026 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:32:03.044 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:32:14.970 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 37301 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:32:14.971 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:32:15.389 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8003 (http)
+2025-06-04 14:32:15.395 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:32:15.395 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:32:15.395 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:32:15.414 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:32:15.414 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 425 ms
+2025-06-04 14:32:15.603 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8003"]
+2025-06-04 14:32:15.609 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8003 (http) with context path '/'
+2025-06-04 14:32:15.614 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.892 seconds (process running for 6.374)
+2025-06-04 14:32:20.913 [http-nio-8003-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 14:32:20.913 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 14:32:20.914 [http-nio-8003-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-04 14:44:56.835 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-04 14:44:56.841 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-04 14:45:08.676 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 55004 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 14:45:08.677 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 14:45:09.160 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-04 14:45:09.166 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-04 14:45:09.167 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 14:45:09.167 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 14:45:09.187 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 14:45:09.188 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 471 ms
+2025-06-04 14:45:09.378 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-04 14:45:09.385 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8103 (http) with context path '/'
+2025-06-04 14:45:09.393 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 1.018 seconds (process running for 6.537)
+2025-06-04 15:00:14.840 [http-nio-8103-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 15:00:14.841 [http-nio-8103-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 15:00:14.843 [http-nio-8103-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-06-04 15:00:14.860 [http-nio-8103-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 15:02:32.529 [http-nio-8103-exec-4] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:35:02.787 [http-nio-8103-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:35:58.852 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 90869 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 19:35:58.853 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 19:35:59.285 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-04 19:35:59.291 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-04 19:35:59.292 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 19:35:59.292 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 19:35:59.312 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 19:35:59.314 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 442 ms
+2025-06-04 19:35:59.522 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-04 19:35:59.525 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-04 19:35:59.533 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-04 19:35:59.542 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8103 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8103 or configure this application to listen on another port.
+
+2025-06-04 19:36:23.406 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 91067 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 19:36:23.408 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 19:36:23.850 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-04 19:36:23.857 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-04 19:36:23.858 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 19:36:23.858 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 19:36:23.876 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 19:36:23.877 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 445 ms
+2025-06-04 19:36:24.077 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-04 19:36:24.080 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-04 19:36:24.088 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-04 19:36:24.097 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8103 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8103 or configure this application to listen on another port.
+
+2025-06-04 19:37:08.121 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 91483 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-04 19:37:08.122 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-04 19:37:08.534 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-04 19:37:08.540 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-04 19:37:08.541 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-04 19:37:08.541 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-04 19:37:08.560 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-04 19:37:08.561 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 420 ms
+2025-06-04 19:37:08.760 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-04 19:37:08.769 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8103 (http) with context path '/'
+2025-06-04 19:37:08.774 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.898 seconds (process running for 6.379)
+2025-06-04 19:37:13.747 [http-nio-8103-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-04 19:37:13.748 [http-nio-8103-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-04 19:37:13.748 [http-nio-8103-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-06-04 19:37:13.763 [http-nio-8103-exec-1] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:37:15.239 [http-nio-8103-exec-2] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:39:43.228 [http-nio-8103-exec-5] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:39:48.395 [http-nio-8103-exec-6] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/qrcode/generate.
+2025-06-04 19:41:28.399 [http-nio-8103-exec-8] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource banking-integration/api/v1/qrcode/generate.
+2025-06-04 19:41:32.016 [http-nio-8103-exec-9] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource banking-integration/api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:42:08.157 [http-nio-8103-exec-10] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: No static resource api/v1/payments/stripe/create-payment-intent.
+2025-06-04 19:45:57.963 [http-nio-8103-exec-3] DEBUG o.s.web.client.RestTemplate - HTTP POST https://api.vietqr.io/v2/generate
+2025-06-04 19:45:57.967 [http-nio-8103-exec-3] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-06-04 19:45:57.968 [http-nio-8103-exec-3] DEBUG o.s.web.client.RestTemplate - Writing [{template=compact, amount=0, accountName=QUY UNG HO NGAN HANG, accountNo=113366668888, addInfo=Ung Ho Quy Vac Xin, acqId=970415}] as "application/json"
+2025-06-04 19:45:58.804 [http-nio-8103-exec-3] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-06-04 19:45:58.806 [http-nio-8103-exec-3] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<?, ?>]
+2025-06-04 20:22:22.785 [http-nio-8103-exec-7] ERROR c.h.b.i.e.GlobalExceptionHandler - Unexpected Error: Request method 'GET' is not supported

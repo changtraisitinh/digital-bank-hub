@@ -3,7 +3,7 @@ spring:
     name: Banking Integration
 
 server:
-  port: 8003
+  port: 8103
 
 logging:
   level:
