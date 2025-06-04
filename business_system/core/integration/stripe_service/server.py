@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Set your secret key. Remember to switch to your live secret key in production.
-stripe.api_key = "sk_test_51RR4FeI5sqndwyBEktkcPBHDhrFAk2M0Bagfu06PbPdv0XJb5VF0LA5GZSh4ck2f9rMwj4PnkWpsmvYwxCr3Zxla00Shd8GGsQ"
+stripe.api_key = "<YOUR_STRIPE_SECRET_KEY>"
 
 @app.route('/create-payment-intent', methods=['POST'])
 def create_payment_intent():
