@@ -49,6 +49,7 @@
     "@hookform/resolvers": "^3.9.0",
     "@react-native-picker/picker": "^2.11.0",
     "@shopify/flash-list": "1.7.1",
+    "@stripe/stripe-react-native": "0.38.6",
     "@tanstack/react-query": "^5.52.1",
     "app-icon-badge": "^0.1.2",
     "axios": "^1.7.5",
@@ -157,7 +158,16 @@
       "exclude": [
         "eslint-config-expo"
       ]
-    }
+    },
+    "plugins": [
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.hiepnh.digitalbank",
+          "enableGooglePay": true
+        }
+      ]
+    ]
   },
   "osMetadata": {
     "initVersion": "7.0.5"

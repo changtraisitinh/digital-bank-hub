@@ -1,12 +1,21 @@
 import { Picker } from '@react-native-picker/picker';
+import {
+  confirmPlatformPayPayment,
+  initPaymentSheet,
+  initStripe,
+  PlatformPay,
+  PlatformPayButton,
+  presentPaymentSheet,
+} from '@stripe/stripe-react-native';
+import { usePlatformPay } from '@stripe/stripe-react-native';
+import { StripeProvider } from '@stripe/stripe-react-native';
 import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
 import * as React from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, Button, Pressable, ScrollView, Text, View } from 'react-native';
 import { useWindowDimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
 // Types
 type BillHistory = {
   id: string;
@@ -28,6 +37,43 @@ type Provider = 'EVN' | 'EVN_HCMC' | 'EVN_HANOI' | 'EVN_DANANG';
 function QuickPayCard() {
   const router = useRouter();
 
+  const checkout = async () => {
+    const { error } = await presentPaymentSheet();
+
+    if (error) {
+      // handle error
+      console.log(error);
+    } else {
+      // success
+      console.log('success');
+    }
+  };
+
+  const pay = async () => {
+    const clientSecret =
+      'pi_3RW7l7I5sqndwyBE1qgnLjP6_secret_bVUiSfYRb1fN6njotlmgprn3l';
+    const { error } = await confirmPlatformPayPayment(clientSecret, {
+      googlePay: {
+        testEnv: true,
+        merchantName: 'My merchant name',
+        merchantCountryCode: 'US',
+        currencyCode: 'USD',
+        billingAddressConfig: {
+          format: PlatformPay.BillingAddressFormat.Full,
+          isPhoneNumberRequired: true,
+          isRequired: true,
+        },
+      },
+    });
+
+    if (error) {
+      Alert.alert(error.code, error.message);
+      // Update UI to prompt user to retry payment (and possibly another payment method)
+      return;
+    }
+    Alert.alert('Success', 'The payment was confirmed successfully.');
+  };
+
   return (
     <View className="mb-4 rounded-xl bg-white p-4 shadow-lg">
       <Image
@@ -46,6 +92,17 @@ function QuickPayCard() {
       <View className="items-center rounded-lg bg-gray-100 p-4">
         <Text className="mb-2 text-gray-600">Scan QR Code</Text>
         <View className="size-32 rounded-lg bg-gray-200" />
+      </View>
+      <View>
+        <Button title="Checkout" onPress={checkout} />
+        <PlatformPayButton
+          type={PlatformPay.ButtonType.Pay}
+          onPress={pay}
+          style={{
+            width: '100%',
+            height: 50,
+          }}
+        />
       </View>
     </View>
   );
@@ -159,23 +216,102 @@ export default function ElectricityScreen() {
     },
   ];
 
+  const [publishableKey, setPublishableKey] = React.useState('');
+
+  const [clientSecret, setClientSecret] = React.useState(
+    'pi_3RW7l7I5sqndwyBE1qgnLjP6_secret_bVUiSfYRb1fN6njotlmgprn3l'
+  ); // Replace with your client secret
+
+  const { isPlatformPaySupported } = usePlatformPay();
+
+  const fetchPaymentIntentClientSecret = async () => {
+    // Fetch payment intent created on the server, see above
+    const response = await fetch(
+      `http://localhost:5000/create-payment-intent`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          currency: 'usd',
+        }),
+      }
+    );
+    const { clientSecret } = await response.json();
+    setClientSecret(clientSecret);
+    return clientSecret;
+  };
+
+  const fetchKey = async () => {
+    // Fetch key from your server here
+    const key =
+      'pk_test_51RR4FeI5sqndwyBEp3aQjy2yLUUgU1N8lW9u1ghF2Tn7F4joD5cwKd2I65xp1ofs2af4SVYjatRfHMWVhFDAaZFB00O1PKEbmE';
+    return key;
+  };
+
+  const setup = async () => {
+    // Initialize Stripe first
+    await initStripe({
+      publishableKey: publishableKey, // Replace with your Stripe publishable key
+      merchantIdentifier: 'your_merchant_identifier', // Required for Apple Pay
+    });
+
+    const { error } = await initPaymentSheet({
+      merchantDisplayName: 'Di-Bank Solutions, Inc.',
+      paymentIntentClientSecret: clientSecret, // retrieve paymentInstant this from your server
+    });
+
+    if (error) {
+      // handle error
+      console.log(error);
+    }
+  };
+
+  const fetchPublishableKey = async () => {
+    const key = await fetchKey(); // fetch key from your server here
+    setPublishableKey(key);
+  };
+
+  React.useEffect(() => {
+    fetchPublishableKey();
+    fetchPaymentIntentClientSecret();
+
+    (async function () {
+      if (!(await isPlatformPaySupported({ googlePay: { testEnv: true } }))) {
+        Alert.alert('Google Pay is not supported.');
+        return;
+      }
+    })();
+
+    console.log('setup initPaymentSheet');
+    setup();
+  }, []);
+
   return (
-    <SafeAreaView className="flex-1 bg-gray-50">
-      <ScrollView className="flex-1 p-4">
-        <QuickPayCard />
-        <UsageInsights data={mockData} />
-        <HistoryShortcut bills={mockBills} />
-      </ScrollView>
-    </SafeAreaView>
+    <StripeProvider
+      publishableKey={publishableKey}
+      merchantIdentifier="merchant.identifier" // required for Apple Pay
+      urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
+    >
+      <SafeAreaView className="flex-1 bg-gray-50">
+        <ScrollView className="flex-1 p-4">
+          <QuickPayCard />
+          <UsageInsights data={mockData} />
+          <HistoryShortcut bills={mockBills} />
+        </ScrollView>
+      </SafeAreaView>
+    </StripeProvider>
   );
 }
 
 export function BillInputScreen() {
-  const [selectedProvider, setSelectedProvider] = React.useState<Provider>('EVN');
+  const [selectedProvider, setSelectedProvider] =
+    React.useState<Provider>('EVN');
   const router = useRouter();
 
   return (
-    <SafeAreaView className="flex-1 bg-white justify-center">
+    <SafeAreaView className="flex-1 justify-center bg-white">
       <View className="p-4">
         <Text className="mb-4 text-center text-blue-500">
           Chọn nhà cung cấp điện
@@ -195,7 +331,9 @@ export function BillInputScreen() {
           </View>
           <Pressable
             className="rounded-lg bg-blue-500 py-3"
-            onPress={() => router.push('/payments/services/electricity/confirm')}
+            onPress={() =>
+              router.push('/payments/services/electricity/confirm')
+            }
           >
             <Text className="text-center font-semibold text-white">
               Tiếp tục
