@@ -4,15 +4,13 @@ import {
   initPaymentSheet,
   initStripe,
   PlatformPay,
-  PlatformPayButton,
-  presentPaymentSheet,
 } from '@stripe/stripe-react-native';
 import { usePlatformPay } from '@stripe/stripe-react-native';
 import { StripeProvider } from '@stripe/stripe-react-native';
 import { Image } from 'expo-image';
 import { router, useRouter } from 'expo-router';
 import * as React from 'react';
-import { Alert, Button, Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
 import { useWindowDimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -36,52 +34,64 @@ type UsageData = {
 
 type Provider = 'EVN' | 'EVN_HCMC' | 'EVN_HANOI' | 'EVN_DANANG';
 
+type PaymentIntentResponse = {
+  clientSecret: string;
+  paymentIntent: {
+    id: string;
+    status: string;
+    amount: number;
+    currency: string;
+  };
+};
+
 // Components
 function QuickPayCard() {
   const [loading, setLoading] = React.useState(false);
-  const [showPayWithGooglePay, setShowPayWithGooglePay] = React.useState(false);
-  const [clientSecret, setClientSecret] = React.useState(
-    'pi_3RWHNHI5sqndwyBE0bUwBkfy_secret_X0KX291oh6CnwWjWatjC60s2Q'
-  );
+  const [paymentError, setPaymentError] = React.useState<string | null>(null);
+  const [clientSecret, setClientSecret] = React.useState<string | null>(null);
+  const [isInitializing, setIsInitializing] = React.useState(false);
 
   const createPaymentIntent = useCreatePaymentIntent();
 
   const fetchPaymentIntentClientSecret = async () => {
     try {
-      setLoading(true);
+      setIsInitializing(true);
+      setPaymentError(null);
 
       const variables = {
-        description: 'create payment intent for 1000 usd',
+        description: 'Electricity bill payment',
         amount: 1000,
         currency: 'usd',
       };
-      const response = await createPaymentIntent.mutate(variables);
 
-      // Log response for debugging
+      setLoading(true);
+
+      const response = await createPaymentIntent.mutateAsync(variables);
+
       console.log('🚀 Payment Intent Response:', response);
 
-      const clientSecret =
-        'pi_3RWHNHI5sqndwyBE0bUwBkfy_secret_X0KX291oh6CnwWjWatjC60s2Q';
-      setClientSecret(clientSecret);
-      return clientSecret;
+      if (!response || typeof response !== 'object') {
+        throw new Error('Invalid payment intent response');
+      }
+
+      const paymentResponse = response as unknown as PaymentIntentResponse;
+
+      if (!paymentResponse?.clientSecret) {
+        throw new Error('No client secret received');
+      }
+
+      setClientSecret(paymentResponse.clientSecret);
+      return paymentResponse.clientSecret;
     } catch (error) {
       console.error('Error fetching client secret:', error);
-      Alert.alert('Error', 'Failed to initialize payment. Please try again.');
+      setPaymentError('Failed to initialize payment. Please try again.');
+      Alert.alert('Error', 'Failed to initialize payment. Please try again.', [
+        { text: 'OK' },
+      ]);
       return null;
     } finally {
       setLoading(false);
-    }
-  };
-
-  const checkout = async () => {
-    const { error } = await presentPaymentSheet();
-
-    if (error) {
-      // handle error
-      console.log('error', error);
-    } else {
-      // success
-      console.log('success');
+      setIsInitializing(false);
     }
   };
 
@@ -109,7 +119,6 @@ function QuickPayCard() {
       });
 
       if (error) {
-        // Specific error handling based on error codes
         switch (error.code) {
           case 'Canceled':
             Alert.alert('Payment Cancelled', 'You cancelled the payment');
@@ -118,12 +127,6 @@ function QuickPayCard() {
             Alert.alert(
               'Payment Failed',
               'Please try again or use a different payment method'
-            );
-            break;
-          case 'InvalidRequest':
-            Alert.alert(
-              'Invalid Request',
-              'Please check your payment details and try again'
             );
             break;
           default:
@@ -142,7 +145,6 @@ function QuickPayCard() {
           {
             text: 'View Receipt',
             onPress: () => {
-              // Navigate to receipt or transaction details
               router.push('/payments/receipt');
             },
           },
@@ -171,23 +173,17 @@ function QuickPayCard() {
         <Text className="mb-2 text-gray-600">Scan QR Code</Text>
         <View className="size-32 rounded-lg bg-gray-200" />
       </View>
-      <View>
-        {showPayWithGooglePay && (
-          <View>
-            <Button title="Checkout" onPress={checkout} />
-            <PlatformPayButton
-              type={PlatformPay.ButtonType.Pay}
-              onPress={pay}
-              style={{
-                width: '100%',
-                height: 50,
-              }}
-            />
-          </View>
-        )}
-      </View>
+
+      {paymentError && (
+        <View className="mb-4 rounded-lg bg-red-50 p-3">
+          <Text className="text-center text-red-600">{paymentError}</Text>
+        </View>
+      )}
+
       <Pressable
-        className={`mb-4 rounded-lg ${loading ? 'bg-gray-400' : 'bg-[#0066FF]'} px-4 py-3`}
+        className={`mb-4 rounded-lg ${
+          loading || isInitializing ? 'bg-gray-400' : 'bg-[#0066FF]'
+        } px-4 py-3`}
         onPress={async () => {
           try {
             const secret = await fetchPaymentIntentClientSecret();
@@ -196,16 +192,21 @@ function QuickPayCard() {
             }
           } catch (error) {
             console.error('Payment initialization error:', error);
+            setPaymentError('Failed to initialize payment. Please try again.');
             Alert.alert(
               'Error',
               'Failed to initialize payment. Please try again.'
             );
           }
         }}
-        disabled={loading}
+        disabled={loading || isInitializing}
       >
         <Text className="text-center font-semibold text-white">
-          {loading ? 'Processing Payment...' : 'Pay Electricity Bill'}
+          {loading
+            ? 'Processing Payment...'
+            : isInitializing
+              ? 'Initializing...'
+              : 'Pay Electricity Bill'}
         </Text>
       </Pressable>
     </View>
@@ -321,46 +322,41 @@ export default function ElectricityScreen() {
   ];
 
   const [publishableKey, setPublishableKey] = React.useState('');
-
-  const [clientSecret, setClientSecret] = React.useState(
-    'pi_3RW7l7I5sqndwyBE1qgnLjP6_secret_bVUiSfYRb1fN6njotlmgprn3l'
-  ); // Replace with your client secret
+  const [clientSecret] = React.useState<string | null>(null);
 
   const { isPlatformPaySupported } = usePlatformPay();
 
   const fetchKey = async () => {
-    // Fetch key from your server here
     const key =
       'pk_test_51RR4FeI5sqndwyBEp3aQjy2yLUUgU1N8lW9u1ghF2Tn7F4joD5cwKd2I65xp1ofs2af4SVYjatRfHMWVhFDAaZFB00O1PKEbmE';
     return key;
   };
 
   const setup = async () => {
-    // Initialize Stripe first
     await initStripe({
-      publishableKey: publishableKey, // Replace with your Stripe publishable key
-      merchantIdentifier: 'your_merchant_identifier', // Required for Apple Pay
+      publishableKey: publishableKey,
+      merchantIdentifier: 'your_merchant_identifier',
     });
 
-    const { error } = await initPaymentSheet({
-      merchantDisplayName: 'Di-Bank Solutions, Inc.',
-      paymentIntentClientSecret: clientSecret, // retrieve paymentInstant this from your server
-    });
+    if (clientSecret) {
+      const { error } = await initPaymentSheet({
+        merchantDisplayName: 'Di-Bank Solutions, Inc.',
+        paymentIntentClientSecret: clientSecret,
+      });
 
-    if (error) {
-      // handle error
-      console.log(error);
+      if (error) {
+        console.log(error);
+      }
     }
   };
 
   const fetchPublishableKey = async () => {
-    const key = await fetchKey(); // fetch key from your server here
+    const key = await fetchKey();
     setPublishableKey(key);
   };
 
   React.useEffect(() => {
     fetchPublishableKey();
-    // fetchPaymentIntentClientSecret();
 
     (async function () {
       if (!(await isPlatformPaySupported({ googlePay: { testEnv: true } }))) {
@@ -371,13 +367,13 @@ export default function ElectricityScreen() {
 
     console.log('setup initPaymentSheet');
     setup();
-  }, []);
+  }, [clientSecret]);
 
   return (
     <StripeProvider
       publishableKey={publishableKey}
-      merchantIdentifier="merchant.identifier" // required for Apple Pay
-      urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
+      merchantIdentifier="merchant.identifier"
+      urlScheme="your-url-scheme"
     >
       <SafeAreaView className="flex-1 bg-gray-50">
         <ScrollView className="flex-1 p-4">
