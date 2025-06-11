@@ -50,6 +50,9 @@ function QuickPayCard() {
   const [paymentError, setPaymentError] = React.useState<string | null>(null);
   const [clientSecret, setClientSecret] = React.useState<string | null>(null);
   const [isInitializing, setIsInitializing] = React.useState(false);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] =
+    React.useState<string>('cash');
+  const [showMoreMethods, setShowMoreMethods] = React.useState(false);
 
   const createPaymentIntent = useCreatePaymentIntent();
 
@@ -148,7 +151,18 @@ function QuickPayCard() {
               router.push('/payments/receipt');
             },
           },
-          { text: 'OK' },
+          {
+            text: 'OK',
+            onPress: () => {
+              router.push('/payments/services/electricity/confirm');
+            },
+          },
+          {
+            text: 'Cancel',
+            onPress: () => {
+              router.push('/payments/services/electricity/confirm');
+            },
+          },
         ]
       );
     } catch (e) {
@@ -179,6 +193,101 @@ function QuickPayCard() {
           <Text className="text-center text-red-600">{paymentError}</Text>
         </View>
       )}
+
+      {/* Enhanced Payment Method Selection */}
+      <View className="mb-4">
+        <Text className="mb-3 text-base font-semibold text-gray-800">
+          Payment Method
+        </Text>
+
+        {/* Main Payment Methods */}
+        <View className="mb-3 flex-row justify-between">
+          {[
+            {
+              id: 'cash',
+              label: 'Cash',
+              icon: '💵',
+              color: 'bg-green-50 border-green-200',
+            },
+            {
+              id: 'transfer',
+              label: 'Transfer',
+              icon: '🏦',
+              color: 'bg-blue-50 border-blue-200',
+            },
+            {
+              id: 'ewallet',
+              label: 'eWallet',
+              icon: '👛',
+              color: 'bg-purple-50 border-purple-200',
+            },
+          ].map((method) => (
+            <Pressable
+              key={method.id}
+              onPress={() => setSelectedPaymentMethod(method.id)}
+              className={`mx-1 flex-1 items-center rounded-xl border p-3 ${
+                selectedPaymentMethod === method.id
+                  ? `${method.color} border-2`
+                  : 'border-gray-200 bg-white'
+              }`}
+            >
+              <Text className="mb-1 text-xl">{method.icon}</Text>
+              <Text
+                className={`text-sm font-medium ${
+                  selectedPaymentMethod === method.id
+                    ? 'text-gray-800'
+                    : 'text-gray-600'
+                }`}
+              >
+                {method.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        {/* Additional Payment Methods */}
+        <Pressable
+          onPress={() => setShowMoreMethods(!showMoreMethods)}
+          className="mb-2 flex-row items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-4 py-2"
+        >
+          <Text className="text-sm font-medium text-gray-600">
+            More Payment Methods
+          </Text>
+          <Text className="text-gray-500">{showMoreMethods ? '▲' : '▼'}</Text>
+        </Pressable>
+
+        {showMoreMethods && (
+          <View className="flex-row flex-wrap gap-2">
+            {[
+              { id: 'stripe', label: 'Credit Card', icon: '💳' },
+              { id: 'paypal', label: 'PayPal', icon: '🔷' },
+              { id: 'apple', label: 'Apple Pay', icon: '🍎' },
+              { id: 'google', label: 'Google Pay', icon: 'G' },
+            ].map((method) => (
+              <Pressable
+                key={method.id}
+                onPress={() => setSelectedPaymentMethod(method.id)}
+                className={`flex-row items-center rounded-full border px-3 py-2 ${
+                  selectedPaymentMethod === method.id
+                    ? 'border-blue-500 bg-blue-50'
+                    : 'border-gray-200 bg-white'
+                }`}
+              >
+                <Text className="mr-1">{method.icon}</Text>
+                <Text
+                  className={`text-sm ${
+                    selectedPaymentMethod === method.id
+                      ? 'text-blue-600'
+                      : 'text-gray-600'
+                  }`}
+                >
+                  {method.label}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+        )}
+      </View>
 
       <Pressable
         className={`mb-4 rounded-lg ${

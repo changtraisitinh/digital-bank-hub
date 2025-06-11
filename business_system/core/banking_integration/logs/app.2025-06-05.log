@@ -1,0 +1,16 @@
+2025-06-05 09:39:53.671 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-05 09:39:54.728 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-05 14:53:58.754 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 11669 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-05 14:53:58.755 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-05 14:53:59.195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-05 14:53:59.202 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-05 14:53:59.203 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-05 14:53:59.203 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-05 14:53:59.225 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-05 14:53:59.225 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 450 ms
+2025-06-05 14:53:59.421 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-05 14:53:59.429 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8103 (http) with context path '/'
+2025-06-05 14:53:59.433 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.939 seconds (process running for 6.739)
+2025-06-05 14:54:07.194 [http-nio-8103-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-05 14:54:07.194 [http-nio-8103-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-06-05 14:54:07.195 [http-nio-8103-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms

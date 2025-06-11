@@ -1,16 +1,90 @@
-2025-06-05 09:39:53.671 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-05 09:39:54.728 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-06-05 14:53:58.754 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 11669 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
-2025-06-05 14:53:58.755 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
-2025-06-05 14:53:59.195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
-2025-06-05 14:53:59.202 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
-2025-06-05 14:53:59.203 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-06-05 14:53:59.203 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-05 14:53:59.225 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-06-05 14:53:59.225 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 450 ms
-2025-06-05 14:53:59.421 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
-2025-06-05 14:53:59.429 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8103 (http) with context path '/'
-2025-06-05 14:53:59.433 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 0.939 seconds (process running for 6.739)
-2025-06-05 14:54:07.194 [http-nio-8103-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-05 14:54:07.194 [http-nio-8103-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-06-05 14:54:07.195 [http-nio-8103-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-06-11 10:55:38.016 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 2234 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 10:55:38.019 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 10:55:38.557 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-11 10:55:38.564 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-11 10:55:38.565 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 10:55:38.565 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-11 10:55:38.586 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 10:55:38.587 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 548 ms
+2025-06-11 10:55:38.921 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 10:55:38.944 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-11 10:55:38.947 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-06-11 10:55:38.959 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-11 10:55:38.968 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8103 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8103 or configure this application to listen on another port.
+
+2025-06-11 10:56:13.361 [main] INFO  c.h.b.BankingIntegrationApplication - Starting BankingIntegrationApplication using Java 21.0.6 with PID 2343 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 10:56:13.362 [main] INFO  c.h.b.BankingIntegrationApplication - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 10:56:13.899 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8103 (http)
+2025-06-11 10:56:13.906 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8103"]
+2025-06-11 10:56:13.907 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-11 10:56:13.907 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-11 10:56:13.927 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-11 10:56:13.928 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 547 ms
+2025-06-11 10:56:14.269 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 10:56:14.292 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8103"]
+2025-06-11 10:56:14.302 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8103 (http) with context path '/'
+2025-06-11 10:56:14.310 [main] INFO  c.h.b.BankingIntegrationApplication - Started BankingIntegrationApplication in 1.207 seconds (process running for 6.725)
+2025-06-11 10:56:19.776 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-11 10:56:19.783 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-11 11:02:47.125 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 2992 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:02:47.126 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:02:47.864 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:02:47.896 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.983 seconds (process running for 1.476)
+2025-06-11 11:08:11.109 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 3566 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:08:11.109 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:08:11.888 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:08:11.920 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.99 seconds (process running for 1.476)
+2025-06-11 11:09:47.527 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 3783 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:09:47.527 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:09:48.233 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:09:48.263 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.912 seconds (process running for 1.452)
+2025-06-11 11:12:53.489 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 4170 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:12:53.490 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:12:54.155 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:12:54.183 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.908 seconds (process running for 1.392)
+2025-06-11 11:16:29.421 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 4575 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:16:29.422 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:16:30.164 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:16:30.198 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.953 seconds (process running for 1.446)
+2025-06-11 11:26:11.709 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 5511 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:26:11.710 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:26:12.412 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:26:12.444 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.905 seconds (process running for 1.371)
+2025-06-11 11:28:52.336 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 5869 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:28:52.337 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:28:53.037 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:28:53.069 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.902 seconds (process running for 1.365)
+2025-06-11 11:29:37.551 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 6002 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:29:37.552 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:29:38.277 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:29:38.305 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.941 seconds (process running for 1.451)
+2025-06-11 11:30:56.840 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 6181 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:30:56.841 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:30:57.554 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:30:57.589 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.922 seconds (process running for 1.416)
+2025-06-11 11:32:17.241 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 6478 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:32:17.242 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:32:17.981 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:32:18.013 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.956 seconds (process running for 1.457)
+2025-06-11 11:36:02.106 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 6806 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:36:02.107 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:36:02.836 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:36:02.865 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.939 seconds (process running for 1.427)
+2025-06-11 11:36:56.378 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Starting BankingIntegrationApplicationTests using Java 21.0.6 with PID 6943 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/banking_integration)
+2025-06-11 11:36:56.379 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 11:36:57.090 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-06-11 11:36:57.121 [Test worker] INFO  c.h.b.BankingIntegrationApplicationTests - Started BankingIntegrationApplicationTests in 0.911 seconds (process running for 1.385)
