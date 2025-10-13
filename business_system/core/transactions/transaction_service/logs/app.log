@@ -1,41 +1,4 @@
-2025-05-26 10:10:48.883 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 83570 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
-2025-05-26 10:10:48.886 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-26 10:10:48.887 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-26 10:10:49.317 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8002 (http)
-2025-05-26 10:10:49.324 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8002"]
-2025-05-26 10:10:49.325 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-26 10:10:49.325 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-26 10:10:49.345 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-26 10:10:49.346 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 441 ms
-2025-05-26 10:10:49.542 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8002"]
-2025-05-26 10:10:49.551 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8002 (http) with context path '/'
-2025-05-26 10:10:49.556 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 0.946 seconds (process running for 6.458)
-2025-05-26 10:25:18.100 [http-nio-8002-Acceptor] ERROR o.apache.tomcat.util.net.NioEndpoint - Error setting socket options
-java.net.SocketException: Invalid argument
-	at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
-	at java.base/sun.nio.ch.Net.setSocketOption(Net.java:447)
-	at java.base/sun.nio.ch.Net.setSocketOption(Net.java:385)
-	at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:287)
-	at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:212)
-	at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:250)
-	at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:215)
-	at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:474)
-	at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:72)
-	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:148)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-26 10:27:00.226 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-26 10:27:00.236 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-26 10:27:12.095 [main] INFO  c.h.t.TransactionServiceApplication - Starting TransactionServiceApplication using Java 21.0.6 with PID 85483 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
-2025-05-26 10:27:12.096 [main] DEBUG c.h.t.TransactionServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-26 10:27:12.096 [main] INFO  c.h.t.TransactionServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-26 10:27:12.559 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8102 (http)
-2025-05-26 10:27:12.567 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8102"]
-2025-05-26 10:27:12.568 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-26 10:27:12.568 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-26 10:27:12.589 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-26 10:27:12.589 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 474 ms
-2025-05-26 10:27:12.820 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8102"]
-2025-05-26 10:27:12.828 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8102 (http) with context path '/'
-2025-05-26 10:27:12.834 [main] INFO  c.h.t.TransactionServiceApplication - Started TransactionServiceApplication in 1.014 seconds (process running for 6.6)
-2025-05-26 10:39:34.717 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-26 10:39:34.726 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-11 13:39:26.642 [Test worker] INFO  c.h.t.TransactionServiceApplicationTests - Starting TransactionServiceApplicationTests using Java 21.0.6 with PID 16764 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
+2025-06-11 13:39:26.644 [Test worker] DEBUG c.h.t.TransactionServiceApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-06-11 13:39:26.647 [Test worker] INFO  c.h.t.TransactionServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 13:39:27.152 [Test worker] INFO  c.h.t.TransactionServiceApplicationTests - Started TransactionServiceApplicationTests in 0.687 seconds (process running for 1.215)

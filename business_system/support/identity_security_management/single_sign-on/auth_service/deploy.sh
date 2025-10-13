@@ -1,14 +1,12 @@
 #!/bin/bash
 
 # Get the directory containing the script
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-# Go to project root (two levels up from script location)
-cd "$SCRIPT_DIR/../.."
+#SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Define container group name
 CONTAINER_GROUP="dibank"
 SERVICE_NAME="dibank-auth-service"
-PORT=8004
+PORT=8104
 
 # Check if port is already in use
 if lsof -i :${PORT} > /dev/null; then
@@ -17,9 +15,9 @@ if lsof -i :${PORT} > /dev/null; then
 fi
 
 # Delete existing k8s resources
-kubectl delete deployment dibank-auth-service --ignore-not-found
-kubectl delete service dibank-auth-service --ignore-not-found
-kubectl delete ingress dibank-auth-service --ignore-not-found
+kubectl delete deployment deploy/local/dibank-auth-service --ignore-not-found
+kubectl delete service deploy/local/dibank-auth-service --ignore-not-found
+kubectl delete ingress deploy/local/dibank-auth-service --ignore-not-found
 
 # Build the application
 ./gradlew clean build
@@ -41,9 +39,9 @@ docker build \
   -t ${SERVICE_NAME}:latest .
 
 # Apply k8s manifests
-kubectl apply -f deployment/local/auth-deployment.yaml
-kubectl apply -f deployment/local/auth-service.yaml
-kubectl apply -f deployment/local/auth-ingress.yaml
+kubectl apply -f deploy/local/auth-deployment.yaml
+kubectl apply -f deploy/local/auth-service.yaml
+kubectl apply -f deploy/local/auth-ingress.yaml
 
 # Add local DNS entry (requires sudo)
 #echo "127.0.0.1 ${SERVICE_NAME}.local" | sudo tee -a /etc/hosts

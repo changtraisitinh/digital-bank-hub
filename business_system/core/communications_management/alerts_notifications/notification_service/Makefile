@@ -6,7 +6,7 @@ GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 GOMOD=$(GOCMD) mod
-BINARY_NAME=notification-service
+BINARY_NAME=dibank-notification-service
 
 # Main entry point
 MAIN_PATH=cmd/api/main.go

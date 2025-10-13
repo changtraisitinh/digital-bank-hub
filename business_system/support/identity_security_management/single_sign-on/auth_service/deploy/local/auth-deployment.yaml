@@ -22,7 +22,7 @@ spec:
           image: dibank-auth-service:latest
           imagePullPolicy: Never
           ports:
-            - containerPort: 8004
+            - containerPort: 8104
           env:
             - name: CONTAINER_NAME
               value: "dibank-auth-service"

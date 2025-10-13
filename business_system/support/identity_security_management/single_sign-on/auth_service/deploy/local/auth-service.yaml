@@ -7,12 +7,12 @@ metadata:
     app: dibank-auth-service
     group: dibank
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-    - port: 8004
-      targetPort: 8004
-      nodePort: 30004
-      protocol: TCP
+    - port: 8104
+      targetPort: 8104
+#      nodePort: 30104
+#      protocol: TCP
   selector:
     app: dibank-auth-service
     group: dibank

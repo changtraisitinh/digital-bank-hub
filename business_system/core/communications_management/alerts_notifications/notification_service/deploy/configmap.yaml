@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dibank-notification-config
+  labels:
+    app: dibank-notification-service
+data:
+  config.yaml: |
+    # Paste the contents of your configs/config.yaml here
+    # Example:
+    # server:
+    #   port: 8080
+    # ...
+

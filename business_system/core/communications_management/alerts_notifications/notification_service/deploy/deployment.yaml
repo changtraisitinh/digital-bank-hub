@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dibank-notification-service
+  labels:
+    app: dibank-notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dibank-notification-service
+  template:
+    metadata:
+      labels:
+        app: dibank-notification-service
+    spec:
+      containers:
+        - name: dibank-notification-service
+          image: dibank-notification-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8105
+          volumeMounts:
+            - name: config-volume
+              mountPath: /root/configs/config.yaml
+              subPath: config.yaml
+      volumes:
+        - name: config-volume
+          configMap:
+            name: dibank-notification-config
+

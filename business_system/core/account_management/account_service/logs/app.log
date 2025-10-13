@@ -1,29 +1,4 @@
-2025-05-26 10:25:18.089 [http-nio-8001-Acceptor] ERROR o.apache.tomcat.util.net.NioEndpoint - Error setting socket options
-java.net.SocketException: Invalid argument
-	at java.base/sun.nio.ch.Net.setIntOption0(Native Method)
-	at java.base/sun.nio.ch.Net.setSocketOption(Net.java:447)
-	at java.base/sun.nio.ch.Net.setSocketOption(Net.java:385)
-	at java.base/sun.nio.ch.SocketChannelImpl.setOption(SocketChannelImpl.java:287)
-	at java.base/sun.nio.ch.SocketAdaptor.setIntOption(SocketAdaptor.java:212)
-	at java.base/sun.nio.ch.SocketAdaptor.setSoLinger(SocketAdaptor.java:250)
-	at org.apache.tomcat.util.net.SocketProperties.setProperties(SocketProperties.java:215)
-	at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:474)
-	at org.apache.tomcat.util.net.NioEndpoint.setSocketOptions(NioEndpoint.java:72)
-	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:148)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-05-26 10:27:55.959 [main] INFO  c.h.a.AccountServiceApplication - Starting AccountServiceApplication using Java 21.0.6 with PID 85645 (/Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service/build/classes/java/main started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-05-26 10:27:55.959 [main] DEBUG c.h.a.AccountServiceApplication - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-05-26 10:27:55.960 [main] INFO  c.h.a.AccountServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-05-26 10:27:56.381 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8101 (http)
-2025-05-26 10:27:56.387 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8101"]
-2025-05-26 10:27:56.388 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-05-26 10:27:56.388 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-26 10:27:56.409 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-05-26 10:27:56.409 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 430 ms
-2025-05-26 10:27:56.594 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8101"]
-2025-05-26 10:27:56.601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8101 (http) with context path '/'
-2025-05-26 10:27:56.606 [main] INFO  c.h.a.AccountServiceApplication - Started AccountServiceApplication in 0.926 seconds (process running for 6.633)
-2025-05-26 10:39:34.201 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-26 10:39:34.212 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-05-26 10:42:59.487 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-26 10:42:59.521 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-06-11 13:32:56.050 [Test worker] INFO  c.h.a.AccountServiceApplicationTests - Starting AccountServiceApplicationTests using Java 21.0.6 with PID 15717 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
+2025-06-11 13:32:56.051 [Test worker] DEBUG c.h.a.AccountServiceApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-06-11 13:32:56.052 [Test worker] INFO  c.h.a.AccountServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-06-11 13:32:56.605 [Test worker] INFO  c.h.a.AccountServiceApplicationTests - Started AccountServiceApplicationTests in 0.744 seconds (process running for 1.267)
