@@ -1,0 +1,38 @@
+{
+  "category": "Mediation",
+  "name": "PromptTemplate",
+  "displayName": "Prompt Template",
+  "version": "v1.0",
+  "description": "Dynamically modifies the prompt by applying custom templates using a configured strategy.",
+  "applicableFlows": [
+    "request"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Template Name",
+      "description": "The name of the prompt template policy. Used for tracking and referencing this policy instance.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "promptTemplateConfig",
+      "displayName": "Prompt Template Configuration",
+      "description": "The configuration that defines one or more prompt templates to be used during request mediation. Each template includes a unique name and a corresponding formatted prompt.",
+      "type": "JSON",
+      "defaultValue": "[\n  {\n    \"name\": \"\",\n    \"prompt\": \"\"\n  }\n]",
+      "allowedValues": [],
+      "required": true
+    }
+  ]
+}

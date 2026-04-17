@@ -1,0 +1,74 @@
+{
+  "category": "Mediation",
+  "name": "WordCountGuardrail",
+  "version": "v1.1",
+  "displayName": "Word Count Guardrail",
+  "description": "Validates the request or response content to ensure it complies with the specified minimum and maximum word count limits. If a violation is detected, the guardrail intervenes and returns an error response.",
+  "applicableFlows": [
+    "request",
+    "response"
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Guardrail Name",
+      "description": "The name of the guardrail policy. This will be used for tracking purposes.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "min",
+      "displayName": "Minimum Word Count",
+      "description": "The minimum number of words the content must contain.",
+      "type": "Integer",
+      "validationRegex": "^[1-9][0-9]*$",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "max",
+      "displayName": "Maximum Word Count",
+      "description": "The maximum number of words the content must contain.",
+      "type": "Integer",
+      "validationRegex": "^[1-9][0-9]*$",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation.",
+      "type": "String",
+      "allowedValues": [],
+      "required": false
+    },
+    {
+      "name": "invert",
+      "displayName": "Invert the Guardrail Decision",
+      "description": "If enabled, inverts the guardrail blocking decision, causing the guardrail to intervene and return an error response when the content is within the specified limits.",
+      "type": "Boolean",
+      "allowedValues": [],
+      "defaultValue": "false",
+      "required": false
+    },
+    {
+      "name": "showAssessment",
+      "displayName": "Show Guardrail Assessment",
+      "description": "When enabled, the error response will include detailed information about the reason for the guardrail intervention.",
+      "type": "Boolean",
+      "defaultValue": "false",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

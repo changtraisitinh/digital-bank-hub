@@ -1,0 +1,66 @@
+{
+  "category": "Mediation",
+  "name": "SemanticPromptGuardrail",
+  "displayName": "Semantic Prompt Guardrail",
+  "version": "v1.0",
+  "description": "Validate the request content by checking its semantic similarity against a list of defined allowed and denied prompts.",
+  "applicableFlows": [
+    "request",
+    "response"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Guardrail Name",
+      "description": "The name of the guardrail policy. This will be used for tracking purposes.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "rules",
+      "displayName": "Semantic Rules",
+      "description": "Define the allowed and denied prompts.",
+      "required": true,
+      "type": "JSON",
+      "defaultValue": "{\n  \"allowPrompts\": [],\n  \"denyPrompts\": []\n}",
+      "allowedValues": []
+    },
+    {
+      "name": "threshold",
+      "displayName": "Similarity Threshold",
+      "description": "The similarity threshold that must be met for rule enforcement.",
+      "required": false,
+      "type": "Integer",
+      "validationRegex": "^(100|[1-9]?[0-9])$",
+      "defaultValue": "90",
+      "allowedValues": []
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation.",
+      "type": "String",
+      "allowedValues": [],
+      "required": false
+    },
+    {
+      "name": "showAssessment",
+      "displayName": "Show Guardrail Assessment",
+      "description": "When enabled, the error response will include detailed information about the reason for the guardrail intervention.",
+      "type": "Boolean",
+      "defaultValue": "false",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

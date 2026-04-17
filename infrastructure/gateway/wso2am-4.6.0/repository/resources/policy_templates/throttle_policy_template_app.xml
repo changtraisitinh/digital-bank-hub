@@ -1,0 +1,31 @@
+        @Plan:name('${policy.getTenantDomain()}_app_${policy.getName()}')
+        @Plan:description('ExecutionPlan for app_${policy.getName()}')
+
+        @Import('org.wso2.throttle.processed.request.stream:1.0.0')
+        define stream RequestStream (messageID string, appKey string, appTier string, subscriptionKey string, apiKey string, apiTier string, subscriptionTier string, resourceKey string, resourceTier string, userId string,  apiContext string, apiVersion string, appTenant string, apiTenant string, appId string, apiName string, propertiesMap string);
+
+        @Export('org.wso2.throttle.globalThrottle.stream:1.0.0')
+        define stream GlobalThrottleStream (throttleKey string, isThrottled bool, expiryTimeStamp long);
+
+        FROM RequestStream
+        SELECT messageID, (appTenant == '$policy.getTenantDomain()' and appTier == '$policy.getName()') AS isEligible, appKey AS throttleKey, propertiesMap
+        INSERT INTO EligibilityStream;
+
+        #if($quotaPolicy != "")
+        FROM EligibilityStream[isEligible==true]#throttler:timeBatch($quotaPolicy.getLimit().getUnitTime() $quotaPolicy.getLimit().getTimeUnit(), 0)
+        #if($quotaPolicy.getQuotaType() == $REQUEST_COUNT_TYPE)
+        select throttleKey,
+        #if($isDistributed == true)
+        (throttler:distributedCount(messageID,cast(map:get(propertiesMap,'reset'),'bool')) >= $quotaPolicy.getLimit().getRequestCount()) as isThrottled, expiryTimeStamp group by throttleKey
+        #else
+        (throttler:count(messageID,cast(map:get(propertiesMap,'reset'),'bool')) >= $quotaPolicy.getLimit().getRequestCount()) as isThrottled, expiryTimeStamp group by throttleKey
+        #end
+        #else
+        select throttleKey, (throttler:sum(cast(map:get(propertiesMap,'messageSize'),'long'),cast(map:get(propertiesMap,'reset'),'bool')) >= $quotaPolicy.getLimit().getStandardDataAmount()L) as isThrottled, expiryTimeStamp group by throttleKey
+        #end
+        INSERT ALL EVENTS into ResultStream;
+        #end
+
+        from ResultStream#throttler:emitOnStateChange(throttleKey, isThrottled)
+        select *
+        insert into GlobalThrottleStream;

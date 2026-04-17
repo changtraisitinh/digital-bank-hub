@@ -1,0 +1,25 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 Identity Server Apps - Recovery Portal
+
+
+From: 'OWASP (Open Web-Application Security Project)' (https://www.owasp.org/)
+  - Java Encoder (https://www.owasp.org/index.php/OWASP_Java_Encoder_Project/encoder) org.owasp.encoder:encoder:jar:1.2.2
+    License: The BSD 3-Clause License  (http://www.opensource.org/licenses/BSD-3-Clause)
+  - JSP Encoder (https://www.owasp.org/index.php/OWASP_Java_Encoder_Project/encoder-jsp) org.owasp.encoder:encoder-jsp:jar:1.2.2
+    License: The BSD 3-Clause License  (http://www.opensource.org/licenses/BSD-3-Clause)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Standard Taglib Implementation (http://tomcat.apache.org/taglibs/standard-1.2.5/taglibs-standard-impl) org.apache.taglibs:taglibs-standard-impl:bundle:1.2.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'WSO2' (http://www.wso2.org/)
+  - WSO2 Identity Server Apps - Layout Controlling Tag Library (http://wso2.org) org.wso2.identity.apps:org.wso2.identity.apps.taglibs.layout.controller:jar:1.4.34
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

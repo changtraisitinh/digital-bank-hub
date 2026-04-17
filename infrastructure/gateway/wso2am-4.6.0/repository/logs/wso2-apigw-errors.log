@@ -1,0 +1,29 @@
+2026-04-17T09:54:52,855 [-] [Start Level: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.apache.tomcat.util.digester.Digester} Match [Server/Service/Engine/Host/Valve] failed to set property [maxDays] to []
+2026-04-17T09:54:57,752 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.apache.axis2.description.java2wsdl.DefaultSchemaGenerator} We don't support method overloading. Ignoring [addRemoteServerConfig]
+2026-04-17T09:54:57,752 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.apache.axis2.description.java2wsdl.DefaultSchemaGenerator} We don't support method overloading. Ignoring [resetRemoteServerConfig]
+2026-04-17T09:54:57,982 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.apache.axis2.description.java2wsdl.DefaultSchemaGenerator} We don't support method overloading. Ignoring [searchByAttribute]
+2026-04-17T09:54:59,159 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.wso2.carbon.identity.application.mgt.internal.ApplicationManagementServiceComponent} Templates directory not found at /Users/mac/Engineering/GitHub/digital-bank-hub/infrastructure/gateway/wso2am-4.6.0/repository/resources/identity/authntemplates
+2026-04-17T09:54:59,308 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.wso2.carbon.identity.auth.valve.internal.AuthenticationValveServiceComponent} File invalid_tenant_domain_response.html not found. The default content will be used as the error page content.
+2026-04-17T09:54:59,330 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.wso2.carbon.identity.auth.service.internal.AuthenticationServiceComponent} 
+
+##################################  ALERT  ##################################
+[WARNING]: Internal authentication is utilizing default credentials,
+which may expose the environment to potential security risks.
+If this is a production environment, change the credentials immediately.
+Please refer to the WSO2 security advisory: https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2023/WSO2-2023-2617/
+#############################################################################
+
+2026-04-17T09:55:00,751 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.wso2.carbon.identity.event.internal.IdentityEventServiceComponent} Properties for OrganizationCreationHandler is not configured. This event handler will not be activated
+2026-04-17T09:55:00,767 [-] [Framework Event Dispatcher: Equinox Container: 06acb8b9-c80f-4695-a33c-77b93dec563f]  WARN {org.wso2.carbon.identity.application.authentication.framework.internal.FrameworkServiceComponent} Adaptive authentication is disabled.
+2026-04-17T09:58:53,022 [-] [UsageDataReceiver-Init]  WARN {org.wso2.carbon.usage.data.receiver.core.a.a} No subscription file found matching pattern 'subscription-*.json' in directory: /Users/mac/Engineering/GitHub/digital-bank-hub/infrastructure/gateway/wso2am-4.6.0. Please place a subscription file at this location to enable usage data collection.
+2026-04-17T09:58:53,029 [-] [UsageDataReceiver-Init]  WARN {org.wso2.carbon.usage.data.receiver.core.util.DatabaseAvailabilityChecker} Required table 'USAGE_COUNT' does not exist in the database. Usage data collection will be disabled until tables are created.
+2026-04-17T10:07:00,870 [-] [HTTPS-Listener I/O dispatcher-11]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,873 [-] [HTTPS-Listener I/O dispatcher-12]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,874 [-] [HTTPS-Listener I/O dispatcher-13]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,875 [-] [HTTPS-Listener I/O dispatcher-14]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,876 [-] [HTTPS-Listener I/O dispatcher-15]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,878 [-] [HTTPS-Listener I/O dispatcher-16]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,880 [-] [HTTPS-Listener I/O dispatcher-17]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,881 [-] [HTTPS-Listener I/O dispatcher-18]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,882 [-] [HTTPS-Listener I/O dispatcher-19]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?
+2026-04-17T10:07:00,882 [-] [HTTPS-Listener I/O dispatcher-20]  WARN {org.apache.synapse.transport.passthru.SourceHandler} I/O error: Unrecognized SSL message, plaintext connection?

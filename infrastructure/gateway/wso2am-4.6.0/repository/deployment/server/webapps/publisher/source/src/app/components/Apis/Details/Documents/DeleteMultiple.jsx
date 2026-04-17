@@ -1,0 +1,151 @@
+/*
+ * Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+import React, { useState, useEffect, useContext } from 'react';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import API from 'AppData/api.js';
+import APIProduct from 'AppData/APIProduct';
+import MCPServer from 'AppData/MCPServer';
+import APIContext from 'AppComponents/Apis/Details/components/ApiContext';
+import Alert from 'AppComponents/Shared/Alert';
+import { getTypeToDisplay } from 'AppComponents/Shared/Utils';
+
+/**
+ * Delete multiple documents component
+ * @param {*} props {intl, docsToDelete, docs, getDocumentsList, apiType}
+ * @returns {JSX.Element} - The Delete multiple documents component
+ */
+function DeleteMultiple(props) {
+    const {
+        intl, docsToDelete, docs, getDocumentsList,
+    } = props;
+    const { api, isAPIProduct } = useContext(APIContext);
+    let restApi;
+    if (isAPIProduct) {
+        restApi = new APIProduct();
+    } else if (api.apiType === MCPServer.CONSTS.MCP) {
+        restApi = MCPServer;
+    } else {
+        restApi = new API();
+    }
+
+    const [open, setOpen] = useState(true);
+
+    const deleteDocs = () => {
+        const docPromises = [];
+
+        docsToDelete.data.map((docIndexObj) => {
+            const doc = docs[docIndexObj.index];
+            docPromises.push(restApi.deleteDocument(api.id, doc.documentId));
+        });
+        Promise.all(docPromises)
+            .then((values) => {
+                console.log(values);
+                Alert.info(`${intl.formatMessage({
+                    id: 'Apis.Details.Documents.Delete.document.delete.successfully',
+                    defaultMessage: 'Document(s) deleted successfully',
+                })}`);
+                setOpen(!open);
+                getDocumentsList();
+            })
+            .catch((error) => {
+                if (process.env.NODE_ENV !== 'production') {
+                    console.log(error);
+                    Alert.error(`${intl.formatMessage({
+                        id: 'Apis.Details.Documents.Delete.document.delete.error',
+                        defaultMessage: 'Error while deleting documents',
+                    })}`);
+                }
+            });
+    };
+
+    const runAction = (action) => {
+        if (action === 'yes') {
+            deleteDocs();
+        } else {
+            setOpen(!open);
+        }
+    };
+
+    const toggleOpen = () => {
+        setOpen(!open);
+    };
+
+    useEffect(() => {
+        setOpen(true);
+    }, [docsToDelete]);
+
+    return (
+        <Dialog
+            open={open}
+            onClose={toggleOpen}
+            aria-labelledby='alert-dialog-title'
+            aria-describedby='alert-dialog-description'
+        >
+            <DialogTitle id='alert-dialog-title'>
+                <FormattedMessage
+                    id='Apis.Details.Documents.Delete.selected.document.listing.delete.confirm.title'
+                    defaultMessage='Delete Selected Documents'
+                />
+            </DialogTitle>
+            <DialogContent>
+                <DialogContentText id='alert-dialog-description'>
+                    <FormattedMessage
+                        id='Apis.Details.Documents.Delete.selected.document.listing.delete.confirm.body'
+                        defaultMessage={
+                            'Selected documents will be deleted from the {type}.' +
+                            ' You will not be able to undo this action.'
+                        }
+                        values={{
+                            type: getTypeToDisplay(api.apiType),
+                        }}
+                    />
+                </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={() => runAction('no')}>
+                    <FormattedMessage
+                        id='Apis.Details.Documents.Delete.document.listing.delete.cancel'
+                        defaultMessage='Cancel'
+                    />
+                </Button>
+                <Button onClick={() => runAction('yes')} color='primary' autoFocus>
+                    <FormattedMessage
+                        id='Apis.Details.Documents.Delete.document.listing.delete.yes'
+                        defaultMessage='Delete'
+                    />
+                </Button>
+            </DialogActions>
+        </Dialog>
+    );
+}
+DeleteMultiple.propTypes = {
+    docs: PropTypes.instanceOf(Array).isRequired,
+    getDocumentsList: PropTypes.func.isRequired,
+    docsToDelete: PropTypes.instanceOf(Array).isRequired,
+    intl: PropTypes.shape({}).isRequired,
+};
+
+export default injectIntl(DeleteMultiple);

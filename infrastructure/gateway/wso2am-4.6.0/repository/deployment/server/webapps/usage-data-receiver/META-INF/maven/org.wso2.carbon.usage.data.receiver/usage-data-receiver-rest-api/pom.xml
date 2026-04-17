@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.wso2.carbon.usage.data.receiver</groupId>
+        <artifactId>usage-data-receiver-parent</artifactId>
+        <version>1.0.6</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>usage-data-receiver-rest-api</artifactId>
+    <packaging>war</packaging>
+
+    <name>WSO2 Usage Data Receiver - REST API</name>
+    <description>CXF-based REST API for receiving usage data</description>
+
+    <dependencies>
+        <!-- Core Module (provided separately in Carbon pack) -->
+        <dependency>
+            <groupId>org.wso2.carbon.usage.data.receiver</groupId>
+            <artifactId>org.wso2.carbon.usage.data.receiver.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- CXF Dependencies (provided by Carbon CXF3 environment) -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Jackson for JSON (provided by Carbon CXF3 environment) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Logging (provided by Carbon) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Spring Framework - NOT NEEDED (no longer using Spring-based CXF) -->
+        <!-- All Spring dependencies removed to match APIM Publisher pattern -->
+
+        <!-- Servlet API (provided by container) -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JAX-RS API -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warName>usage-data-receiver</warName>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+

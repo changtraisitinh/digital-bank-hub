@@ -1,0 +1,66 @@
+{
+  "category": "Mediation",
+  "name": "URLGuardrail",
+  "version": "v1.0",
+  "displayName": "URL Guardrail",
+  "description": "Extract and Validate URLs included in the request or response content by either performing a DNS lookup or a connection establishment. If a violation is detected, the guardrail intervenes and returns an error response.",
+  "applicableFlows": [
+    "request",
+    "response"
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Guardrail Name",
+      "description": "The name of the guardrail policy. This will be used for tracking purposes.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation.",
+      "type": "String",
+      "allowedValues": [],
+      "required": false
+    },
+    {
+      "name": "onlyDNS",
+      "displayName": "Perform DNS Lookup",
+      "description": "If enabled, a DNS lookup will be performed to validate the extracted URLs. If disabled, a connection attempt will be made instead.\n",
+      "type": "Boolean",
+      "allowedValues": [],
+      "defaultValue": "false",
+      "required": false
+    },
+    {
+      "name": "timeout",
+      "displayName": "Connection Timeout",
+      "description": "The connection timeout for DNS lookups or connection attempts, in milliseconds. If not specified, a default timeout will be used.",
+      "type": "Integer",
+      "defaultValue": "3000",
+      "validationRegex": "^[1-9][0-9]*$",
+      "allowedValues": [],
+      "required": false
+    },
+    {
+      "name": "showAssessment",
+      "displayName": "Show Guardrail Assessment",
+      "description": "When enabled, the error response will include detailed information about the reason for the guardrail intervention.",
+      "type": "Boolean",
+      "defaultValue": "false",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "category": "Mediation",
+  "name": "RegexGuardrail",
+  "version": "v1.0",
+  "displayName": "Regex Guardrail",
+  "description": "Validates the request or response content against a regular expression pattern to ensure it contains a match. If no match is found, the guardrail intervenes and returns an error response.",
+  "applicableFlows": [
+    "request",
+    "response"
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Guardrail Name",
+      "description": "The name of the guardrail policy. This will be used for tracking purposes.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "regex",
+      "displayName": "Regex Pattern",
+      "description": "The regular expression used to validate the content.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation.",
+      "type": "String",
+      "allowedValues": [],
+      "required": false
+    },
+    {
+      "name": "invert",
+      "displayName": "Invert the Guardrail Decision",
+      "description": "If enabled, inverts the guardrail blocking decision, causing the guardrail to intervene and return an error response when a match is found in the content.",
+      "type": "Boolean",
+      "allowedValues": [],
+      "defaultValue": "false",
+      "required": false
+    },
+    {
+      "name": "showAssessment",
+      "displayName": "Show Guardrail Assessment",
+      "description": "When enabled, the error response will include detailed information about the reason for the guardrail intervention.",
+      "type": "Boolean",
+      "defaultValue": "false",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<WorkFlowExtensions>
+    <APIRevisionDeployment executor="org.wso2.carbon.apimgt.impl.workflow.APIRevisionDeploymentSimpleWorkflowExecutor"/>
+    <!--APIRevisionDeployment executor="org.wso2.carbon.apimgt.impl.workflow.APIRevisionDeploymentApprovalWorkflowExecutor"/-->
+    <ApplicationCreation executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationCreationSimpleWorkflowExecutor"/>
+    <!--ApplicationCreation executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationCreationApprovalWorkflowExecutor"/-->
+    <ApplicationUpdate executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationUpdateSimpleWorkflowExecutor"/>
+    <!--ApplicationUpdate executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationUpdateApprovalWorkflowExecutor"/-->
+
+    <ProductionApplicationRegistration executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationRegistrationSimpleWorkflowExecutor"/>
+    <!--ProductionApplicationRegistration executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationRegistrationApprovalWorkflowExecutor"/-->
+    <SandboxApplicationRegistration executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationRegistrationSimpleWorkflowExecutor"/>
+    <!--SandboxApplicationRegistration executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationRegistrationApprovalWorkflowExecutor"/-->
+    <SubscriptionCreation executor="org.wso2.carbon.apimgt.impl.workflow.SubscriptionCreationSimpleWorkflowExecutor"/>
+    <!--SubscriptionCreation executor="org.wso2.carbon.apimgt.impl.workflow.SubscriptionCreationApprovalWorkflowExecutor"/-->
+
+    <SubscriptionUpdate executor="org.wso2.carbon.apimgt.impl.workflow.SubscriptionUpdateSimpleWorkflowExecutor"/>
+    <!--SubscriptionUpdate executor="org.wso2.carbon.apimgt.impl.workflow.SubscriptionUpdateApprovalWorkflowExecutor"/-->
+
+    <UserSignUp executor="org.wso2.carbon.apimgt.impl.workflow.UserSignUpSimpleWorkflowExecutor"/>
+    <!--UserSignUp executor="org.wso2.carbon.apimgt.impl.workflow.UserSignUpApprovalWorkflowExecutor"/-->
+
+	<!--
+	***NOTE:***
+        Users of deletion workflows are expected to implement their own deletion workflow executors and services.
+        By default API Manager only implements the core functionalities required to support deletion workflows and
+        simple deletion workflow executors. Default WS deletion workflow implementations are not available with the
+        distribution.
+    -->
+
+    <SubscriptionDeletion executor="org.wso2.carbon.apimgt.impl.workflow.SubscriptionDeletionSimpleWorkflowExecutor"/>
+    <!--<SubscriptionDeletion executor="org.wso2.carbon.apimgt.impl.workflow.SubscriptionDeletionApprovalWorkflowExecutor"/>-->
+
+    <ApplicationDeletion executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationDeletionSimpleWorkflowExecutor"/>
+    <!--<ApplicationDeletion executor="org.wso2.carbon.apimgt.impl.workflow.ApplicationDeletionApprovalWorkflowExecutor"/>-->
+    
+    <!-- Publisher related workflows -->
+    <APIStateChange executor="org.wso2.carbon.apimgt.impl.workflow.APIStateChangeSimpleWorkflowExecutor" />
+    <!--APIStateChange executor="org.wso2.carbon.apimgt.impl.workflow.APIStateChangeApprovalWorkflowExecutor">
+        <Property name="stateList">Created:Publish,Published:Block</Property>
+    </APIStateChange-->
+
+    <APIProductStateChange executor="org.wso2.carbon.apimgt.impl.workflow.APIProductStateChangeSimpleWorkflowExecutor" />
+    <!--APIProductStateChange executor="org.wso2.carbon.apimgt.impl.workflow.APIProductStateChangeApprovalWorkflowExecutor">
+        <Property name="stateList">Created:Publish,Published:Block</Property>
+    </APIProductStateChange-->
+
+</WorkFlowExtensions>

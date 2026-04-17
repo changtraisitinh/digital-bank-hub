@@ -1,0 +1,144 @@
+{
+  "apim.devportal.application_sharing_impl": [
+    {
+      "if": {
+        "apim.devportal.application_sharing_type": "custom"
+      },
+      "match_regex": ".+",
+      "error_message": "application_sharing_impl class is required for custom application sharing implementation"
+    }
+  ],
+  "apim.jwt.generator_impl": [
+    {
+      "if": {
+        "apim.jwt.generator_type": "custom"
+      },
+      "match_regex": ".+",
+      "error_message": "generator_impl class is required for custom JWT generation implementation"
+    }
+  ],
+  "apim.jwt.claims_extractor_impl": [
+    {
+      "if": {
+        "apim.jwt.claims": "custom"
+      },
+      "match_regex": ".+",
+      "error_message": "claims_extractor_impl class is required for custom claim extractor implementation"
+    }
+  ],
+  "apim.analytics.event_publisher_impl": [
+    {
+      "if": {
+        "apim.analytics.event_publisher_type": "custom"
+      },
+      "match_regex": ".+",
+      "error_message": "event_publisher_impl class is required for custom event publisher implementation"
+    }
+  ],
+  "apim.key_manager.key_validation_handler_impl": [
+    {
+      "if": {
+        "apim.key_manager.key_validation_handler_type": "custom"
+      },
+      "match_regex": ".+",
+      "error_message": "key_validation_handler_impl class is required for custom key validation implementation"
+    }
+  ],
+  "user_store.type": [
+    {
+      "default_value": "database",
+      "regex": "\\Adatabase\\Z|\\Aread_only_ldap\\Z|\\Aread_write_ldap\\Z|\\Aactive_directory\\Z|\\Adatabase_unique_id\\Z|\\Aread_only_ldap_unique_id\\Z|\\Aread_write_ldap_unique_id\\Z|\\Aactive_directory_unique_id\\Z"
+    }
+  ],
+  "user_store.properties.ConnectionURL": [
+    {
+      "if": {
+        "user_store.type": "read_only_ldap"
+      },
+      "match_regex": ".+",
+      "error_message": "Connection URL is required for read only ldap userstore"
+    },
+    {
+      "if": {
+        "user_store.type": "read_write_ldap"
+      },
+      "match_regex": ".+",
+      "error_message": "Connection URL is required for read write ldap userstore"
+    },
+    {
+      "if": {
+        "user_store.type": "active_directory"
+      },
+      "match_regex": ".+",
+      "error_message": "Connection URL is required for active directory userstore"
+    }
+  ],
+  "user_store.properties.ConnectionName": [
+    {
+      "if": {
+        "user_store.type": "read_only_ldap"
+      },
+      "match_regex": ".+",
+      "error_message": "Connection name is required for read only ldap userstore"
+    },
+    {
+      "if": {
+        "user_store.type": "read_only_ldap"
+      },
+      "match_regex": ".+",
+      "error_message": "Connection name is required for read write ldap userstore"
+    },
+    {
+      "if": {
+        "user_store.type": "active_directory"
+      },
+      "match_regex": ".+",
+      "error_message": "Connection name is required for active directory userstore"
+    }
+  ],
+  "super_admin.username": [
+    {
+      "default_value": "admin",
+      "match_regex": ""
+    }
+  ],
+  "encryption.type": [
+    {
+      "regex": "\\Aasymmetric\\Z|\\Asymmetric\\Z"
+    }
+  ],
+  "encryption.key": [
+    {
+      "if": {
+        "encryption.type": "symmetric"
+      },
+      "match_regex": ".+",
+      "error_message": "Encryption key required for symmetric encryption"
+    }
+  ],
+  "admin_console.authenticator.mutual_ssl_authenticator.config.WhiteList": [
+    {
+      "if": {
+        "admin_console.authenticator.mutual_ssl_authenticator.config.WhiteListEnabled": true
+      },
+      "regex": ".+",
+      "error_message": "Trusted client certificates list is required"
+    }
+  ],
+  "oauth.oidc.user_info.response_type": [
+    {
+      "if": {
+        "oauth.oidc.extensions.user_info_response_builder": "org.wso2.carbon.identity.oauth.endpoint.user.impl.UserInfoJWTResponse"
+      },
+      "regex": "jwt",
+      "error_message": "OIDC userinfo response type should be jwt"
+    },
+    {
+      "if": {
+        "oauth.oidc.extensions.user_info_response_builder": "org.wso2.carbon.identity.oauth.endpoint.user.impl.UserInfoJSONResponseBuilder"
+      },
+      "regex": "json",
+      "error_message": "OIDC userinfo response type should be json"
+    }
+  ]
+}

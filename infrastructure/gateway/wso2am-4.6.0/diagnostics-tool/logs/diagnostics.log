@@ -1,0 +1,27 @@
+2026-04-17 09:55:17 ServerProcess [INFO] Server Process ID: 1875
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Starting WSO2 Diagnostics Tool
+2026-04-17 09:55:17 ServerInfo [INFO] Update level: 22
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Server name: WSO2 API Manager
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Version: 4.6.0
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Update Level: 22
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Java Version: 21.0.6
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Java Home: /Users/mac/.sdkman/candidates/java/21.0.6-tem
+2026-04-17 09:55:17 DiagnosticsApp [INFO] OS Name: Mac OS X
+2026-04-17 09:55:17 DiagnosticsApp [INFO] OS Version: 15.6
+2026-04-17 09:55:17 DiagnosticsApp [INFO] OS Architecture: aarch64
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Diagnostic App Home: /Users/mac/Engineering/GitHub/digital-bank-hub/infrastructure/gateway/wso2am-4.6.0/diagnostics-tool
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Listening to : ../repository/logs/wso2-apigw-errors.log
+2026-04-17 09:55:17 LogWatcher [INFO] Initiating LogWatcher for file: /Users/mac/Engineering/GitHub/digital-bank-hub/infrastructure/gateway/wso2am-4.6.0/diagnostics-tool/../repository/logs/wso2-apigw-errors.log
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Initiating CPUWatcher with interval: 5 retry count: 2 threshold: 80
+2026-04-17 09:55:17 DiagnosticsApp [INFO] Initiating MemoryWatcher with interval: 5 retry count: 2 threshold: 80
+2026-04-17 09:55:17 TrafficAnalyzerInitializer [INFO] LastFifteenSecondsRequests Traffic Analyzer is enabled with window size: 100, interval: 15, delay: 4
+2026-04-17 09:55:17 TrafficAnalyzerInitializer [INFO] LastMinuteRequests Traffic Analyzer is enabled with window size: 100, interval: 60, delay: 1
+2026-04-17 10:07:00 Interpreter [INFO] Executing the action executors for the log line matching the regex pattern (.*)org.apache.synapse.transport.passthru(.*)
+2026-04-17 10:07:00 ServerInfo [INFO] Update level: 22
+2026-04-17 10:07:00 ServerInfo [INFO] ServerInfo executed successfully.
+2026-04-17 10:07:00 MetricsSnapshot [INFO] MetricsSnapshot executed successfully.
+2026-04-17 10:07:01 OpenFileFinder [INFO] OpenFileFinder executed successfully.
+2026-04-17 10:07:12 ThreadDumper [INFO] Thread dump execution is completed for 1875, thread dump count: 5, delay: 2000ms
+2026-04-17 10:07:19 Netstat [INFO] Netstat executed successfully
+2026-04-17 10:07:24 ZipFileExecutor [INFO] Zipping the folder at /Users/mac/Engineering/GitHub/digital-bank-hub/infrastructure/gateway/wso2am-4.6.0/diagnostics-tool/temp/2026-04-17_10:07:00.91
+2026-04-17 10:07:24 ZipFileExecutor [INFO] Diagnosis Dumped in :/Users/mac/Engineering/GitHub/digital-bank-hub/infrastructure/gateway/wso2am-4.6.0/diagnostics-tool/data/1875_2026-04-17_10:07:00.91.zip

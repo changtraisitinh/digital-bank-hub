@@ -1,0 +1,445 @@
+/*
+ * Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/* eslint no-param-reassign: ["error", { "props": false }] */
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import { FormattedMessage } from 'react-intl';
+import API from 'AppData/api.js';
+import MCPServer from 'AppData/MCPServer';
+import { withAPI } from 'AppComponents/Apis/Details/components/ApiContext';
+import { isRestricted } from 'AppData/AuthManager';
+import APIValidation from 'AppData/APIValidation';
+import { Alert } from 'AppComponents/Shared';
+import { getBasePath } from 'AppComponents/Shared/Utils';
+
+const PREFIX = 'BusinessInformation';
+
+const classes = {
+    FormControl: `${PREFIX}-FormControl`,
+    FormControlOdd: `${PREFIX}-FormControlOdd`,
+    buttonWrapper: `${PREFIX}-buttonWrapper`,
+    paperRoot: `${PREFIX}-paperRoot`
+};
+
+
+const Root = styled('div')((
+    {
+        theme
+    }
+) => ({
+    [`& .${classes.FormControl}`]: {
+        padding: 0,
+        width: '100%',
+        marginTop: 0,
+    },
+
+    [`& .${classes.FormControlOdd}`]: {
+        padding: 0,
+        backgroundColor: theme.palette.background.paper,
+        width: '100%',
+        marginTop: 0,
+    },
+
+    [`& .${classes.buttonWrapper}`]: {
+        paddingTop: 20,
+    },
+
+    [`& .${classes.paperRoot}`]: {
+        padding: 20,
+        marginTop: 20,
+    }
+}));
+
+/**
+ *
+ *
+ * @class BusinessInformation
+ * @extends {React.Component}
+ */
+class BusinessInformation extends React.Component {
+    /**
+     *Creates an instance of BusinessInformation.
+     * @param {*} props
+     * @memberof BusinessInformation
+     */
+    constructor(props) {
+        super(props);
+        const {
+            businessOwner,
+            businessOwnerEmail,
+            technicalOwner,
+            technicalOwnerEmail,
+        } = this.props.api.businessInformation;
+        this.state = {
+            businessOwner,
+            businessOwnerEmail,
+            technicalOwner,
+            technicalOwnerEmail,
+        };
+        this.isFormUpdated = false;
+        this.isValidBusinessOwnerEmail = true;
+        this.isValidTechnicalOwnerEmail = true;
+    }
+
+    handleChange = (name) => (event) => {
+        let { value } = event.target;
+        const { checked } = event.target;
+        if (name === 'accessControlRoles' || name === 'visibleRoles') {
+            value = value.split(',');
+        } else if (name === 'isDefaultVersion') {
+            value = value === 'yes';
+        } else if (name === 'responseCaching') {
+            value = checked ? 'Enabled' : 'Disabled';
+        }
+        // Validate whether given email addresses are valid.
+        if (name === 'businessOwnerEmail') {
+            const emailStatus = APIValidation.email.validate(value).error;
+            this.isValidBusinessOwnerEmail = (emailStatus === null || value === '');
+        }
+        if (name === 'technicalOwnerEmail') {
+            const emailStatus = APIValidation.email.validate(value).error;
+            this.isValidTechnicalOwnerEmail = (emailStatus === null || value === '');
+        }
+        this.isFormUpdated = true;
+        this.setState({ [name]: value });
+    };
+
+    isValid = () => {
+        return (this.isValidBusinessOwnerEmail && this.isValidTechnicalOwnerEmail && this.isFormUpdated);
+    }
+
+    /**
+     *
+     *
+     * @param {*} oldAPI
+     * @param {*} updateAPI
+     * @memberof BusinessInformation
+     */
+    handleSubmit(updateAPI) {
+        const {
+            businessOwner, businessOwnerEmail, technicalOwner, technicalOwnerEmail,
+        } = this.state;
+        const businessInformation = {
+            businessOwner, businessOwnerEmail, technicalOwner, technicalOwnerEmail,
+        };
+        updateAPI({ businessInformation }).catch((error) => {
+            if (error.response) {
+                Alert.error(error.response.body.description);
+            } else {
+                Alert.error('Error occurred while updating business information');
+            }
+        });
+    }
+
+    /**
+     * Determines if the current user has restricted access based on context
+     * @param {Object} api - The API or MCP server object
+     * @returns {boolean} - True if access is restricted, false otherwise
+     */
+    isAccessRestricted = (api) => {
+        const isMCPServer = api.isMCPServer();
+        if (isMCPServer) {
+            // For MCP servers, check MCP-specific permissions
+            return isRestricted(['apim:mcp_server_create', 'apim:mcp_server_manage', 'apim:mcp_server_publish'], api);
+        } else {
+            // For APIs, check API-specific permissions
+            return isRestricted(['apim:api_create', 'apim:api_publish'], api);
+        }
+    };
+
+    /**
+     *
+     * @inheritdoc
+     * @returns
+     * @memberof BusinessInformation
+     */
+    render() {
+        const {  api, updateAPI } = this.props;
+        const {
+            businessOwner, businessOwnerEmail, technicalOwner, technicalOwnerEmail,
+        } = this.state;
+
+        const isAccessRestricted = this.isAccessRestricted(api);
+
+        return (
+            (<Root>
+                <Container maxWidth='md'>
+                    <Box mb={3}>
+                        <Typography id='itest-api-details-bushiness-info-head' variant='h4' component='h2'>
+                            <FormattedMessage
+                                id='Apis.Details.BusinessInformation.BusinessInformation.business.info'
+                                defaultMessage='Business Information'
+                            />
+                        </Typography>
+                        {(() => {
+                            if (api.apiType === MCPServer.CONSTS.MCP) {
+                                return (
+                                    <Typography variant='caption'>
+                                        <FormattedMessage
+                                            id={'Apis.Details.BusinessInformation.BusinessInformation.MCPServer.'
+                                                + 'sub.heading'}
+                                            defaultMessage='Business Information of the MCP Server'
+                                        />
+                                    </Typography>
+                                );
+                            } else if (api.apiType === API.CONSTS.APIProduct) {
+                                return (
+                                    <Typography variant='caption'>
+                                        <FormattedMessage
+                                            id={'Apis.Details.BusinessInformation.BusinessInformation.APIProduct.'
+                                                + 'sub.heading'}
+                                            defaultMessage='Business Information of the API Product'
+                                        />
+                                    </Typography>
+                                );
+                            } else {
+                                return (
+                                    <Typography variant='caption'>
+                                        <FormattedMessage
+                                            id='Apis.Details.BusinessInformation.BusinessInformation.sub.heading'
+                                            defaultMessage='Business Information of the API'
+                                        />
+                                    </Typography>
+                                );
+                            }
+                        })()}
+                    </Box>
+                    <Paper elevation={0}>
+                        <Box px={8} py={5}>
+                            <form noValidate autoComplete='off'>
+                                <TextField
+                                    disabled={isAccessRestricted}
+                                    fullWidth
+                                    id='name'
+                                    label={(
+                                        <>
+                                            <FormattedMessage
+                                                id={
+                                                    'Apis.Details.BusinessInformation.BusinessInformation'
+                                                    + '.business.owner.name'
+                                                }
+                                                defaultMessage='Business Owner'
+                                            />
+                                        </>
+                                    )}
+                                    helperText={(
+                                        <FormattedMessage
+                                            id={
+                                                'Apis.Details.BusinessInformation.BusinessInformation'
+                                                + '.business.owner.name.helper.text'
+                                            }
+                                            defaultMessage='Provide the name of the business owner'
+                                        />
+                                    )}
+                                    type='text'
+                                    name='name'
+                                    margin='normal'
+                                    variant='outlined'
+                                    value={businessOwner}
+                                    onChange={this.handleChange('businessOwner')}
+                                    autoFocus
+                                />
+                                <TextField
+                                    error={!this.isValidBusinessOwnerEmail}
+                                    disabled={isAccessRestricted}
+                                    fullWidth
+                                    id='Email'
+                                    label={(
+                                        <>
+                                            <FormattedMessage
+                                                id={
+                                                    'Apis.Details.BusinessInformation.BusinessInformation.'
+                                                    + 'business.owner.email'
+                                                }
+                                                defaultMessage='Business Owner Email'
+                                            />
+                                        </>
+                                    )}
+                                    helperText={(() => {
+                                        if (this.isValidBusinessOwnerEmail) {
+                                            return (
+                                                <FormattedMessage
+                                                    id={
+                                                        'Apis.Details.BusinessInformation.BusinessInformation'
+                                                    + '.business.owner.email.helper.text'
+                                                    }
+                                                    defaultMessage='Provide the email of the business owner'
+                                                />
+                                            );
+                                        } else {
+                                            return (
+                                                <FormattedMessage
+                                                    id={
+                                                        'Apis.Details.BusinessInformation.BusinessInformation'
+                                                    + '.business.owner.email.helper.text'
+                                                    + '.error'
+                                                    }
+                                                    defaultMessage='Please enter a valid email address'
+                                                />
+                                            );
+                                        }
+                                    })()}
+                                    type='email'
+                                    name='name'
+                                    margin='normal'
+                                    value={businessOwnerEmail}
+                                    onChange={this.handleChange('businessOwnerEmail')}
+                                    variant='outlined'
+                                />
+                                <TextField
+                                    disabled={isAccessRestricted}
+                                    fullWidth
+                                    id='TOname'
+                                    label={(
+                                        <>
+                                            <FormattedMessage
+                                                id={
+                                                    'Apis.Details.BusinessInformation.BusinessInformation'
+                                                    + '.technical.owner.name'
+                                                }
+                                                defaultMessage='Technical Owner'
+                                            />
+                                        </>
+                                    )}
+                                    helperText={(
+                                        <FormattedMessage
+                                            id={
+                                                'Apis.Details.BusinessInformation.BusinessInformation'
+                                                + '.technical.owner.name.helper.text'
+                                            }
+                                            defaultMessage='Provide the name of the technical owner'
+                                        />
+                                    )}
+                                    type='text'
+                                    name='name'
+                                    margin='normal'
+                                    value={technicalOwner}
+                                    onChange={this.handleChange('technicalOwner')}
+                                    variant='outlined'
+                                />
+                                <TextField
+                                    error={!this.isValidTechnicalOwnerEmail}
+                                    disabled={isAccessRestricted}
+                                    fullWidth
+                                    id='TOemail'
+                                    label={(
+                                        <FormattedMessage
+                                            id={
+                                                'Apis.Details.BusinessInformation.BusinessInformation'
+                                                + '.technical.owner.email'
+                                            }
+                                            defaultMessage='Technical Owner Email'
+                                        />
+                                    )}
+                                    helperText={(() => {
+                                        if (this.isValidTechnicalOwnerEmail) {
+                                            return (
+                                                <FormattedMessage
+                                                    id={
+                                                        'Apis.Details.BusinessInformation.BusinessInformation'
+                                                    + '.technical.owner.email.helper.text'
+                                                    }
+                                                    defaultMessage='Provide the email of the technical owner'
+                                                />
+                                            );
+                                        } else {
+                                            return (
+                                                <FormattedMessage
+                                                    id={
+                                                        'Apis.Details.BusinessInformation.BusinessInformation'
+                                                    + '.technical.owner.email.helper.text'
+                                                    + '.error'
+                                                    }
+                                                    defaultMessage='Please enter a valid email address'
+                                                />
+                                            );
+                                        }
+                                    })()}
+                                    type='email'
+                                    name='name'
+                                    margin='normal'
+                                    value={technicalOwnerEmail}
+                                    onChange={this.handleChange('technicalOwnerEmail')}
+                                    variant='outlined'
+                                />
+                            </form>
+                            <div className={classes.buttonWrapper}>
+                                <Grid
+                                    container
+                                    direction='row'
+                                    alignItems='flex-start'
+                                    spacing={1}
+                                    className={classes.buttonSection}
+                                >
+                                    <Grid item>
+                                        <div>
+                                            <Button
+                                                variant='contained'
+                                                color='primary'
+                                                onClick={() => this.handleSubmit(updateAPI)}
+                                                disabled={ isAccessRestricted || !this.isValid() || api.isRevision }
+                                                id='business-info-save'
+                                            >
+                                                <FormattedMessage id='save' defaultMessage='Save' />
+                                            </Button>
+                                        </div>
+                                    </Grid>
+                                    <Grid item>
+                                        <Button
+                                            component={Link}
+                                            to={getBasePath(api.apiType) + api.id + '/overview'}
+                                        >
+                                            <FormattedMessage id='cancel' defaultMessage='Cancel' />
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </div>
+                        </Box>
+                    </Paper>
+                </Container>
+            </Root>)
+        );
+    }
+}
+
+BusinessInformation.propTypes = {
+    state: PropTypes.shape({}).isRequired,
+    classes: PropTypes.shape({}).isRequired,
+    api: PropTypes.shape({
+        id: PropTypes.string,
+        businessInformation: PropTypes.shape({
+            businessOwner: PropTypes.string,
+            businessOwnerEmail: PropTypes.string,
+            technicalOwner: PropTypes.string,
+            technicalOwnerEmail: PropTypes.string,
+            apiType: PropTypes.oneOf([API.CONSTS.API, API.CONSTS.APIProduct, MCPServer.CONSTS.MCP]),
+        }).isRequired,
+    }).isRequired,
+    updateAPI: PropTypes.func.isRequired,
+};
+
+export default withAPI((BusinessInformation));

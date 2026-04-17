@@ -1,0 +1,47 @@
+{
+    "category": "Mediation",
+    "name": "SemanticCache",
+    "version": "v1.0",
+    "displayName": "Semantic Cache",
+    "description": "Caches API responses based on semantic similarity, reducing redundant processing and improving performance.",
+    "applicableFlows": [
+      "request",
+      "response"
+    ],
+    "supportedGateways": [
+      "Synapse"
+    ],
+    "supportedApiTypes": [
+      {
+        "subType": "AIAPI",
+        "apiType": "HTTP"
+      }
+    ],
+    "policyAttributes": [
+      {
+        "name": "name",
+        "displayName": "Semantic Cache Policy Name",
+        "description": "The name of the semantic cache policy. Used for tracking and referencing this policy instance.",
+        "type": "String",
+        "allowedValues": [],
+        "required": true
+      },
+      {
+        "name": "threshold",
+        "displayName": "Threshold",
+        "description": "The maximum distance threshold value for the semantic cache.",
+        "type": "String",
+        "defaultValue": "0.32",
+        "allowedValues": [],
+        "required": false
+      },
+      {
+        "name": "jsonPath",
+        "displayName": "JSON Path",
+        "description": "The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation.",
+        "type": "String",
+        "allowedValues": [],
+        "required": false
+      }
+    ]
+}

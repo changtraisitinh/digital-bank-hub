@@ -1,0 +1,55 @@
+{
+  "category": "Mediation",
+  "name": "PromptDecorator",
+  "displayName": "Prompt Decorator",
+  "version": "v1.0",
+  "description": "Dynamically modifies the prompt by applying custom decorations using a configured strategy.",
+  "applicableFlows": [
+    "request"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Decorator Name",
+      "description": "The name of the prompt decorator policy. Used for tracking and referencing this policy instance.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "promptDecoratorConfig",
+      "displayName": "Prompt Decorator Configuration",
+      "description": "The configuration for decorating the prompt. Can decorate completions or chat/completions definitions.",
+      "type": "JSON",
+      "defaultValue": "{\n  \"decoration\": [\n    {\n      \"role\": \"\",\n      \"content\": \"\"\n    }\n  ]\n}",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "The JSONPath expression to extract the portion of the prompt that should be modified.",
+      "type": "String",
+      "defaultValue": "$.messages",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "append",
+      "displayName": "Append Decorated Content",
+      "description": "If true, the decorated content will be appended to the prompt. Otherwise, it will be prepended.",
+      "type": "Boolean",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

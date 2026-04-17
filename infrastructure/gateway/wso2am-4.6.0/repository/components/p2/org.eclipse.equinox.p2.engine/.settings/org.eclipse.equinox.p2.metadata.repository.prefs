@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/enabled=true
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/isSystem=false
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/name=wso2carbon-core
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/suffix=content.xml
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/type=org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/uri=file\:/home/jenkins/workspace/platform-builds/carbon-kernel_4.9.x/carbon-kernel/target/checkout/distribution/kernel/target/p2-repo
+repositories/file\:_home_jenkins_workspace_platform-builds_carbon-kernel_4.9.x_carbon-kernel_target_checkout_distribution_kernel_target_p2-repo/version=1.0.0
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/enabled=true
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/isSystem=false
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/name=am-p2-profile
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/suffix=content.xml
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/type=org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/uri=file\:/home/jenkins/workspace/products/product_apim/product-apim/all-in-one-apim/modules/p2-profile/product/target/p2-repo
+repositories/file\:_home_jenkins_workspace_products_product_apim_product-apim_all-in-one-apim_modules_p2-profile_product_target_p2-repo/version=1.0.0

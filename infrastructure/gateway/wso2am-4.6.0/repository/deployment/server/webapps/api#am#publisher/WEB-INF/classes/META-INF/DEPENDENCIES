@@ -1,0 +1,35 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+WSO2 API Manager Publisher REST API - v4
+
+
+From: 'an unknown organization'
+  - javax.inject (http://code.google.com/p/atinject/) javax.inject:javax.inject:jar:1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Hibernate Validator Engine (http://hibernate.org/validator/hibernate-validator) org.hibernate.validator:hibernate-validator:jar:6.2.5.Final
+    License: Apache License 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - SnakeYAML (https://bitbucket.org/snakeyaml/snakeyaml) org.yaml:snakeyaml:bundle:2.2
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Apache Software Foundation' (http://www.apache.org/)
+  - org.apache.xmlgraphics:batik-all (http://xmlgraphics.apache.org/batik/batik-all/) org.apache.xmlgraphics:batik-all:pom:1.17
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache XML Graphics Commons (http://xmlgraphics.apache.org/commons/) org.apache.xmlgraphics:xmlgraphics-commons:jar:2.9
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XML Commons External Components XML APIs Extensions (http://xml.apache.org/commons/components/external/) xml-apis:xml-apis-ext:jar:1.3.04
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'fasterxml.com' (https://fasterxml.com)
+  - ClassMate (https://github.com/FasterXML/java-classmate) com.fasterxml:classmate:bundle:1.5.1
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - Apache Tika core (https://tika.apache.org/) org.apache.tika:tika-core:bundle:3.2.3
+    License: Apache-2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

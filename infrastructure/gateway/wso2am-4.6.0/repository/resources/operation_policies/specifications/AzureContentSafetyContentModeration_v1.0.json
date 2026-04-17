@@ -1,0 +1,92 @@
+{
+  "category": "Mediation",
+  "name": "AzureContentSafetyContentModeration",
+  "displayName": "Azure Content Safety Content Moderation",
+  "version": "v1.0",
+  "description": "Integrate Azure Content Safety's Content Moderation Service to filter out harmful content in request messages sent to AI APIs and in AI generated content within AI API responses. The policy defines four severity levels across content safety categories hate, sexual, self-harm, and violence. If the severity level identified by the content moderation service exceeds the configured policy thresholds, the guardrail intervenes and returns an error response.",
+  "applicableFlows": [
+    "request",
+    "response"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Guardrail Name",
+      "description": "The name of the guardrail policy. This will be used for tracking purposes.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "hateCategory",
+      "displayName": "Hate",
+      "description": "The severity level for the hate category.",
+      "required": false,
+      "type": "Integer",
+      "validationRegex": "^[0-7]$",
+      "allowedValues": []
+    },
+    {
+      "name": "sexualCategory",
+      "displayName": "Sexual",
+      "description": "The severity level for the sexual category.",
+      "required": false,
+      "type": "Integer",
+      "validationRegex": "^[0-7]$",
+      "allowedValues": []
+    },
+    {
+      "name": "selfHarmCategory",
+      "displayName": "Self Harm",
+      "description": "The severity level for the self harm category.",
+      "required": false,
+      "type": "Integer",
+      "validationRegex": "^[0-7]$",
+      "allowedValues": []
+    },
+    {
+      "name": "violenceCategory",
+      "displayName": "Violence",
+      "description": "The severity level for the violence category.",
+      "required": false,
+      "type": "Integer",
+      "validationRegex": "^[0-7]$",
+      "allowedValues": []
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "Specify the JSONPath expression that identifies the content location for validation.",
+      "required": false,
+      "type": "String",
+      "allowedValues": []
+    },
+    {
+      "name": "passthroughOnError",
+      "displayName": "Passthrough on Error",
+      "description": "If enabled, the request or response is passed through without validation when the Azure Content Safety service is unavailable. Otherwise, a guardrail validation error is triggered.",
+      "required": false,
+      "defaultValue": "false",
+      "type": "Boolean",
+      "allowedValues": []
+    },
+    {
+      "name": "showAssessment",
+      "displayName": "Show Guardrail Assessment",
+      "description": "When enabled, the error response will include detailed information about the reason for the guardrail intervention.",
+      "type": "Boolean",
+      "defaultValue": "false",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "category": "Mediation",
+  "name": "ContentBasedModelRouter",
+  "version": "v1.0",
+  "displayName": "Content Based Model Router",
+  "description": "Routes AI API requests to specific model endpoints based on header or query parameter values. Enables dynamic content-based routing decisions for AI APIs.",
+  "applicableFlows": [
+    "request"
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "policyAttributes": [
+    {
+      "name": "contentBasedModelRoutingConfigs",
+      "displayName": "Content Based Model Routing Configuration",
+      "description": "JSON configuration containing the routing rules. Includes production and sandbox routing entries with conditions (type, key, operator, value) and targets (model, endpointId).",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    }
+  ]
+}

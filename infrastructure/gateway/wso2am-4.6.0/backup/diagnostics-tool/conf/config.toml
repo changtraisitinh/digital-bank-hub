@@ -1,0 +1,120 @@
+# Server Configurations
+[server_configuration]
+diagnostic_tool_enabled = "true"
+deployment_toml_path = "../conf/deployment.toml"
+logs_directory = "../repository/logs"
+updates_config_path = "../updates/config.json"
+diagnostic_log_file_path = "logs/diagnostics.log"
+carbon_log_file_path = "../repository/logs/wso2error.log"
+process_id_path = "../wso2carbon.pid"
+#server_name = "WSO2 Server"
+#server_version = "1.0.0"
+
+
+## Action Executor Configurations
+
+# Example
+#[[action_executor_configuration]]
+#executor = "ActionExecutor"
+#reload_time = "180" # in seconds
+
+[[action_executor_configuration]]
+executor = "MemoryDumper"
+reload_time = "180"
+
+[[action_executor_configuration]]
+executor = "ThreadDumper"
+count = "5"
+delay = "2000"
+
+[[action_executor_configuration]]
+executor = "OpenFileFinder"
+
+[[action_executor_configuration]]
+executor = "Netstat"
+command = "netstat -alt"
+
+[[action_executor_configuration]]
+executor = "ServerInfo"
+
+[[action_executor_configuration]]
+executor = "MetricsSnapshot"
+
+# Watcher Configurations
+[cpu_watcher]
+enabled = "true"
+threshold = "80"
+attempts = "2"
+interval = "5"
+action_executors = "ThreadDumper,MetricsSnapshot,ServerInfo"
+
+[memory_watcher]
+enabled = "true"
+threshold = "80"
+attempts = "2"
+interval = "5"
+action_executors = "ThreadDumper,MetricsSnapshot,ServerInfo"
+
+[log_watcher]
+enabled = "true"
+interval = "0.1"
+
+# Traffic Analyzer Configurations
+[traffic_analyzer]
+last_second_requests_enabled = "false"
+last_second_requests_windows_size = "300"
+last_second_requests_delay = "60"
+last_second_requests_interval = "1"
+last_fifteen_seconds_requests_enabled = "true"
+last_fifteen_seconds_requests_window_size = "100"
+last_fifteen_seconds_requests_delay = "4"
+last_fifteen_seconds_requests_interval = "15"
+last_minutes_requests_enabled = "true"
+last_minutes_requests_window_size = "100"
+last_minutes_requests_delay = "1"
+last_minutes_requests_interval = "60"
+notify_interval = "60"
+
+# Output data zip configurations
+
+[zip_file_configuration]
+output_directory = "data"
+max_count = "20"
+
+# Error regex patterns and diagnosis
+
+# Example
+#[[log_pattern]]
+#regex = "(.*)Timeout(.*)"
+#executors = "MetricsSnapshot,Netstat,OpenFileFinder,ServerInfo"
+#reload_time = "30"
+
+[[log_pattern]]
+regex = "(.*)org.apache.synapse.transport.passthru(.*)"
+executors = "MetricsSnapshot,Netstat,OpenFileFinder,ThreadDumper,ServerInfo"
+reload_time = "30"
+
+[[log_pattern]]
+regex = "(.*)org.apache.synapse(.*)"
+executors = "ServerInfo"
+reload_time = "10"
+
+## FTP Uploader configurations
+#[ftp_uploader]
+#enabled = "true"
+#host = "ftp.example.com"
+#port = "21"
+#username = "username"
+#password = "password"
+#directory = "diagnostics"
+
+## SFTP Uploader configurations
+#[sftp_uploader]
+#enabled = "true"
+#host = "sftp.example.com"
+#port = "22"
+#username = "username"
+#password = "password"
+#directory = "diagnostics"
+#known_hosts_path = "/home/user/.ssh/known_hosts"
+#strict_host_key_checking = "yes" # or "no"

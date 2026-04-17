@@ -1,0 +1,1042 @@
+/*
+ * Copyright (c) 2019, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+import React,{forwardRef,useRef,useImperativeHandle} from 'react';
+import { styled } from '@mui/material/styles';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
+import Typography from '@mui/material/Typography';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import Icon from '@mui/material/Icon';
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import Dropzone from 'react-dropzone';
+import InlineMessage from 'AppComponents/Shared/InlineMessage';
+import Api from 'AppData/api';
+import APIProduct from 'AppData/APIProduct';
+import MCPServer from 'AppData/MCPServer';
+import APIValidation from 'AppData/APIValidation';
+import AppContext from 'AppComponents/Shared/AppContext';
+import Alert from 'AppComponents/Shared/Alert';
+import Configurations from 'Config';
+import { green } from '@mui/material/colors';
+import { Box } from '@mui/material';
+
+const PREFIX = 'CreateEditForm';
+
+const classes = {
+    button: `${PREFIX}-button`,
+    contentWrapper: `${PREFIX}-contentWrapper`,
+    addNewOther: `${PREFIX}-addNewOther`,
+    radioGroup: `${PREFIX}-radioGroup`,
+    expansionPanel: `${PREFIX}-expansionPanel`,
+    group: `${PREFIX}-group`,
+    formControlFirst: `${PREFIX}-formControlFirst`,
+    formControl: `${PREFIX}-formControl`,
+    formControlLabel: `${PREFIX}-formControlLabel`,
+    typeTextWrapper: `${PREFIX}-typeTextWrapper`,
+    FormControlOdd: `${PREFIX}-FormControlOdd`,
+    acceptDrop: `${PREFIX}-acceptDrop`,
+    dropzone: `${PREFIX}-dropzone`,
+    dropZoneWrapper: `${PREFIX}-dropZoneWrapper`,
+    uploadedFile: `${PREFIX}-uploadedFile`
+};
+
+const Root = styled('div')((
+    {
+        theme
+    }
+) => ({
+    [`& .${classes.button}`]: {
+        marginLeft: theme.spacing(2),
+        color: theme.palette.getContrastText(theme.palette.primary.main),
+    },
+
+    [`& .${classes.contentWrapper}`]: {
+        maxWidth: theme.custom.contentAreaWidth,
+    },
+
+    [`&.${classes.addNewOther}`]: {
+        padding: theme.spacing(2),
+    },
+
+    [`& .${classes.radioGroup}`]: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: 300,
+    },
+
+    [`& .${classes.expansionPanel}`]: {
+        marginBottom: theme.spacing(1),
+    },
+
+    [`& .${classes.group}`]: {
+        display: 'flex',
+        flexDirection: 'row',
+    },
+
+    [`& .${classes.formControlFirst}`]: {
+        display: 'block',
+    },
+
+    [`& .${classes.formControl}`]: {
+        display: 'block',
+        marginTop: 20,
+    },
+
+    [`& .${classes.formControlLabel}`]: {
+        background: '#efefef',
+        borderRadius: 5,
+        paddingRight: 10,
+        marginLeft: 0,
+        marginTop: 10,
+    },
+
+    [`& .${classes.typeTextWrapper}`]: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+
+    [`& .${classes.FormControlOdd}`]: {
+        padding: 0,
+        backgroundColor: theme.palette.background.paper,
+        width: '100%',
+        marginTop: 0,
+    },
+
+    [`& .${classes.acceptDrop}`]: {
+        backgroundColor: green[50],
+    },
+
+    [`& .${classes.dropzone}`]: {
+        border: '1px dashed ' + theme.palette.primary.main,
+        borderRadius: '5px',
+        cursor: 'pointer',
+        height: 75,
+        padding: `${theme.spacing(2)} 0px`,
+        position: 'relative',
+        textAlign: 'center',
+        width: '100%',
+        margin: '10px 0',
+    },
+
+    [`& .${classes.dropZoneWrapper}`]: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        '& span.material-icons': {
+            color: theme.palette.primary.main,
+        },
+    },
+
+    [`& .${classes.uploadedFile}`]: {
+        fontSize: 11,
+    }
+}));
+
+/**
+ * CreateEditForm component
+ * @extends {React.Component} extends React.Component
+ */
+class CreateEditForm extends React.Component {
+
+    /**
+     * constructor component
+     * @param {*} props {intl, apiId, docId, apiType, saveDisabled, setSaveDisabled}
+     */
+    constructor(props) {
+        super(props);
+        this.state = {
+            type: 'HOWTO',
+            sourceType: 'INLINE',
+            name: '',
+            summary: '',
+            sourceUrl: '',
+            file: null,
+            disableName: false,
+            otherTypeName: '',
+            nameNotDuplicate: true,
+            nameMaxLengthExceeds: false,
+            invalidUrl: false,
+            nameEmpty: false,
+            summaryEmpty: false,
+            otherTypeEmpty: false,
+            urlEmpty: false,
+            invalidDocName: false,
+            visibility: 'API_LEVEL'
+        };
+    }
+
+    /**
+     * componentDidMount component
+     * @returns {void} - The componentDidMount component
+     */
+    componentDidMount() {
+        this.getDocument();
+        const { apiId, docId } = this.props;
+        if (apiId && docId) {
+            this.setState({ disableName: true });
+        }
+    }
+
+    /**
+     * handleChange component
+     * @param {string} name - The name
+     * @returns {function} - The handleChange component
+     */
+    handleChange = name => (e) => {
+        const { value } = e.target;
+        if (name === 'name') {
+            this.setState({ name: value });
+        } else if (name === 'summary') {
+            this.setState({ summary: value });
+        } else if (name === 'sourceUrl') {
+            this.setState({ sourceUrl: value });
+        } else if (name === 'otherTypeName') {
+            this.setState({ otherTypeName: value });
+        } else if (name === 'visibility') {
+            this.setState({ visibility: value });
+        }
+    };
+
+    /**
+     * onDrop component
+     * @param {Array} acceptedFile - The accepted file
+     * @returns {void} - The onDrop component
+     */
+    onDrop = (acceptedFile) => {
+        const specialChars = /[`!@#%^*()+\={};'"\\|,<>\/~]/;
+        if (specialChars.test(acceptedFile[0].name)) {
+            this.setState({ file: null });
+            Alert.error('Document source file name cannot contain spaces or special characters');
+        } else {
+            this.setState({ file: acceptedFile });
+        }
+    };
+
+    /**
+     * setDisable component
+     * @param {string} item - The item
+     * @returns {boolean}  item is disabled
+     */
+    setDisable = (item) => {
+        const { type } = this.state;
+        if (item === 'INLINE' || item === 'MARKDOWN' || item === 'FILE') {
+            if (type === 'PUBLIC_FORUM' || type === 'SUPPORT_FORUM') {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    /**
+     * getUrlHelperText component
+     * @returns {JSX.Element} - The getUrlHelperText component
+     */
+    getUrlHelperText() {
+        const { invalidUrl, urlEmpty} = this.state;
+
+        if (invalidUrl) {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.source.url.helper.text.error.invalid'
+                    defaultMessage='Enter a valid URL to the source'
+                />
+            );
+        } else if (urlEmpty) {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.source.url.helper.text.error.empty'
+                    defaultMessage='URL Field cannot be empty'
+                />
+            );
+        } else {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.source.url.helper.text'
+                    defaultMessage='Provide the URL to the source'
+                />
+            );
+        }
+    }
+
+    /**
+     * getDocument component
+     * @returns {void} - The getDocument component
+     */
+    getDocument() {
+        const { apiId, docId, apiType } = this.props;
+        let restAPI;
+        if (apiType === Api.CONSTS.APIProduct) {
+            restAPI = new APIProduct();
+        } else if (apiType === MCPServer.CONSTS.MCP) {
+            restAPI = MCPServer;
+        } else {
+            restAPI = new Api();
+        }
+        if (docId && apiId) {
+            const docPromise = restAPI.getDocument(apiId, docId);
+            docPromise
+                .then((doc) => {
+                    const {
+                        name, type, summary, sourceType, sourceUrl, otherTypeName, visibility,
+                    } = doc.body;
+                    this.setState({
+                        name,
+                        type,
+                        summary,
+                        sourceType,
+                        sourceUrl,
+                        otherTypeName,
+                        visibility,
+                    });
+                })
+                .catch((error) => {
+                    if (process.env.NODE_ENV !== 'production') {
+                        console.log(error);
+                    }
+                    const { status } = error;
+                    if (status === 404) {
+                        this.setState({ apiNotFound: true });
+                    }
+                });
+        }
+    }
+
+    /**
+     * addDocument component
+     * @param {string} apiId - The ID of the API
+     * @returns {Object} - The addDocument component
+     */
+    addDocument = (apiId) => {
+        const { apiType } = this.props;
+        let restAPI;
+        if (apiType === Api.CONSTS.APIProduct) {
+            restAPI = new APIProduct();
+        } else if (apiType === MCPServer.CONSTS.MCP) {
+            restAPI = MCPServer;
+        } else {
+            restAPI = new Api();
+        }
+        const {
+            name, type, summary, sourceType, sourceUrl, file, otherTypeName, visibility,
+        } = this.state;
+        const docPromise = restAPI.addDocument(apiId, {
+            name,
+            type,
+            summary,
+            sourceType,
+            visibility,
+            sourceUrl,
+            otherTypeName,
+            inlineContent: '',
+        });
+        return { docPromise, file };
+    };
+
+
+    /**
+     * updateDocument component
+     * @param {string} apiId - The ID of the API
+     * @returns {Object} - The updateDocument component
+     */
+    updateDocument = (apiId) => {
+        const { apiType } = this.props;
+        let restAPI;
+        if (apiType === Api.CONSTS.APIProduct) {
+            restAPI = new APIProduct();
+        } else if (apiType === MCPServer.CONSTS.MCP) {
+            restAPI = MCPServer;
+        } else {
+            restAPI = new Api();
+        }
+        const {
+            name, type, summary, sourceType, sourceUrl, file, otherTypeName, visibility,
+        } = this.state;
+        const { docId } = this.props;
+        const docPromise = restAPI.updateDocument(apiId, docId, {
+            name,
+            type,
+            summary,
+            sourceType,
+            visibility,
+            sourceUrl,
+            otherTypeName,
+            inlineContent: '',
+        });
+        return { docPromise, file };
+    };
+
+    /**
+     * changeSource component
+     * @param {*} e {value: string}
+     * @returns {void} - The changeSource component
+     */
+    changeSource = (e) => {
+        const { value } = e.target;
+        this.validate();
+        this.setState({ sourceType: value });
+    };
+
+    changeType = (e) => {
+        const { value } = e.target;
+        if (value === 'PUBLIC_FORUM' || value === 'SUPPORT_FORUM') {
+            this.setState({ sourceType: 'URL' });
+        }
+        this.setState({ type: value });
+    };
+
+    /**
+     * validate component
+     * @param {*} field {string}
+     * @param {*} value {string}
+     * @returns {void} - The validate component
+     */
+    validate(field=null, value=null) {
+        let invalidUrl = false;
+        const { intl } = this.props;
+        if (field === 'url') {
+            invalidUrl = value ? APIValidation.url.validate(value).error : false;
+            this.setState({ invalidUrl });
+            if (value === '') {
+                this.setState({ urlEmpty: true });
+            } else {
+                this.setState({ urlEmpty: false });
+            }
+        } else if (field === 'name') {
+            if (value) {
+                const nameValidity = APIValidation.documentName.required().validate(value, { abortEarly: false }).error;
+                if (nameValidity === null) {
+                    this.setState({ invalidDocName: false });
+                    const promise = APIValidation.apiDocument.validate({ id: this.props.apiId, name: value });
+                    promise
+                        .then((isDocumentPresent) => {
+                            this.setState({ nameNotDuplicate: !isDocumentPresent });
+                        })
+                        .catch((error) => {
+                            if (error.status === 404) {
+                                this.setState({ nameNotDuplicate: true });
+                            } else {
+                                Alert.error(intl.formatMessage({
+                                    id:'Apis.Details.Documents.Create.Edit.validate.doc.name.error',
+                                    defaultMessage:'Error when validating document name'
+                                }));
+                            }
+                        });
+                } else {
+                    this.setState({ invalidDocName: true });
+                }
+            } else {
+                this.setState({ nameNotDuplicate: true });
+            }
+
+            if (value === '') {
+                this.setState({ nameEmpty: true, nameMaxLengthExceeds: false });
+            } else if (value && value.length > 60) {
+                this.setState({ nameEmpty: false, nameMaxLengthExceeds: true });
+            } else {
+                this.setState({ nameEmpty: false, nameMaxLengthExceeds: false });
+            }
+        } else if (field === 'summary') {
+            if (value === '') {
+                this.setState({ summaryEmpty: true });
+            } else {
+                this.setState({ summaryEmpty: false });
+            }
+        } else if (field === 'otherTypeName') {
+            if (value === '') {
+                this.setState({ otherTypeEmpty: true });
+            } else {
+                this.setState({ otherTypeEmpty: false });
+            }
+        }
+    }
+
+    /**
+     * showNameHelper component
+     * @returns {JSX.Element} - The showNameHelper component
+     */
+    showNameHelper() {
+        const { nameEmpty, nameNotDuplicate, nameMaxLengthExceeds, invalidDocName } = this.state;
+        if (nameMaxLengthExceeds) {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.exceeds.document.name.length.helper.text'
+                    defaultMessage='Document name exceeds the maximum length of 60 characters'
+                />
+            );
+        } else if (nameNotDuplicate && !nameEmpty && !invalidDocName) {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.document.name.helper.text'
+                    defaultMessage='Provide the name for the document'
+                />
+            );
+        } else if (nameEmpty) {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.empty.document.name.helper.text'
+                    defaultMessage='Document name cannot be empty'
+                />
+            );
+        } else if (invalidDocName) {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.invalid.document.name.helper.text'
+                    defaultMessage='Document name cannot contain special characters'
+                />
+            );
+        } else {
+            return (
+                <FormattedMessage
+                    id='Apis.Details.Documents.CreateEditForm.duplicate.document.name.helper.text'
+                    defaultMessage='Duplicate document name'
+                />
+            );
+        }
+    }
+
+    /**
+     * render component
+     * @returns {JSX.Element} - The render component
+     */
+    render() {
+        const {
+            name,
+            type,
+            summary,
+            sourceType,
+            sourceUrl,
+            file,
+            disableName,
+            otherTypeName,
+            invalidUrl,
+            nameNotDuplicate,
+            nameMaxLengthExceeds,
+            nameEmpty,
+            invalidDocName,
+            summaryEmpty,
+            otherTypeEmpty,
+            urlEmpty,
+            visibility
+        } = this.state;
+        const {  setSaveDisabled, docId } = this.props;
+        const { settings: settingsContext } = this.context;
+
+        const isEditing = !!docId;
+        let isFormValid =
+            name !== '' &&
+            summary !== '' &&
+            nameNotDuplicate &&
+            !nameMaxLengthExceeds &&
+            !invalidDocName &&
+            (sourceType !== 'URL' || (sourceUrl && !invalidUrl));
+
+        if (sourceType === 'FILE' && !isEditing && !file) {
+            isFormValid = false;
+        }
+
+        if (type === 'OTHER' && !otherTypeName) {
+            isFormValid = false;
+        }
+
+        setSaveDisabled(!isFormValid);
+
+        return (
+            <Root className={classes.addNewOther}>
+                <FormControl margin='normal' className={classes.FormControlOdd}>
+                    <TextField
+                        fullWidth
+                        InputProps={{
+                            onBlur: ({ target: { value } }) => {
+                                this.validate('name', value);
+                            },
+                        }}
+                        label={
+                            <FormattedMessage
+                                id='Apis.Details.Documents.CreateEditForm.document.name'
+                                defaultMessage='Name *'
+                            />
+                        }
+                        helperText={this.showNameHelper()}
+                        type='text'
+                        id='doc-name'
+                        variant='outlined'
+                        name='name'
+                        margin='normal'
+                        value={name}
+                        onChange={this.handleChange('name')}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        autoFocus
+                        disabled={disableName}
+                        error={!nameNotDuplicate || nameEmpty || nameMaxLengthExceeds || invalidDocName}
+                    />
+                </FormControl>
+                <FormControl margin='normal' className={classes.FormControlOdd}>
+                    <TextField
+                        fullWidth
+                        multiline
+                        InputProps={{
+                            onBlur: ({ target: { value } }) => {
+                                this.validate('summary', value);
+                            },
+                            onKeyUp: ({ target: { value } }) => {
+                                this.validate('summary', value);
+                            },
+                        }}
+                        id='doc-summary'
+                        margin='normal'
+                        variant='outlined'
+                        label={
+                            <FormattedMessage
+                                id='Apis.Details.Documents.CreateEditForm.document.summary'
+                                defaultMessage='Summary *'
+                            />
+                        }
+                        helperText={
+                            summaryEmpty ? (
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.document.summary.error.empty'
+                                    defaultMessage='Document summary can not be empty'
+                                />
+                            ) : (
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.document.summary.helper.text'
+                                    defaultMessage='Provide a brief description for the document'
+                                />
+                            )
+                        }
+                        type='text'
+                        name='summary'
+                        value={summary}
+                        onChange={this.handleChange('summary')}
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                        error={summaryEmpty}
+                    />
+                </FormControl>
+                {settingsContext?.docVisibilityEnabled && 
+                <FormControl margin='normal' className={classes.FormControlOdd}>
+                    <TextField
+                        fullWidth
+                        id='docVisibility-selector'
+                        select
+                        variant='outlined'
+                        label={
+                            <FormattedMessage
+                                id='Apis.Details.Documents.CreateEditForm.document.docVisibility'
+                                defaultMessage='Document Visibility'
+                            />
+                        }
+                        helperText={
+                            summaryEmpty ? (
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.document.summary.error.empty'
+                                    defaultMessage='Document summary can not be empty'
+                                />
+                            ) : (
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.document.summary.helper.text'
+                                    defaultMessage='Provide a brief description for the document'
+                                />
+                            )
+                        }
+                        type='text'
+                        name='visibility'
+                        margin='normal'
+                        value={visibility}
+                        onChange={this.handleChange('visibility')}
+                        error={summaryEmpty}
+                    >
+                        <MenuItem value='API_LEVEL'>
+                            <FormattedMessage
+                                id='Apis.Details.Documents.CreateEditForm.document.docVisibility.dropdown.public'
+                                defaultMessage='Same as API Visibility'
+                            />
+                        </MenuItem>
+                        <MenuItem value='PRIVATE'>
+                            <FormattedMessage
+                                id='Apis.Details.Documents.CreateEditForm.document.docVisibility.dropdown.private'
+                                defaultMessage='Private'
+                            />
+                        </MenuItem>
+                        <MenuItem value='OWNER_ONLY'>
+                            <FormattedMessage
+                                id='Apis.Details.Documents.CreateEditForm.document.docVisibility.dropdown.ownerOnly'
+                                defaultMessage='Owner Only'
+                            />
+                        </MenuItem>
+                    </TextField>
+                </FormControl>}
+                <FormControl component='fieldset' className={classes.formControlFirst}>
+                    <FormLabel component='legend'>
+                        <FormattedMessage
+                            id='Apis.Details.Documents.CreateEditForm.document.create.type'
+                            defaultMessage='Type'
+                        />
+                    </FormLabel>
+                    <RadioGroup
+                        aria-label='Type'
+                        name='type'
+                        className={classes.group}
+                        value={type}
+                        onChange={this.changeType}
+                    >
+                        <FormControlLabel
+                            className={classes.formControlLabel}
+                            value='HOWTO'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <div className={classes.typeTextWrapper}>
+                                    <Icon>help_outline</Icon>
+                                    <div>
+                                        <FormattedMessage
+                                            id='Apis.Details.Documents.CreateEditForm.document.create.type.how.to'
+                                            defaultMessage='How To'
+                                        />
+                                    </div>
+                                </div>
+                            }
+                        />
+                        <FormControlLabel
+                            className={classes.formControlLabel}
+                            value='SAMPLES'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <div className={classes.typeTextWrapper}>
+                                    <Icon>code</Icon>
+                                    <div>
+                                        <FormattedMessage
+                                            id='Apis.Details.Documents.CreateEditForm.document.create.type.sample'
+                                            defaultMessage='Sample and SDK'
+                                        />
+                                    </div>
+                                </div>
+                            }
+                        />
+                        <FormControlLabel
+                            className={classes.formControlLabel}
+                            value='PUBLIC_FORUM'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <div className={classes.typeTextWrapper}>
+                                    <Icon>forum</Icon>
+                                    <div>
+                                        <FormattedMessage
+                                            id='Apis.Details.Documents.CreateEditForm.document.create.type.public.forum'
+                                            defaultMessage='Public Forum'
+                                        />
+                                    </div>
+                                </div>
+                            }
+                        />
+                        <FormControlLabel
+                            className={classes.formControlLabel}
+                            value='SUPPORT_FORUM'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <div className={classes.typeTextWrapper}>
+                                    <Icon>forum</Icon>
+                                    <div>
+                                        <FormattedMessage
+                                            id={
+                                                'Apis.Details.Documents.CreateEditForm.document.create.type.support.' +
+                                                'forum'
+                                            }
+                                            defaultMessage='Support Forum'
+                                        />
+                                    </div>
+                                </div>
+                            }
+                        />
+                        <FormControlLabel
+                            className={classes.formControlLabel}
+                            value='OTHER'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <div className={classes.typeTextWrapper}>
+                                    <Icon>video_label</Icon>
+                                    <div>
+                                        <FormattedMessage
+                                            id='Apis.Details.Documents.CreateEditForm.document.create.type.other'
+                                            defaultMessage='Other'
+                                        />
+                                    </div>
+                                </div>
+                            }
+                        />
+                    </RadioGroup>
+                </FormControl>
+                {type === 'OTHER' && (
+                    <FormControl margin='normal' className={classes.FormControlOdd}>
+                        <TextField
+                            fullWidth
+                            InputProps={{
+                                onBlur: ({ target: { value } }) => {
+                                    this.validate('otherTypeName', value);
+                                },
+                                onKeyUp: ({ target: { value } }) => {
+                                    this.validate('otherTypeName', value);
+                                },
+                            }}
+                            label={
+                                <FormattedMessage
+                                    id={
+                                        'Apis.Details.Documents.CreateEditForm.document.create.type.other.document.' +
+                                        'category'
+                                    }
+                                    defaultMessage='Other Document Type *'
+                                />
+                            }
+                            helperText={
+                                otherTypeEmpty ? (
+                                    <FormattedMessage
+                                        id={
+                                            'Apis.Details.Documents.CreateEditForm.document.create.type.other.error.' +
+                                            'document.category.helper.text'
+                                        }
+                                        defaultMessage='Document type cannot be empty'
+                                    />
+                                ) : (
+                                    <FormattedMessage
+                                        id={
+                                            'Apis.Details.Documents.CreateEditForm.document.create.type.other.' +
+                                            'document.category.helper.text'
+                                        }
+                                        defaultMessage='Provide the document type'
+                                    />
+                                )
+                            }
+                            type='text'
+                            id='other-doc-type'
+                            name='otherTypeName'
+                            margin='normal'
+                            value={otherTypeName}
+                            error={otherTypeEmpty}
+                            variant='outlined'
+                            onChange={this.handleChange('otherTypeName')}
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                        />
+                    </FormControl>
+                )}
+                <FormControl component='fieldset' className={classes.formControl}>
+                    <FormLabel component='legend'>
+                        <FormattedMessage id='Apis.Details.Documents.CreateEditForm.source' defaultMessage='Source' />
+                    </FormLabel>
+                    <RadioGroup
+                        aria-label='Source'
+                        name='sourceType'
+                        className={classes.group}
+                        value={sourceType}
+                        onChange={this.changeSource}
+                    >
+                        <FormControlLabel
+                            disabled={this.setDisable('INLINE')}
+                            value='INLINE'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.source.inline'
+                                    defaultMessage='Inline'
+                                />
+                            }
+                        />
+                        <FormControlLabel
+                            disabled={this.setDisable('MARKDOWN')}
+                            value='MARKDOWN'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.source.markdown'
+                                    defaultMessage='Markdown'
+                                />
+                            }
+                        />
+                        <FormControlLabel
+                            disabled={this.setDisable('URL')}
+                            value='URL'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.source.url'
+                                    defaultMessage='URL'
+                                />
+                            }
+                        />
+                        <FormControlLabel
+                            disabled={this.setDisable('FILE')}
+                            value='FILE'
+                            control={<Radio color='primary'/>}
+                            label={
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.source.file'
+                                    defaultMessage='File'
+                                />
+                            }
+                        />
+                    </RadioGroup>
+                </FormControl>
+                {sourceType === 'URL' && (
+                    <FormControl margin='normal' className={classes.FormControlOdd}>
+                        <TextField
+                            fullWidth
+                            InputProps={{
+                                onBlur: ({ target: { value } }) => {
+                                    this.validate('url', value);
+                                },
+                                onKeyUp: ({ target: { value } }) => {
+                                    this.validate('url', value);
+                                },
+                            }}
+                            id='url'
+                            margin='normal'
+                            label={
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.source.url.url'
+                                    defaultMessage='URL'
+                                />
+                            }
+                            helperText={this.getUrlHelperText()}
+                            type='text'
+                            name='sourceUrl'
+                            value={sourceUrl}
+                            onChange={this.handleChange('sourceUrl')}
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            error={invalidUrl || urlEmpty}
+                            variant='outlined'
+                        />
+                    </FormControl>
+                )}
+                {sourceType === 'FILE' && (
+                    <Dropzone
+                        multiple={false}
+                        accept={Configurations.app.supportedDocTypes}
+                        activeClassName={classes.acceptDrop}
+                        rejectClassName={classes.rejectDrop}
+                        onDrop={(dropFile) => {
+                            this.onDrop(dropFile);
+                        }}
+                    >
+                        {({ getRootProps, getInputProps }) => (
+                            <div {...getRootProps()} className={classes.dropzone} >
+                                <input {...getInputProps()} />
+                                <div className={classes.dropZoneWrapper}>
+                                    {!file && (
+                                        <div>
+                                            <Icon
+                                                className={classes.dropIcon}
+                                                style={{ fontSize: 56 }}
+                                            >
+                                                cloud_upload
+                                            </Icon>
+                                            <Typography
+                                                component="p"
+                                                className={classes.content}
+                                            >
+                                                {isEditing ? (
+                                                    <FormattedMessage
+                                                        id='Apis.Details.Documents.CreateEditForm.document.drop.file.replace'
+                                                        defaultMessage={'Drag and drop a file here, or click to select a file ' +
+                                                            'to replace the existing document'}
+                                                    />
+                                                ) : (
+                                                    <FormattedMessage
+                                                        id='Apis.Details.Documents.CreateEditForm.document.drop.file'
+                                                        defaultMessage='Drag and drop a file here, or click to select a file to upload'
+                                                    />
+                                                )}
+                                            </Typography>
+                                        </div>
+                                    )}
+                                    {file && file.length > 0 && (
+                                        <div className={classes.uploadedFile}>
+                                            <InsertDriveFileIcon color='primary' fontSize='large' />
+                                            <Box fontSize='h6.fontSize' fontWeight='fontWeightLight'>
+                                                <Typography>
+                                                    {file[0].name}
+                                                </Typography>
+                                            </Box>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </Dropzone>
+                )}
+                {(sourceType === 'INLINE' || sourceType === 'MARKDOWN') && (
+                    <InlineMessage type='info' height={60}>
+                        <div className={classes.contentWrapper}>
+                            <Typography component='p' className={classes.content}>
+                                <FormattedMessage
+                                    id='Apis.Details.Documents.CreateEditForm.document.content.info'
+                                    defaultMessage={
+                                        'Please save the document. The content can be edited in the next ' + 'step.'
+                                    }
+                                />
+                            </Typography>
+                        </div>
+                    </InlineMessage>
+                )}
+            </Root>
+        );
+    }
+}
+CreateEditForm.contextType = AppContext;
+CreateEditForm.defaultProps = {
+    apiId: null,
+    docId: null,
+};
+CreateEditForm.propTypes = {
+    classes: PropTypes.shape({}).isRequired,
+    intl: PropTypes.shape({}).isRequired,
+    docId: PropTypes.shape({}),
+    apiId: PropTypes.shape({}),
+    saveDisabled: PropTypes.bool.isRequired,
+    setSaveDisabled: PropTypes.func.isRequired,
+    apiType: PropTypes.oneOf([Api.CONSTS.API, Api.CONSTS.APIProduct]).isRequired,
+};
+
+const ForwardedCreateEditForm = forwardRef((props, ref) => {
+    const childRef = useRef(null);
+    useImperativeHandle(ref, () => ({
+        addDocument: (apiId) => {
+            return childRef.current.addDocument(apiId);
+        },
+        updateDocument: (apiId) => {
+            return childRef.current.updateDocument(apiId);
+        }
+    }));
+    return <CreateEditForm ref={childRef} {...props} />;
+});
+
+export default injectIntl(ForwardedCreateEditForm,{ forwardRef: true });

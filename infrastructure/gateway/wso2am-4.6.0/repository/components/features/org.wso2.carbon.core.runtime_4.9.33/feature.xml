@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feature id="org.wso2.carbon.core.runtime" label="WSO2 Carbon - Carbon Runtime Feature" provider-name="%providerName" version="4.9.33">
+  <description>This feature contains the carbon core runtime features</description>
+  <copyright>%copyright</copyright>
+  <license url="%licenseURL">%license</license>
+  <plugin id="org.eclipse.osgi" unpack="false" version="3.14.0.v20190517-1309"/>
+  <plugin id="org.eclipse.core.expressions" unpack="false" version="3.4.500.v20130515-1343"/>
+  <plugin id="org.eclipse.equinox.p2.core" unpack="false" version="2.3.0.v20131211-1531"/>
+  <plugin id="org.eclipse.equinox.simpleconfigurator" unpack="false" version="1.1.200.v20160504-1450"/>
+  <plugin id="org.eclipse.equinox.launcher.gtk.linux.x86" unpack="false" version="1.1.400.v20160518-1444"/>
+  <plugin id="org.eclipse.equinox.registry" unpack="false" version="3.6.0.v20150318-1503"/>
+  <plugin id="org.eclipse.equinox.frameworkadmin" unpack="false" version="2.0.300.v20160504-1450"/>
+  <plugin id="org.eclipse.core.jobs" unpack="false" version="3.5.300.v20130429-1813"/>
+  <plugin id="org.eclipse.osgi.compatibility.state" unpack="false" version="1.0.200.v20160504-1419"/>
+  <plugin id="org.apache.felix.gogo.shell" unpack="false" version="0.10.0.v201212101605"/>
+  <plugin id="org.eclipse.ecf.identity" unpack="false" version="3.2.0.v20130604-1622"/>
+  <plugin id="org.sat4j.core" unpack="false" version="2.3.5.v201308161310"/>
+  <plugin id="org.eclipse.equinox.p2.console" unpack="false" version="1.0.300.v20131113-1212"/>
+  <plugin id="org.eclipse.equinox.p2.updatechecker" unpack="false" version="1.1.200.v20131119-0908"/>
+  <plugin id="org.eclipse.equinox.ds" unpack="false" version="1.4.400.v20160226-2036"/>
+  <plugin id="org.eclipse.equinox.p2.metadata.repository" unpack="false" version="1.2.100.v20131209-2144"/>
+  <plugin id="org.eclipse.equinox.frameworkadmin.equinox" unpack="false" version="1.0.700.v20160102-2223"/>
+  <plugin id="org.eclipse.equinox.launcher" unpack="false" version="1.3.200.v20160318-1642"/>
+  <plugin id="org.eclipse.equinox.p2.jarprocessor" unpack="false" version="1.0.300.v20131211-1531"/>
+  <plugin id="org.eclipse.equinox.p2.extensionlocation" unpack="false" version="1.2.100.v20131119-0908"/>
+  <plugin id="org.eclipse.equinox.util" unpack="false" version="1.0.500.v20130404-1337"/>
+  <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" unpack="false" version="2.0.200.v20160504-1450"/>
+  <plugin id="org.eclipse.equinox.app" unpack="false" version="1.3.100.v20130327-1442"/>
+  <plugin id="org.eclipse.equinox.p2.engine" unpack="false" version="2.3.0.v20140506-1720"/>
+  <plugin id="org.eclipse.equinox.p2.publisher.eclipse" unpack="false" version="1.0.0.v20110511"/>
+  <plugin id="org.eclipse.equinox.p2.repository" unpack="false" version="2.3.0.v20131211-1531"/>
+  <plugin id="org.eclipse.equinox.security" unpack="false" version="1.2.100.v20150423-1356"/>
+  <plugin id="org.eclipse.equinox.preferences" unpack="false" version="3.6.0.v20160120-1756"/>
+  <plugin id="org.eclipse.equinox.p2.director" unpack="false" version="2.3.100.v20140224-1921"/>
+  <plugin id="org.eclipse.equinox.p2.metadata" unpack="false" version="2.2.0.v20131211-1531"/>
+  <plugin id="org.eclipse.equinox.p2.director.app" unpack="false" version="1.0.300.v20150129-0838"/>
+  <plugin id="org.eclipse.equinox.p2.repository.tools" unpack="false" version="2.1.0.v20131211-1531"/>
+  <plugin id="org.sat4j.pb" unpack="false" version="2.3.5.v201308161310"/>
+  <plugin id="org.eclipse.equinox.p2.artifact.repository" unpack="false" version="1.1.300.v20131211-1531"/>
+  <plugin id="org.eclipse.ecf" unpack="false" version="3.2.0.v20130604-1622"/>
+  <plugin id="org.apache.felix.gogo.command" unpack="false" version="0.10.0.v201209301215"/>
+  <plugin id="org.eclipse.equinox.p2.touchpoint.natives" unpack="false" version="1.1.100.v20140523-0116"/>
+  <plugin id="org.eclipse.equinox.p2.publisher" unpack="false" version="1.2.0.v20110511"/>
+  <plugin id="org.eclipse.equinox.concurrent" unpack="false" version="1.1.0.v20130327-1442"/>
+  <plugin id="org.eclipse.osgi.services" unpack="false" version="3.5.100.v20160504-1419"/>
+  <plugin id="org.eclipse.equinox.p2.directorywatcher" unpack="false" version="1.1.0.v20131211-1531"/>
+  <plugin id="org.eclipse.equinox.common" unpack="false" version="3.8.0.v20160509-1230"/>
+  <plugin id="org.eclipse.equinox.p2.garbagecollector" unpack="false" version="1.0.200.v20131115-1210"/>
+  <plugin id="org.wso2.carbon.osgi.security" unpack="false" version="4.9.33"/>
+  <plugin id="org.eclipse.ecf.provider.filetransfer" unpack="false" version="3.2.0.v20130604-1622"/>
+  <plugin id="org.apache.felix.gogo.runtime" unpack="false" version="0.10.0.v201209301036"/>
+  <plugin id="org.eclipse.ecf.filetransfer" unpack="false" version="5.0.0.v20130604-1622"/>
+  <plugin id="org.eclipse.core.runtime" unpack="false" version="3.9.0.v20130326-1255"/>
+  <plugin id="org.eclipse.equinox.p2.transport.ecf" unpack="false" version="1.0.100.v20110902-0807"/>
+  <plugin id="org.eclipse.equinox.p2.touchpoint.eclipse" unpack="false" version="2.1.0.v20110511-wso2v1"/>
+  <plugin id="org.eclipse.core.contenttype" unpack="false" version="3.4.200.v20130326-1255"/>
+  <plugin id="org.eclipse.equinox.console" unpack="false" version="1.3.300.v20190516-1504"/>
+  <plugin id="org.eclipse.equinox.p2.updatesite" unpack="false" version="1.0.400.v20131211-1531"/>
+  <plugin id="org.eclipse.ecf.provider.filetransfer.httpclient" unpack="false" version="4.0.200.v20120319-0616"/>
+</feature>

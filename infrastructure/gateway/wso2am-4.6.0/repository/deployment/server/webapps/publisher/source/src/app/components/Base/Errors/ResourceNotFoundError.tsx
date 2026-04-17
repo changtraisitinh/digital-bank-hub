@@ -1,0 +1,116 @@
+/*
+ * Copyright (c) 2022, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+import React, { FC } from 'react';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import { FormattedMessage } from 'react-intl';
+import Grid from '@mui/material/Grid';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Image404 from './Custom404Image';
+import { usePublisherSettings } from 'AppComponents/Shared/AppContext';
+
+interface ResourceNotFoundErrorProps {
+    message?: {
+        title: string;
+        body: string;
+    }
+}
+
+const ResourceNotFoundError: FC<ResourceNotFoundErrorProps> = ({ message }) => {
+    const { data: settings } = usePublisherSettings();
+    const isMCPSupportEnabled = settings && (settings as any).isMCPSupportEnabled;
+
+    return (
+        <>
+            <Container maxWidth='md'>
+                <Box padding={4}>
+                    <Paper elevation={0}>
+                        <Box padding={4}>
+                            <Grid container alignItems='center' justifyContent='center' style={{ height: '100%' }}>
+                                <Grid item xs={12} md={6}>
+                                    <Typography variant='h5' gutterBottom>
+                                        {message ? message.title : (
+                                            <FormattedMessage
+                                                id='Base.Errors.ResourceNotfound.default_tittle'
+                                                defaultMessage='Page Not Found'
+                                            />
+                                        )}
+                                    </Typography>
+                                    <Typography variant='subtitle1' gutterBottom>
+                                        {message ? message.body : (
+                                            <FormattedMessage
+                                                id='Base.Errors.ResourceNotfound.default_body'
+                                                defaultMessage='The page you are looking for is not available'
+                                            />
+                                        )}
+                                    </Typography>
+                                    <Box py={5}>
+                                        <Box pb={2}>
+                                            <Typography variant='subtitle1'>
+                                                <FormattedMessage
+                                                    id='Base.Errors.ResourceNotFound.more.links'
+                                                    defaultMessage='You may check the links below'
+                                                />
+                                            </Typography>
+                                        </Box>
+                                        <Link to='/apis/' style={{ marginRight: 8 }}>
+                                            <Button variant='contained' color='primary'>
+                                                <FormattedMessage
+                                                    id='Base.Errors.ResourceNotFound.api.list'
+                                                    defaultMessage='API List'
+                                                />
+                                            </Button>
+                                        </Link>
+                                        {isMCPSupportEnabled && (
+                                            <Link to='/mcp-servers/' style={{ marginRight: 8 }}>
+                                                <Button variant='contained' color='primary'>
+                                                    <FormattedMessage
+                                                        id='Base.Errors.ResourceNotFound.mcp.server.list'
+                                                        defaultMessage='MCP Server List'
+                                                    />
+                                                </Button>
+                                            </Link>
+                                        )}
+                                        <Link to='/api-products/'>
+                                            <Button variant='contained' color='primary'>
+                                                <FormattedMessage
+                                                    id='Base.Errors.ResourceNotFound.api.product.list'
+                                                    defaultMessage='API Product List'
+                                                />
+                                            </Button>
+                                        </Link>
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    {/* Image */}
+                                    <Image404 />
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </Paper>
+                </Box>
+            </Container>
+        </>
+    );
+};
+
+export default ResourceNotFoundError;

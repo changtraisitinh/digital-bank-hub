@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2025, WSO2 LLC. (http://www.wso2.com) All Rights Reserved.
+  ~
+  ~ WSO2 LLC. licenses this file to you under the Apache License,
+  ~ Version 2.0 (the "License"); you may not use this file except
+  ~ in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied. See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<!--
+    This file defines class loading policy for the Usage Data Receiver webapp.
+    Matches WSO2 APIM Publisher API configuration.
+-->
+<Classloading xmlns="http://wso2.org/projects/as/classloading">
+
+    <!-- Child-first classloading (default) -->
+    <ParentFirst>true</ParentFirst>
+
+    <!--
+        Environments required by this webapp:
+        - CXF3: Apache CXF 3.x for JAX-RS REST API support (provided by Carbon)
+        - Carbon: WSO2 Carbon framework (for OSGi, datasources, logging)
+
+        Using Carbon's CXF3 environment to keep WAR size small (< 2MB).
+    -->
+    <Environments>CXF3, Carbon</Environments>
+</Classloading>
+

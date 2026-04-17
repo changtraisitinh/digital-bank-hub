@@ -1,0 +1,291 @@
+/*
+ * Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+import React from 'react';
+import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/icons-material/List';
+import GridOn from '@mui/icons-material/GridOn';
+import AddIcon from '@mui/icons-material/Add';
+import { FormattedMessage } from 'react-intl';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import VerticalDivider from 'AppComponents/Shared/VerticalDivider';
+import { isRestricted } from 'AppData/AuthManager';
+
+const PREFIX = 'TopMenu';
+
+const classes = {
+    button: `${PREFIX}-button`,
+    root: `${PREFIX}-root`,
+    mainTitleWrapper: `${PREFIX}-mainTitleWrapper`,
+    APICreateMenu: `${PREFIX}-APICreateMenu`
+};
+
+const Root = styled('div')((
+    {
+        theme
+    }
+) => ({
+    [`& .${classes.button}`]: {
+        margin: theme.spacing(1),
+        marginBottom: 0,
+    },
+
+    [`&.${classes.root}`]: {
+        height: 70,
+        background: theme.palette.background.paper,
+        borderBottom: 'solid 1px ' + theme.palette.grey.A200,
+        display: 'flex',
+    },
+
+    [`& .${classes.mainTitleWrapper}`]: {
+        paddingLeft: 35,
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+    },
+
+    [`& .${classes.APICreateMenu}`]: {
+        flexGrow: 1,
+        display: 'flex',
+        alignItems: 'center',
+    }
+}));
+
+/**
+ *
+ * @param props
+ * @returns {*}
+ */
+function getTitleForArtifactType(props, count) {
+    const {
+        isAPIProduct, isMCPServer, query,
+    } = props;
+    const isSingular = count === 1;
+    if (query) {
+        return isSingular ? (
+            <FormattedMessage
+                id='Apis.Listing.components.TopMenu.search.results.singular'
+                defaultMessage='Search result'
+            />
+        ) : (
+            <FormattedMessage id='Apis.Listing.components.TopMenu.search.results' defaultMessage='Search results' />
+        );
+    } else if (isAPIProduct) {
+        return isSingular ? (
+            <FormattedMessage
+                id='Apis.Listing.components.TopMenu.apiproduct.singular'
+                defaultMessage='API product'
+            />
+        ) : (
+            <FormattedMessage
+                id='Apis.Listing.components.TopMenu.apiproducts.results'
+                defaultMessage='API products'
+            />
+        );
+    } else if (isMCPServer) {
+        return isSingular ? (
+            <FormattedMessage
+                id='Apis.Listing.components.TopMenu.mcp.server.singular'
+                defaultMessage='MCP Server'
+            />
+        ) : (
+            <FormattedMessage
+                id='Apis.Listing.components.TopMenu.mcp.servers.results'
+                defaultMessage='MCP Servers'
+            />
+        );
+    } else {
+        return isSingular ? (
+            <FormattedMessage id='Apis.Listing.components.TopMenu.api.singular' defaultMessage='API' />
+        ) : (
+            <FormattedMessage id='Apis.Listing.components.TopMenu.apis' defaultMessage='APIs' />
+        );
+    }
+}
+
+/**
+ *
+ * Renders the top menu
+ * @param {*} props
+ * @returns JSX
+ */
+function TopMenu(props) {
+    const {
+        data, setListType, count, isAPIProduct, isMCPServer, listType, showToggle, query,
+    } = props;
+
+    const isAPIAccessRestricted = () => {
+        return isRestricted(['apim:api_create', 'apim:api_manage']);
+    };
+
+    const isAPIProductAccessRestricted = () => {
+        return isRestricted(['apim:api_publish', 'apim:api_manage']);
+    };
+
+    const isMCPServerAccessRestricted = () => {
+        return isRestricted(['apim:mcp_server_create', 'apim:mcp_server_manage']);
+    };
+
+    if (count > 0) {
+        return (
+            <Root className={classes.root}>
+                <div className={classes.mainTitleWrapper}>
+                    {data && (
+                        <>
+                            <Typography variant='h5' className={classes.mainTitle} component='h1'>
+                                {isAPIProduct && (
+                                    <FormattedMessage
+                                        id='Apis.Listing.components.TopMenu.apiproducts'
+                                        defaultMessage='API Products'
+                                    />
+                                )}
+                                {isMCPServer && (
+                                    <FormattedMessage
+                                        id='Apis.Listing.components.TopMenu.mcp.servers'
+                                        defaultMessage='MCP Servers'
+                                    />
+                                )}
+                                { query && (
+                                    <FormattedMessage
+                                        id='Apis.Listing.components.TopMenu.unified.search'
+                                        defaultMessage='Unified search'
+                                    />
+                                )}
+                                { !query && !isAPIProduct && !isMCPServer && (
+                                    <FormattedMessage id='Apis.Listing.components.TopMenu.apis' defaultMessage='APIs' />
+                                )}
+                            </Typography>
+                            <Box
+                                fontFamily='fontFamily'
+                                fontSize='body1.fontSize'
+                                display='flex'
+                            >
+                                <FormattedMessage
+                                    id='Apis.Listing.components.TopMenu.displaying'
+                                    defaultMessage='Total:'
+                                />
+                                <Box
+                                    id='itest-apis-listing-total'
+                                    fontWeight='fontWeightBold'
+                                    px={0.5}
+                                    mb={0.5}
+                                >
+                                    {count}
+                                </Box>
+                                {getTitleForArtifactType(props, count)}
+                            </Box>
+                        </>
+                    )}
+                </div>
+                <VerticalDivider height={70} />
+                <div className={classes.APICreateMenu}>
+                    {isAPIProduct && (
+                        <Button
+                            variant='contained'
+                            color='primary'
+                            component={Link}
+                            disabled={isAPIProductAccessRestricted()}
+                            to='/api-products/create'
+                            data-testid='itest-create-api-product-button'
+                            startIcon={<AddIcon />}
+                        >
+                            <FormattedMessage
+                                id='Apis.Listing.components.TopMenu.create.an.api.product'
+                                defaultMessage='Create API Product'
+                            />
+                        </Button>
+                    )}
+                    {isMCPServer && (
+                        <Button
+                            variant='contained'
+                            color='primary'
+                            component={Link}
+                            disabled={isMCPServerAccessRestricted()}
+                            to='/mcp-servers/create'
+                            data-testid='itest-create-mcp-server-button'
+                            startIcon={<AddIcon />}
+                        >
+                            <FormattedMessage
+                                id='MCPServers.Listing.components.TopMenu.create.an.mcp.server'
+                                defaultMessage='Create MCP Server'
+                            />
+                        </Button>
+                    )}
+                    {!query && !isAPIProduct && !isMCPServer && (
+                        <Button
+                            variant='contained'
+                            color='primary'
+                            component={Link}
+                            disabled={isAPIAccessRestricted()}
+                            to='/apis/create'
+                            data-testid='itest-create-api-button'
+                            startIcon={<AddIcon />}
+                        >
+                            <FormattedMessage
+                                id='Apis.Listing.components.TopMenu.create.api'
+                                defaultMessage='Create API'
+                            />
+                        </Button>
+                    )}
+                </div>
+                {showToggle && (
+                    <Box height={32} m='auto' mr={8}>
+                        <ButtonGroup color='primary' aria-label='outlined primary button group'>
+                            <IconButton
+                                onClick={() => setListType('grid')}
+                                aria-label='Switch to Grid View'
+                                size='large'>
+                                <GridOn color={listType === 'grid' ? 'primary' : 'disabled'} />
+                            </IconButton>
+                            <IconButton
+                                onClick={() => setListType('list')}
+                                aria-label='Switch to List View'
+                                size='large'>
+                                <List color={listType === 'list' ? 'primary' : 'disabled'} />
+                            </IconButton>
+                        </ButtonGroup>
+                    </Box>
+                )}
+            </Root>
+        );
+    } else {
+        return null;
+    }
+}
+
+TopMenu.propTypes = {
+    classes: PropTypes.shape({}).isRequired,
+    setListType: PropTypes.func.isRequired,
+    listType: PropTypes.string.isRequired,
+    data: PropTypes.arrayOf(PropTypes.shape(PropTypes.object)).isRequired,
+    count: PropTypes.number.isRequired,
+    theme: PropTypes.shape({
+        custom: PropTypes.shape({}),
+    }).isRequired,
+    isAPIProduct: PropTypes.bool.isRequired,
+    isMCPServer: PropTypes.bool.isRequired,
+    showToggle: PropTypes.bool.isRequired,
+};
+
+export default (TopMenu);

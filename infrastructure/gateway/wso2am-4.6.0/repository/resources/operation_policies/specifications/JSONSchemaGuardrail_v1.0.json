@@ -1,0 +1,63 @@
+{
+  "category": "Mediation",
+  "name": "JSONSchemaGuardrail",
+  "displayName": "JSON Schema Guardrail",
+  "version": "v1.0",
+  "description": "Enforces that the request or response adheres to a defined JSON schema. If a violation is detected, the guardrail intervenes and returns an error response.",
+  "applicableFlows": [
+    "request",
+    "response"
+  ],
+  "supportedApiTypes": [
+    {
+      "subType": "AIAPI",
+      "apiType": "HTTP"
+    }
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "policyAttributes": [
+    {
+      "name": "name",
+      "displayName": "Guardrail Name",
+      "description": "The name of the guardrail policy. This will be used for tracking purposes.",
+      "type": "String",
+      "allowedValues": [],
+      "required": true
+    },
+    {
+      "name": "schema",
+      "displayName": "JSON Schema",
+      "description": "The JSON Schema used to enforce the structure of the content.",
+      "required": true,
+      "type": "JSON",
+      "allowedValues": []
+    },
+    {
+      "name": "jsonPath",
+      "displayName": "JSON Path",
+      "description": "The JSONPath expression used to extract content from the payload. If not specified, the entire payload will be used for validation.",
+      "type": "String",
+      "allowedValues": [],
+      "required": false
+    },
+    {
+      "name": "invert",
+      "displayName": "Invert the Decision",
+      "description": "If enabled, inverts the guardrail blocking decision, causing the guardrail to intervene and return an error response when the content matches the defined schema.",
+      "required": false,
+      "type": "Boolean",
+      "allowedValues": []
+    },
+    {
+      "name": "showAssessment",
+      "displayName": "Show Guardrail Assessment",
+      "description": "When enabled, the error response will include detailed information about the reason for the guardrail intervention.",
+      "type": "Boolean",
+      "defaultValue": "false",
+      "allowedValues": [],
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+	"username": "",
+	"update-level": "22",
+	"channel": "full",
+	"environment": "live",
+	"backup-dir": "",
+	"product": {
+		"pattern": "wso2am-4.6.0",
+		"name": "wso2am",
+		"version": "4.6.0",
+		"backup": "",
+		"backup-size": 0
+	},
+	"service": {
+		"url": "https://api.updates.wso2.com",
+		"token-url": "https://api.updates.wso2.com/token",
+		"app-key": "Njg4bTVXTzFDSGlLWGFTT216MDJKOUxMRDYwYTpSOGJnZERXb2pLY0dTdVUyQWhDdzN3OWY3OGNh",
+		"access-token": "",
+		"refresh-token": ""
+	},
+	"hotfixes": null
+}

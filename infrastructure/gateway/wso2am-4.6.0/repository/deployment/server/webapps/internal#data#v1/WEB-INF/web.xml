@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ~ Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ WSO2 Inc. licenses this file to you under the Apache License,
+ ~ Version 2.0 (the "License"); you may not use this file except
+ ~ in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~    http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing,
+ ~ software distributed under the License is distributed on an
+ ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ ~ KIND, either express or implied.  See the License for the
+ ~ specific language governing permissions and limitations
+ ~ under the License.
+ -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0" metadata-complete="true">
+    <absolute-ordering />
+
+    <display-name>WSO2 APIM REST API</display-name>
+    <description>WSO2 API Manager REST API</description>
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <servlet-class>
+            org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+
+        <init-param>
+            <param-name>jaxrs.serviceClasses</param-name>
+            <param-value>
+                org.wso2.carbon.apimgt.internal.service.KeyTemplatesApi,
+                org.wso2.carbon.apimgt.internal.service.BlockApi,
+                org.wso2.carbon.apimgt.internal.service.RevokedjwtApi,
+                org.wso2.carbon.apimgt.internal.service.ApisApi,
+                org.wso2.carbon.apimgt.internal.service.ApplicationKeyMappingsApi,
+                org.wso2.carbon.apimgt.internal.service.ApplicationPoliciesApi,
+                org.wso2.carbon.apimgt.internal.service.ApplicationsApi,
+                org.wso2.carbon.apimgt.internal.service.SubscriptionsApi,
+                org.wso2.carbon.apimgt.internal.service.SubscriptionPoliciesApi,
+                org.wso2.carbon.apimgt.internal.service.KeymanagersApi,
+                org.wso2.carbon.apimgt.internal.service.ApiPoliciesApi,
+                org.wso2.carbon.apimgt.internal.service.NotifyApi,
+                org.wso2.carbon.apimgt.internal.service.ScopesApi,
+                org.wso2.carbon.apimgt.internal.service.GlobalPoliciesApi,
+                org.wso2.carbon.apimgt.internal.service.RuntimeArtifactsApi,
+                org.wso2.carbon.apimgt.internal.service.RuntimeMetadataApi,
+                org.wso2.carbon.apimgt.internal.service.RetrieveApiArtifactsApi,
+                org.wso2.carbon.apimgt.internal.service.WebhooksSubscriptionsApi,
+                org.wso2.carbon.apimgt.internal.service.EndpointCertificatesApi,
+                org.wso2.carbon.apimgt.internal.service.GaConfigApi,
+                org.wso2.carbon.apimgt.internal.service.ApiLoggingConfigsApi,
+                org.wso2.carbon.apimgt.internal.service.CorrelationConfigsApi,
+                org.wso2.carbon.apimgt.internal.service.GatewayPolicyArtifactsApi,
+                org.wso2.carbon.apimgt.internal.service.SubscribeInternalApi,
+                org.wso2.carbon.apimgt.internal.service.LlmProvidersApi,
+                org.wso2.carbon.apimgt.internal.service.TransactionRecordsApi,
+                org.wso2.carbon.apimgt.internal.service.TenantInfoApi,
+                org.wso2.carbon.apimgt.internal.service.NotifyGatewayApi,
+                org.wso2.carbon.apimgt.internal.service.NotifyApiDeploymentStatusApi
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>jaxrs.address</param-name>
+            <param-value>/</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jaxrs.providers</param-name>
+            <param-value>
+                com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider,
+                org.wso2.carbon.apimgt.rest.api.util.exception.GlobalThrowableMapper
+            </param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>jaxrs.inInterceptors</param-name>
+            <param-value>
+                org.wso2.carbon.apimgt.rest.api.util.interceptors.PreAuthenticationInterceptor,
+                org.wso2.carbon.apimgt.rest.api.util.interceptors.auth.BasicAuthenticationInterceptor,
+                org.wso2.carbon.apimgt.rest.api.util.interceptors.auth.PermissionValidationInterceptor(permissions=/permission/admin/ permissions=/permission/protected/),
+                org.wso2.carbon.apimgt.rest.api.util.interceptors.PostAuthenticationInterceptor,
+                org.wso2.carbon.apimgt.rest.api.util.interceptors.OrganizationInterceptor
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>jaxrs.outInterceptors</param-name>
+            <param-value>
+                org.apache.cxf.transport.common.gzip.GZIPOutInterceptor
+            </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>
