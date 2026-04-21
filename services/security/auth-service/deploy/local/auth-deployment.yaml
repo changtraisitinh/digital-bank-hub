@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dibank-auth-service
+  namespace: default
+  labels:
+    group: dibank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dibank-auth-service
+      group: dibank
+  template:
+    metadata:
+      labels:
+        app: dibank-auth-service
+        group: dibank
+    spec:
+      containers:
+        - name: dibank-auth-service
+          image: dibank-auth-service:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8104
+          env:
+            - name: CONTAINER_NAME
+              value: "dibank-auth-service"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "local"
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:postgresql://host.minikube.internal:5432/dibank_auth"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "postgres"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "postgres"
+            - name: LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_JDBC_CORE
+              value: "TRACE"
+            - name: LOGGING_LEVEL_COM_ZAXXER_HIKARI
+              value: "DEBUG"
+            - name: SPRING_JPA_SHOW_SQL
+              value: "true"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"

@@ -1,0 +1,14 @@
+{
+  "extends": "@ballerine/config/tsconfig.node.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/env": ["src/env.ts"]
+    }
+  },
+  "include": ["src", "plugins", "prisma/data-migrations/**/*", "scripts/**/*"]
+}

@@ -1,0 +1,31 @@
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+ide/
+.run/onboarding.run.xml
+.run/transaction.run.xml
+
+# OS generated files
+.DS_Store
+
+# Build and binary files
+*__debug_bin1675735721
+components/mdz/bin/mdz
+dist/
+coverage.out
+scripts/coverage_ignore.txt
+
+# Docker compose files
+components/ledger/_docker-compose.yml
+components/onboarding/_docker-compose.yml
+
+# Environment files
+.env
+
+# Dependencies
+node_modules/
+scripts/node_modules/
+
+# Other
+postman/backups

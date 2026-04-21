@@ -1,0 +1,3 @@
+[build]
+
+base = "examples/web-ui-sdk/sdk-react"

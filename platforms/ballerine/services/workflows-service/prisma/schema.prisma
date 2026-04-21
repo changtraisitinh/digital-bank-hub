@@ -1,0 +1,1087 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum UserStatus {
+  Active
+  Blocked
+  Deleted
+}
+
+model User {
+  id        String     @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String     @unique
+  phone     String?    @unique
+  password  String
+  avatarUrl String?
+  roles     Json
+  status    UserStatus @default(Active)
+
+  userToProjects UserToProject[]
+
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+  lastActiveAt        DateTime?
+  workflowRuntimeData WorkflowRuntimeData[]
+  alerts              Alert[]
+
+  actorWorkflowRuntimeData WorkflowRuntimeData[] @relation("ActorUser")
+}
+
+model Entities {
+  id        String  @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String  @unique
+  phone     String? @unique
+  password  String
+  roles     Json
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum ApprovalState {
+  APPROVED
+  REJECTED
+  PROCESSING
+  NEW
+}
+
+enum Gender {
+  male
+  female
+  other
+}
+
+model EndUser {
+  id              String  @id @default(cuid())
+  isContactPerson Boolean @default(false)
+
+  correlationId String? @db.VarChar
+
+  endUserType   String?       @default("individual") // Add userType: can be 'EndUser', 'CompanyContact', 'Stakeholder'
+  approvalState ApprovalState @default(NEW)
+  stateReason   String?       @db.VarChar
+
+  firstName         String    @db.VarChar
+  lastName          String    @db.VarChar
+  email             String?   @db.Text
+  phone             String?   @db.VarChar
+  country           String?   @db.VarChar
+  dateOfBirth       DateTime?
+  avatarUrl         String?
+  nationalId        String?   @db.VarChar
+  gender            Gender?
+  nationality       String?   @db.VarChar
+  passportNumber    String?   @db.VarChar
+  address           Json?
+  additionalInfo    Json?
+  activeMonitorings Json      @default("[]")
+  amlHits           Json      @default("[]")
+
+  workflowRuntimeData WorkflowRuntimeData[]
+  actorWorkflowRuntimeData WorkflowRuntimeData[] @relation("ActorEndUser")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  businesses           Business[]
+  endUsersOnBusinesses EndUsersOnBusinesses[]
+
+  projectId                String
+  project                  Project                    @relation(fields: [projectId], references: [id])
+  WorkflowRuntimeDataToken WorkflowRuntimeDataToken[]
+  Counterparty             Counterparty[]
+  documents                Document[]
+
+  @@unique([projectId, correlationId])
+  @@index([endUserType])
+  @@index([approvalState])
+  @@index([createdAt])
+  @@index([projectId])
+}
+
+enum BusinessPosition {
+  ubo
+  director
+  representative
+  authorized_signatory
+}
+
+model EndUsersOnBusinesses {
+  endUser    EndUser            @relation(fields: [endUserId], references: [id])
+  endUserId  String
+  business   Business           @relation(fields: [businessId], references: [id])
+  businessId String
+  position   BusinessPosition[]
+
+  @@id([endUserId, businessId])
+  @@index([businessId])
+  @@index([endUserId])
+}
+
+model Business {
+  id            String  @id @default(cuid()) // Unique identifier for the business entity
+  correlationId String? @db.VarChar
+
+  businessType            String?       @default("default")
+  createdAt               DateTime      @default(now()) // Timestamp for when the business entity was created
+  updatedAt               DateTime      @updatedAt // Timestamp for when the business entity was last updated
+  companyName             String // Official registered name of the business entity
+  registrationNumber      String? // Unique registration number assigned by the relevant authorities
+  legalForm               String? // Legal structure of the business entity, e.g., LLC, corporation, partnership
+  dba                     String? // Doing Business As (DBA) name of the business entity
+  country                 String?
+  countryOfIncorporation  String? // Country where the business entity is incorporated
+  dateOfIncorporation     DateTime? // Date when the business entity was incorporated
+  address                 Json? // Registered address of the business entity
+  phoneNumber             String? // Contact phone number of the business entity
+  email                   String? // Contact email of the business entity
+  website                 String? // Official website of the business entity
+  industry                String? // Industry sector the business entity operates in
+  taxIdentificationNumber String? // Unique tax identification number assigned by the tax authorities
+  vatNumber               String? // Unique VAT (Value Added Tax) number for the business entity
+  shareholderStructure    Json? // Information about the ownership structure, including shareholders and their ownership percentages
+  numberOfEmployees       Int? // Number of employees working for the business entity
+  businessPurpose         String? // Brief description of the business entity's purpose or main activities
+  documents               Document[] // Collection of documents required for the KYB process, e.g., registration documents, financial statements
+  avatarUrl               String?
+  additionalInfo          Json?
+  bankInformation         Json?
+  approvalState           ApprovalState @default(NEW) // Current status of the KYB process for the business entity
+  mccCode                 Int?
+  metadata                Json? // Additional metadata for the business entity and processes
+
+  workflowRuntimeData  WorkflowRuntimeData[]
+  endUsers             EndUser[]
+  endUsersOnBusinesses EndUsersOnBusinesses[]
+
+  projectId       String
+  project         Project          @relation(fields: [projectId], references: [id])
+  Counterparty    Counterparty[]
+  businessReports BusinessReport[]
+  alerts          Alert[]
+
+  @@unique([projectId, correlationId])
+  @@index([companyName])
+  @@index([approvalState])
+  @@index([correlationId])
+  @@index([projectId])
+  @@index([businessType])
+}
+
+enum EntityType {
+  Business
+  EndUser
+}
+
+enum Noteable {
+  Report
+  Alert
+  Workflow
+}
+
+model Note {
+  id            String     @id @default(cuid())
+  entityId      String
+  entityType    EntityType
+  noteableId    String
+  noteableType  Noteable
+  content       String
+  parentNoteId  String?
+  parentNote    Note?      @relation("ReplyToNote", fields: [parentNoteId], references: [id])
+  childrenNotes Note[]     @relation("ReplyToNote")
+  fileIds       String[]
+  createdAt     DateTime   @default(now())
+  createdBy     String     @default("SYSTEM")
+  updatedAt     DateTime   @updatedAt
+  deletedAt     DateTime?
+  projectId     String
+  project       Project    @relation(fields: [projectId], references: [id])
+
+  @@index([entityId, entityType, projectId])
+  @@index([noteableId, noteableType, projectId])
+  @@index([projectId])
+}
+
+model WorkflowDefinition {
+  id String @id @default(cuid())
+
+  crossEnvKey     String? @unique
+  displayName     String?
+  reviewMachineId String?
+  name            String
+  version         Int     @default(1)
+
+  projectId String?
+  isPublic  Boolean @default(false)
+
+  definitionType  String
+  definition      Json
+  contextSchema   Json?
+  documentsSchema Json?
+  config          Json?
+  extensions      Json?
+  variant         String @default("DEFAULT")
+
+  persistStates Json?
+  submitStates  Json?
+
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+  createdBy           String                @default("SYSTEM")
+  project             Project?              @relation(fields: [projectId], references: [id])
+  workflowRuntimeData WorkflowRuntimeData[]
+  uiDefinitions       UiDefinition[]
+
+  @@unique([name, version, projectId, definitionType])
+  @@index([projectId, name, definitionType])
+  @@index([variant, projectId])
+  @@index(version)
+}
+
+enum WorkflowRuntimeDataStatus {
+  active
+  completed
+  failed
+}
+
+model WorkflowRuntimeData {
+  id                        String                    @id @default(cuid())
+  endUser                   EndUser?                  @relation(fields: [endUserId], references: [id], onDelete: SetNull)
+  endUserId                 String?
+  business                  Business?                 @relation(fields: [businessId], references: [id], onDelete: SetNull)
+  businessId                String?
+  assignee                  User?                     @relation(fields: [assigneeId], references: [id], onDelete: SetNull)
+  assigneeId                String?
+  actorEndUser             EndUser?                  @relation("ActorEndUser", fields: [actorEndUserId], references: [id], onDelete: SetNull)
+  actorEndUserId           String?
+  actorUser                User?                     @relation("ActorUser", fields: [actorUserId], references: [id], onDelete: SetNull)
+  actorUserId              String?
+  workflowDefinition        WorkflowDefinition        @relation(fields: [workflowDefinitionId], references: [id])
+  workflowDefinitionId      String
+  uiDefinitionId            String?
+  uiDefinition              UiDefinition?             @relation(fields: [uiDefinitionId], references: [id])
+  workflowDefinitionVersion Int
+  context                   Json
+  config                    Json?
+  // history
+  state                     String?
+  tags                      Json?
+  status                    WorkflowRuntimeDataStatus @default(active)
+  createdAt                 DateTime                  @default(now())
+  updatedAt                 DateTime                  @updatedAt
+  createdBy                 String                    @default("SYSTEM")
+  resolvedAt                DateTime?
+  assignedAt                DateTime?
+  salesforceObjectName      String?
+  salesforceRecordId        String?
+
+  parentRuntimeDataId       String?                    @map("parent_runtime_data_id")
+  parentWorkflowRuntimeData WorkflowRuntimeData?       @relation("ParentChild", fields: [parentRuntimeDataId], references: [id])
+  childWorkflowsRuntimeData WorkflowRuntimeData[]      @relation("ParentChild")
+  WorkflowRuntimeDataToken  WorkflowRuntimeDataToken[]
+  alerts                    Alert[]
+  documents                 Document[]
+  logs                      WorkflowLog[]              @relation("WorkflowLogs")
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  deletedAt DateTime?
+  deletedBy String?
+
+  @@index([assigneeId, status])
+  @@index([endUserId, status])
+  @@index([businessId, status])
+  @@index([workflowDefinitionId, status])
+  @@index([state])
+  @@index([parentRuntimeDataId])
+  @@index([projectId])
+  @@index([uiDefinitionId])
+  @@index([tags(ops: JsonbPathOps)], type: Gin)
+  @@index([deletedAt])
+}
+
+model File {
+  id               String   @id @default(cuid())
+  mimeType         String?
+  userId           String
+  fileNameOnDisk   String
+  fileName         String?
+  uri              String
+  fileNameInBucket String?
+  createdAt        DateTime @default(now())
+  createdBy        String   @default("SYSTEM")
+
+  documentFiles DocumentFile[]
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  @@index([userId])
+  @@index([projectId])
+}
+
+model Policy {
+  id        String @id @default(cuid())
+  name      String
+  version   Int
+  tasks     Json
+  rulesSets Json
+}
+
+model Filter {
+  id     String @id @default(cuid())
+  name   String
+  entity String
+  query  Json
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String   @default("SYSTEM")
+
+  @@unique([name, projectId]) // Ensure 'name' is unique within the scope of 'projectId'
+  @@index([projectId])
+}
+
+enum CustomerStatuses {
+  onboarding
+  during_pilot
+  active
+  terminated
+}
+
+enum BusinessReportType {
+  ONGOING_MERCHANT_REPORT_T1
+  MERCHANT_REPORT_T1
+  MERCHANT_REPORT_T1_LITE
+}
+
+model Customer {
+  id                          String           @id @default(cuid())
+  name                        String           @unique
+  displayName                 String
+  logoImageUri                String
+  faviconImageUri             String           @default("") // TODO: remove default value after data migration
+  customerStatus              CustomerStatuses @default(onboarding)
+  config                      Json?
+  authenticationConfiguration Json?
+  country                     String?
+  language                    String?
+  websiteUrl                  String?
+  subscriptions               Json?
+  features                    Json? // Features enabled for the customer
+  hubspotCustomerId           String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  projects Project[]
+  apiKeys  ApiKey[]
+
+  @@index(name)
+  @@index(customerStatus)
+}
+
+model ApiKey {
+  id String @id @default(cuid())
+
+  customerId String
+
+  hashedKey String
+
+  validUntil DateTime?
+
+  additionalInfo Json?
+  rotationInfo   Json?
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  customer Customer @relation(fields: [customerId], references: [id])
+
+  @@unique([hashedKey])
+}
+
+model Project {
+  id         String   @id @default(cuid())
+  name       String
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id])
+
+  userToProjects UserToProject[]
+
+  filters                  Filter[]
+  endUsers                 EndUser[]
+  business                 Business[]
+  workflowRuntimeData      WorkflowRuntimeData[]
+  files                    File[]
+  SalesforceIntegration    SalesforceIntegration?
+  workflowDefinitions      WorkflowDefinition[]
+  uiDefinitions            UiDefinition[]
+  documents                Document[]
+  documentFiles            DocumentFile[]
+  WorkflowRuntimeDataToken WorkflowRuntimeDataToken[]
+  TransactionRecord        TransactionRecord[]
+  AlertDefinition          AlertDefinition[]
+  Alert                    Alert[]
+  Counterparty             Counterparty[]
+  BusinessReport           BusinessReport[]
+  Note                     Note[]
+  workflowLogs             WorkflowLog[]
+
+  @@unique([name, customerId])
+  @@index(name)
+  @@index(customerId)
+}
+
+model UserToProject {
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  @@id([projectId, userId])
+  @@index([userId])
+}
+
+model SalesforceIntegration {
+  id                  String   @id @default(cuid()) @db.VarChar(500)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  projectId           String   @unique @db.VarChar(500)
+  project             Project  @relation(fields: [projectId], references: [id])
+  accessToken         String   @db.VarChar(500)
+  accessTokenIssuedAt DateTime
+  refreshToken        String   @db.VarChar(500)
+  instanceUrl         String   @db.VarChar(500)
+  userId              String   @db.VarChar(500)
+  organizationId      String   @db.VarChar(500)
+  idUrl               String   @db.VarChar(500)
+}
+
+enum UiDefinitionContext {
+  back_office
+  collection_flow
+}
+
+model UiDefinition {
+  id                   String              @id @default(cuid())
+  crossEnvKey          String?             @unique
+  workflowDefinitionId String
+  uiContext            UiDefinitionContext
+
+  name        String?
+  displayName String?
+
+  page  Int?
+  state String?
+
+  definition    Json? // Frontend UI xstate definition
+  uiSchema      Json // JSON schmea of how to render UI
+  theme         Json? // Theme for the UI
+  schemaOptions Json? // Document Schemas, rejectionReasons: {}, documenTypes: {}, documenCateogries: {}
+  uiOptions     Json? // how the view will look, overall
+  locales       Json? // Locales for the UI
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime? @updatedAt
+
+  projectId            String
+  project              Project               @relation(fields: [projectId], references: [id])
+  workflowDefinition   WorkflowDefinition    @relation(fields: [workflowDefinitionId], references: [id])
+  workflowRuntimeDatas WorkflowRuntimeData[]
+
+  version Int @default(1)
+
+  @@index([name, projectId])
+}
+
+model WorkflowRuntimeDataToken {
+  id                    String              @id @default(cuid())
+  token                 String              @unique @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  workflowRuntimeDataId String
+  workflowRuntimeData   WorkflowRuntimeData @relation(fields: [workflowRuntimeDataId], references: [id])
+  endUserId             String?
+  endUser               EndUser?            @relation(fields: [endUserId], references: [id])
+  projectId             String
+  project               Project             @relation(fields: [projectId], references: [id])
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @updatedAt
+  expiresAt             DateTime
+  deletedAt             DateTime?
+}
+
+enum DataVersionStatus {
+  in_progress
+  completed
+  failed
+}
+
+model DataMigrationVersion {
+  id            String            @id @default(cuid())
+  version       String
+  fileName      String?
+  migratedAt    DateTime          @default(now())
+  status        DataVersionStatus @default(completed)
+  failureReason String?
+
+  @@index([migratedAt])
+  @@index([status, version])
+}
+
+enum DataSyncStatus {
+  new
+  synced
+  unsynced
+  pending_approval
+  failed
+}
+
+enum DataSyncTables {
+  WorkflowDefinition
+  UiDefinition
+  AlertDefinition
+}
+
+model DataSync {
+  id           String         @id @default(cuid())
+  table        DataSyncTables
+  crossEnvKey  String
+  fullDataHash String
+
+  status        DataSyncStatus @default(new)
+  diff          Json?
+  failureReason String?
+  auditLog      Json?
+  syncedColumns Json
+
+  createdAt   DateTime  @default(now())
+  lastCheckAt DateTime?
+  lastSyncAt  DateTime?
+
+  @@unique([table, crossEnvKey])
+  @@index([status])
+}
+
+enum TransactionRecordType {
+  deposit
+  withdrawal
+  transfer
+  payment
+  refund
+  chargeback
+}
+
+enum ReviewStatus {
+  pending
+  reviewed
+  flagged
+  cleared
+  rejected
+}
+
+enum VerificationStatus {
+  unverified
+  verified
+  pending
+}
+
+enum TransactionRecordStatus {
+  new
+  pending
+  active
+  completed
+  rejected
+  cancelled
+  failed
+}
+
+enum PaymentMethod {
+  credit_card
+  debit_card
+  bank_transfer
+  pay_pal
+  apple_pay
+  google_pay
+  apm
+}
+
+enum PaymentType {
+  instant
+  scheduled
+  recurring
+  refund
+}
+
+enum PaymentIssuer {
+  chase
+  bank_of_america
+  citibank
+  american_express
+}
+
+enum PaymentGateway {
+  stripe
+  pay_pal
+  square
+  adyen
+}
+
+enum PaymentAcquirer {
+  wells_fargo
+  first_data
+  elavon
+  world_pay
+}
+
+enum PaymentProcessor {
+  visa
+  master_card
+  discover
+  american_express
+}
+
+enum PaymentBrandName {
+  visa
+  mastercard
+  diners
+  jcb
+  discover
+  china_union_pay // China UnionPay
+  american_express // American Express
+  scb_pay_now
+  ocbc_pay_now
+  atome
+  dash
+  grab_pay
+  alipay_host
+  wechat_host
+}
+
+enum TransactionDirection {
+  inbound
+  outbound
+}
+
+model TransactionRecord {
+  id                       String                   @id @default(cuid())
+  transactionCorrelationId String                   @db.VarChar
+  transactionDate          DateTime
+  transactionAmount        Float // Amount of the transaction
+  transactionCurrency      String // Currency of the transaction
+  transactionBaseAmount    Float // Amount of the transaction
+  transactionBaseCurrency  String // Currency of the transaction
+  transactionDescription   String? // Description of the transaction
+  transactionCategory      String? // Category of the transaction
+  transactionType          TransactionRecordType? // Enum for transaction type
+  transactionStatus        TransactionRecordStatus? @default(completed)
+  transactionStatusReason  String? // Reason for the transaction status
+  transactionDirection     TransactionDirection? // Reason for the transaction status
+  transactionReference     String? // Reference number for the transaction
+
+  originatorIpAddress   String?
+  originatorGeoLocation String?
+  originatorUserAgent   String?
+  originatorSortCode    String?
+  originatorBankCountry String?
+
+  paymentBrandName PaymentBrandName?
+  paymentMethod    PaymentMethod?
+  paymentType      PaymentType?
+  paymentChannel   String?
+  paymentIssuer    PaymentIssuer?
+  paymentGateway   PaymentGateway?
+  paymentAcquirer  PaymentAcquirer?
+  paymentProcessor PaymentProcessor?
+  paymentMccCode   Int?
+
+  cardFingerprint   String?
+  cardIssuedCountry String?
+  completed3ds      Boolean?
+  cardType          String?
+  cardIssuer        String?
+  cardBin           Int?
+  cardBrand         String?
+
+  cardExpiryMonth String?
+  cardExpiryYear  String?
+  cardHolderName  String?
+  cardTokenized   String?
+
+  tags             Json?
+  reviewStatus     ReviewStatus?
+  reviewerComments String?
+  auditTrail       Json?
+
+  unusualActivityFlags Json? // Flags indicating unusual activity in the transaction
+  riskScore            Float? // Risk score assigned to the transaction
+  regulatoryAuthority  String? // Regulatory authority overseeing the business involved
+
+  additionalInfo Json? // Additional information related to the transaction
+
+  // Fields for merchant transactions
+  productName          String?
+  productDescription   String?
+  productPrice         Float?
+  productPriceCurrency String?
+  productId            String?
+  productSku           String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Nullable relations to allow association with either, both, or none
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  counterpartyOriginatorId String?
+  counterpartyOriginator   Counterparty? @relation("OriginatingCounterparty", fields: [counterpartyOriginatorId], references: [id])
+
+  counterpartyBeneficiaryId String?
+  counterpartyBeneficiary   Counterparty? @relation("BenefitingCounterparty", fields: [counterpartyBeneficiaryId], references: [id])
+
+  @@unique([projectId, transactionCorrelationId])
+  @@index([transactionType])
+  @@index([transactionDate])
+  @@index([transactionDirection])
+  @@index([transactionStatus])
+  @@index([reviewStatus])
+  @@index([projectId])
+  @@index([transactionCorrelationId])
+  @@index([counterpartyOriginatorId])
+  @@index([counterpartyBeneficiaryId])
+  @@index([paymentMethod])
+}
+
+enum AlertSeverity {
+  low      @map("100")
+  medium   @map("200")
+  high     @map("300")
+  critical @map("400")
+}
+
+enum AlertState {
+  // New
+  triggered @map("101") // Alert generated based on criteria indicating potential suspicious activity.
+
+  // Pending
+  under_review @map("201") // Alert is being investigated for more details and assessment.
+  escalated    @map("202") // Alert requires attention from higher authority or specialized investigation.
+
+  // Completed - Various resolutions indicating the outcome of the investigation.
+  rejected  @map("301") // Investigation confirms the alert as a real threat, necessitating specific actions or interventions.
+  dismissed @map("302") // Alert considered not relevant or not posing any actionable risk.
+  cleared   @map("303") // Investigation finds activity to be legitimate and not suspicious.
+}
+
+enum AlertStatus {
+  new       @map("100")
+  pending   @map("200")
+  completed @map("300")
+}
+
+enum MonitoringType {
+  transaction_monitoring
+  ongoing_merchant_monitoring
+}
+
+model AlertDefinition {
+  id             String         @id @default(cuid())
+  crossEnvKey    String         @unique
+  correlationId  String
+  monitoringType MonitoringType
+  name           String
+  enabled        Boolean        @default(true)
+  description    String?
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onUpdate: Cascade, onDelete: NoAction)
+
+  rulesetId String?
+  ruleId    String?
+
+  inlineRule Json
+  createdBy  String @default("SYSTEM")
+
+  dedupeStrategy  Json
+  config          Json
+  defaultSeverity AlertSeverity
+
+  tags           String[] // Tags for the alert
+  additionalInfo Json // Additional information
+
+  createdAt DateTime @default(now())
+
+  modifiedBy String?
+  updatedAt  DateTime @updatedAt
+
+  alert Alert[]
+
+  @@unique([correlationId, projectId])
+  @@index([projectId])
+}
+
+model Alert {
+  id String @id @default(cuid())
+
+  alertDefinitionId String
+  alertDefinition   AlertDefinition @relation(fields: [alertDefinitionId], references: [id], onUpdate: Cascade, onDelete: NoAction)
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onUpdate: Cascade, onDelete: NoAction)
+
+  dataTimestamp DateTime
+  status        AlertStatus
+  tags          String[]
+  severity      AlertSeverity?
+
+  state      AlertState
+  decisionAt DateTime?
+
+  executionDetails Json
+  additionalInfo   Json?
+
+  assignee   User?     @relation(fields: [assigneeId], references: [id], onUpdate: Cascade, onDelete: NoAction)
+  assigneeId String?
+  assignedAt DateTime?
+
+  dedupedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  workflowRuntimeDataId String?
+  workflowRuntimeData   WorkflowRuntimeData? @relation(fields: [workflowRuntimeDataId], references: [id], onUpdate: Cascade, onDelete: NoAction)
+
+  // TODO: Remove this field after data migration
+  counterpartyId String?
+  counterparty   Counterparty? @relation(fields: [counterpartyId], references: [id])
+
+  counterpartyOriginatorId  String?
+  counterpartyBeneficiaryId String?
+  counterpartyOriginator    Counterparty? @relation(name: "counterpartyAlertOriginator", fields: [counterpartyOriginatorId], references: [id])
+  counterpartyBeneficiary   Counterparty? @relation(name: "counterpartyAlertBeneficiary", fields: [counterpartyBeneficiaryId], references: [id])
+
+  businessId String?
+  business   Business? @relation(fields: [businessId], references: [id])
+
+  @@index([assigneeId])
+  @@index([projectId])
+  @@index([alertDefinitionId])
+  @@index([counterpartyId])
+  @@index([createdAt(sort: Desc)])
+  @@index([counterpartyOriginatorId])
+  @@index([counterpartyBeneficiaryId])
+}
+
+enum RiskCategory {
+  low
+  medium
+  high
+}
+
+enum ComplianceStatus {
+  compliant
+  non_compliant
+  under_review
+}
+
+enum PEPStatus {
+  not_applicable // the counterparty is not a politically exposed person.
+  pending_review // the status of the counterparty being a politically exposed person is pending review.
+  confirmed // The counterparty has been confirmed as a politically exposed person.
+}
+
+enum SanctionListMatchStatus {
+  not_listed // the counterparty is not found on any sanction list.
+  pending_review // the counterparty's status against sanction lists is pending review.
+  listed // The counterparty is listed on a sanction list.
+}
+
+model Counterparty {
+  id String @id @default(cuid())
+
+  correlationId String? // This column is a denormalized value of the EndUser.correlationId or Business.correlationId
+
+  additionalInfo Json? // Additional information about the counterparty
+
+  businessId String?
+  business   Business? @relation(fields: [businessId], references: [id])
+
+  endUserId               String? // individual
+  endUser                 EndUser?            @relation(fields: [endUserId], references: [id])
+  // Relations
+  originatingTransactions TransactionRecord[] @relation("OriginatingCounterparty")
+  benefitingTransactions  TransactionRecord[] @relation("BenefitingCounterparty")
+  alerts                  Alert[]
+
+  alertsBenefiting  Alert[] @relation("counterpartyAlertBeneficiary")
+  alertsOriginating Alert[] @relation("counterpartyAlertOriginator")
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  @@unique([projectId, correlationId])
+  @@index([correlationId])
+  @@index([endUserId])
+}
+
+enum BusinessReportStatus {
+  new
+  in_progress
+  under_review
+  pending_review
+  completed
+}
+
+model BusinessReport {
+  id       String             @id @default(cuid())
+  type     BusinessReportType
+  reportId String?            @unique
+  report   Json
+
+  riskScore  Int?
+  status     BusinessReportStatus
+  businessId String
+  business   Business             @relation(fields: [businessId], references: [id])
+  batchId    String?
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([businessId])
+  @@index([projectId])
+  @@index([riskScore])
+  @@index([type])
+  @@index([batchId])
+}
+
+model Document {
+  id String @id @default(cuid())
+
+  category String
+  type     String
+
+  issuingVersion String
+  issuingCountry String
+  version        Int
+  status         DocumentStatus
+  decision       DocumentDecision?
+  decisionReason String?
+  comment        String?
+  properties     Json
+
+  files DocumentFile[]
+
+  businessId String?
+  business   Business? @relation(fields: [businessId], references: [id])
+
+  endUserId String?
+  endUser   EndUser? @relation(fields: [endUserId], references: [id])
+
+  workflowRuntimeDataId String?
+  workflowRuntimeData   WorkflowRuntimeData? @relation(fields: [workflowRuntimeDataId], references: [id])
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([businessId])
+  @@index([endUserId])
+  @@index([workflowRuntimeDataId])
+}
+
+enum DocumentStatus {
+  provided
+  requested
+}
+
+enum DocumentDecision {
+  approved
+  rejected
+  revisions
+}
+
+enum DocumentFileType {
+  selfie
+  document
+  other
+}
+
+enum DocumentFileVariant {
+  front
+  back
+  other
+}
+
+model DocumentFile {
+  id      String              @id @default(cuid())
+  type    DocumentFileType
+  variant DocumentFileVariant
+  page    Int
+
+  documentId String
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  fileId String
+  file   File   @relation(fields: [fileId], references: [id], onDelete: Cascade)
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([documentId])
+  @@index([fileId])
+}
+
+enum WorkflowLogType {
+  EVENT_RECEIVED
+  STATE_TRANSITION
+  PLUGIN_INVOCATION
+  CONTEXT_CHANGED
+  ERROR
+  INFO
+}
+
+model WorkflowLog {
+  id                    Int                 @id @default(autoincrement())
+  workflowRuntimeData   WorkflowRuntimeData @relation("WorkflowLogs", fields: [workflowRuntimeDataId], references: [id])
+  workflowRuntimeDataId String
+  type                  WorkflowLogType
+  metadata              Json?
+  fromState             String?
+  toState               String?
+  message               String?
+  eventName             String?
+  pluginName            String?
+  createdAt             DateTime            @default(now())
+  projectId             String
+  project               Project             @relation(fields: [projectId], references: [id])
+
+  @@index([workflowRuntimeDataId])
+  @@index([type])
+  @@index([createdAt])
+  @@index([projectId])
+}

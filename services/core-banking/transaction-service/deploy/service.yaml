@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dibank-transaction-service
+spec:
+  selector:
+    app: dibank-transaction-service
+  ports:
+    - port: 8102
+      targetPort: 8102
+  type: ClusterIP

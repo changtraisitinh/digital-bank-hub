@@ -1,0 +1,29 @@
+services:
+  onboarding:
+    container_name: midaz-onboarding
+    restart: always
+    build:
+      context: ../../
+      dockerfile: ./components/onboarding/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - infra-network
+      - onboarding-network
+      - plugin-auth-network
+
+networks:
+  infra-network:
+    name: infra-network
+    driver: bridge
+    external: true
+  onboarding-network:
+    name: onboarding-network
+    driver: bridge
+  plugin-auth-network:
+    name: plugin-auth-network
+    driver: bridge

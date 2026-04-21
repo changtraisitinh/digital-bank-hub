@@ -1,0 +1,10 @@
+package constant
+
+const (
+	CREATED  = "CREATED"
+	APPROVED = "APPROVED"
+	PENDING  = "PENDING"
+	SENT     = "SENT"
+	CANCELED = "CANCELED"
+	DECLINED = "DECLINED"
+)

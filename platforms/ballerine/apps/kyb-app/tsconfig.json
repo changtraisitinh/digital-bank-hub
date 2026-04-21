@@ -1,0 +1,12 @@
+{
+  "extends": "@ballerine/config/tsconfig.react.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["jest", "vite/client", "node", "vite-plugin-terminal/client"]
+  },
+  "include": ["vite-env.d.ts", "src", "e2e", "tests/**/*.js", "jest.config.ts"]
+}

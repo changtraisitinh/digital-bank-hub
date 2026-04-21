@@ -1,0 +1,11 @@
+{
+  "extends": "@ballerine/config/tsconfig.dom-bundler.json",
+  "compilerOptions": {
+    "outDir": "./dist/types",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}

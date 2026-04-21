@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dibank-banking-integration
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dibank-banking-integration
+      group: dibank
+  template:
+    metadata:
+      labels:
+        app: dibank-banking-integration
+        group: dibank
+    spec:
+      containers:
+        - name: dibank-banking-integration
+          image: dibank-banking-integration:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8103
+          env:
+            - name: CONTAINER_NAME
+              value: "dibank-banking-integration"
+            - name: VIETQR_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: vietqr-secrets
+                  key: client-id
+            - name: VIETQR_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: vietqr-secrets
+                  key: api-key
+            - name: VIETQR_URL_GEN_QR
+              valueFrom:
+                configMapKeyRef:
+                  name: vietqr-config
+                  key: url-gen-qr

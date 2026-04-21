@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "module": "es2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2019", "WebWorker"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "importsNotUsedAsValues": "remove",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "downlevelIteration": true
+  },
+  "include": [
+    "src",
+    // Otherwise causes an ESLint error
+    "vite.config.ts",
+    "vite.dev.config.ts",
+    "svelte.config.js",
+    "playwright.config.ts",
+    "vitest.config.ts",
+    "e2e",
+    "cspell.config.cjs"
+  ],
+  "exclude": ["node_modules", "dist", "coverage"]
+}

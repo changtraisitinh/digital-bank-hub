@@ -1,0 +1,37 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "test", "test:unit", "test:integration", "test:e2e"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "dependencies"
+        }
+      ]
+    },
+    "test": {
+      "dependsOn": [{ "projects": "self", "target": "build" }]
+    },
+    "test:unit": {
+      "dependsOn": [{ "projects": "self", "target": "build" }]
+    },
+    "test:integration": {
+      "dependsOn": [{ "projects": "self", "target": "build" }]
+    },
+    "test:e2e": {
+      "dependsOn": [{ "projects": "self", "target": "build" }]
+    },
+    "lint": {
+      "dependsOn": [{ "projects": "self", "target": "build" }]
+    }
+  },
+  "defaultBase": "main"
+}

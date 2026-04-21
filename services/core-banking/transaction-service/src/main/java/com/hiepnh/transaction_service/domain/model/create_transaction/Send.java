@@ -1,0 +1,15 @@
+package com.hiepnh.transaction_service.domain.model.create_transaction;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Send {
+
+    private int scale;
+    private int value;
+    private String asset;
+    private Source source;
+    private Distribute distribute;
+}

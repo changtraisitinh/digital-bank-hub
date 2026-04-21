@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dibank-banking-integration
+spec:
+  selector:
+    app: dibank-banking-integration
+  ports:
+    - port: 8103
+      targetPort: 8103
+  type: ClusterIP
