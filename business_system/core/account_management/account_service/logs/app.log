@@ -1,4 +1,0 @@
-2025-06-11 13:32:56.050 [Test worker] INFO  c.h.a.AccountServiceApplicationTests - Starting AccountServiceApplicationTests using Java 21.0.6 with PID 15717 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/account_management/account_service)
-2025-06-11 13:32:56.051 [Test worker] DEBUG c.h.a.AccountServiceApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-06-11 13:32:56.052 [Test worker] INFO  c.h.a.AccountServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-06-11 13:32:56.605 [Test worker] INFO  c.h.a.AccountServiceApplicationTests - Started AccountServiceApplicationTests in 0.744 seconds (process running for 1.267)

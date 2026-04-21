@@ -1,5 +1,0 @@
----
-- name: Configure the self-hosted server
-  hosts: all
-  roles:
-    - setup-ballerine

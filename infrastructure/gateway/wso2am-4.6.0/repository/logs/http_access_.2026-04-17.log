@@ -286,3 +286,1002 @@
 127.0.0.1 - - [17/Apr/2026:10:52:45 +0700] GET /api/am/devportal/v3/apis?limit=10&offset=0 HTTP/1.1 200 92 https://localhost:9443/devportal/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.015
 127.0.0.1 - - [17/Apr/2026:10:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
 127.0.0.1 - - [17/Apr/2026:10:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:10:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/dist/4005.c4a3665b1173aa1d6ef1.bundle.js HTTP/1.1 200 9786 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/dist/DeferredAPIs.5b8212241003828da526.bundle.js HTTP/1.1 200 26511 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.015
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/dist/2861.0a7939a3633db3f82af2.bundle.js HTTP/1.1 200 16941 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/dist/APICreateRoutes.3b4ac8a9480186fe4faa.bundle.js HTTP/1.1 200 33588 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/dist/8604.5c5fc7fa0d5b8d5e5ad8.bundle.js HTTP/1.1 200 406624 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.061
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/dist/1018.657dcc57f23e30e131a3.bundle.js HTTP/1.1 200 487602 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.055
+127.0.0.1 - - [17/Apr/2026:10:54:01 +0700] GET /publisher/site/public/fonts/Open_Sans/open-sans-v43-latin-700.woff2 HTTP/1.1 200 18244 https://localhost:9443/publisher/site/public/css/main.css Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:10:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:10:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:10:54:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:10:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:10:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:10:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:10:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:10:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:10:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:10:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:10:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:10:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:10:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:02:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:02:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:03:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:11:03:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:11:04:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:04:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:04:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:04:53 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:04:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:05:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:05:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:06:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:06:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:07:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:07:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:08:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:08:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:09:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:09:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:10:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:10:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:11:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:11:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:12:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:12:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:11:13:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:13:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:14:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:14:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:15:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:15:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:11:16:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:16:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:17:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:17:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:18:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:18:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:11:19:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:19:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:20:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:20:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:21:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:21:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:22:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:22:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:23:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:23:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:24:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:24:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:25:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:25:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:26:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:26:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:27:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:27:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:11:28:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:11:28:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:29:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:29:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:30:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:30:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:31:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:31:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:32:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:32:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:33:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:33:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:34:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:34:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:35:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:35:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:36:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:36:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:37:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:11:37:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:38:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:11:38:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:11:39:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.018
+127.0.0.1 - - [17/Apr/2026:11:39:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:40:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:11:40:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:41:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.022
+127.0.0.1 - - [17/Apr/2026:11:41:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:42:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:42:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:43:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:43:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:11:44:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:44:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:45:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:45:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.034
+127.0.0.1 - - [17/Apr/2026:11:46:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:11:46:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:47:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:47:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:11:48:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:48:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:11:49:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:49:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:11:50:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:11:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:51:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:52:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:11:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:11:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:54:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:11:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:11:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:11:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:11:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:11:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.018
+127.0.0.1 - - [17/Apr/2026:11:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:11:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:11:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:12:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:02:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:02:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:03:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:03:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:04:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:12:04:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:12:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:12:04:52 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:12:04:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:12:05:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:05:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:06:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:06:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:07:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:07:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:08:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:08:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:09:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:09:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:10:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:12:10:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:11:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:11:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:12:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:12:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:13:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:13:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:14:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:14:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:15:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:15:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:16:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:16:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:12:17:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:12:17:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:18:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:18:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:19:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:12:19:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:20:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:20:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:21:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:21:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:22:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:22:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:23:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:23:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:24:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:24:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:25:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:25:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:26:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:12:26:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:27:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:27:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:28:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:28:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:29:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:29:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:30:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:30:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:31:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:31:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:32:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:32:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:33:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:33:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:34:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:12:34:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:35:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:35:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:36:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:36:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:12:37:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:37:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:38:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:38:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:39:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.002
+127.0.0.1 - - [17/Apr/2026:12:39:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:40:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:40:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:12:41:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:41:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:12:42:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:42:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:43:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:43:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:44:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:44:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:45:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:45:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.016
+127.0.0.1 - - [17/Apr/2026:12:46:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:46:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:47:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:47:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:48:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:48:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:49:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:49:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:12:50:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:51:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:52:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:12:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:12:54:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:12:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:12:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:12:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:12:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:12:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:13:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.019
+127.0.0.1 - - [17/Apr/2026:13:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:13:02:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:02:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:03:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:03:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:04:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.002
+127.0.0.1 - - [17/Apr/2026:13:04:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:13:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:04:53 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:13:04:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.002
+127.0.0.1 - - [17/Apr/2026:13:05:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:05:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:06:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:06:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:13:07:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:07:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:13:08:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:13:08:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:09:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:09:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:10:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:10:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:11:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:11:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:13:12:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:12:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:13:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:13:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:14:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:14:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:15:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:15:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:16:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:16:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:13:17:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:13:17:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:13:18:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:18:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:19:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:19:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:20:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:20:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:21:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:21:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:22:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:13:22:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:23:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:23:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:24:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:24:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:25:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:25:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:26:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:26:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:27:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:27:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:28:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:28:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:13:29:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:29:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:30:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:30:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:13:31:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:31:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:32:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:32:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:33:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:33:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:13:34:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.002
+127.0.0.1 - - [17/Apr/2026:13:34:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:35:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:13:35:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:13:36:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:36:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:37:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:37:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:38:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:38:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:13:39:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:39:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:40:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:40:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:41:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:41:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:42:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:42:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:43:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:43:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:44:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:44:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:45:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:45:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:46:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:46:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:47:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:13:47:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.029
+127.0.0.1 - - [17/Apr/2026:13:48:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:48:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:13:49:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:49:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:13:50:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:13:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:51:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:52:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.002
+127.0.0.1 - - [17/Apr/2026:13:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:13:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:54:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:13:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:13:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:13:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:13:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:13:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:14:02:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:02:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:03:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:03:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:04:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:04:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:14:04:52 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:14:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:14:05:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:05:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:06:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:06:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:07:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:07:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:14:08:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:08:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:09:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:09:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:10:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:10:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:11:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:11:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:12:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:12:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:13:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:13:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:14:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:14:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:15:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:15:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:16:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:16:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:17:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:17:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:18:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:18:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:14:19:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:19:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:20:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:20:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:21:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:21:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:22:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:22:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:23:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:23:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:14:24:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:24:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:25:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:25:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:26:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:14:26:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:27:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:27:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:28:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:14:28:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:29:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:29:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:30:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:30:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:31:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:31:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:32:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:32:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:33:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:33:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:34:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.016
+127.0.0.1 - - [17/Apr/2026:14:34:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:35:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:35:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:36:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:14:36:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:14:37:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:37:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:38:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:38:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:39:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:39:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:40:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:40:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:41:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:41:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:42:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:42:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:43:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:43:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:44:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:44:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:45:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:14:45:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:46:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:14:46:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:47:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:47:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:48:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:48:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:49:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:14:49:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:50:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:14:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:14:51:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:52:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:14:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:14:54:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:14:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:14:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:14:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:14:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:14:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:14:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:14:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:14:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:15:02:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:02:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:15:03:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:15:03:48 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.080
+127.0.0.1 - - [17/Apr/2026:15:04:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:04:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:15:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.018
+127.0.0.1 - - [17/Apr/2026:15:04:52 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:15:04:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:15:05:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.018
+127.0.0.1 - - [17/Apr/2026:15:05:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:06:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:06:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:07:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:07:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:08:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:08:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:09:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.018
+127.0.0.1 - - [17/Apr/2026:15:09:42 +0700] GET /publisher/apis/design-assistant HTTP/1.1 200 1713 https://localhost:9443/authenticationendpoint/login.do?client_id=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&commonAuthCallerPath=%2Foauth2%2Fauthorize&forceAuth=false&passiveAuth=false&redirect_uri=https%3A%2F%2Flocalhost%3A9443%2Fpublisher%2Fservices%2Fauth%2Fcallback%2Flogin&response_type=code&scope=apim%3Aadmin+apim%3Aapi_create+apim%3Aapi_definition_view+apim%3Aapi_delete+apim%3Aapi_generate_key+apim%3Aapi_import_export+apim%3Aapi_list_view+apim%3Aapi_manage+apim%3Aapi_mediation_policy_manage+apim%3Aapi_product_import_export+apim%3Aapi_publish+apim%3Aapi_view+apim%3Aapp_import_export+apim%3Aclient_certificates_add+apim%3Aclient_certificates_manage+apim%3Aclient_certificates_update+apim%3Aclient_certificates_view+apim%3Acomment_manage+apim%3Acomment_view+apim%3Acomment_write+apim%3Acommon_operation_policy_manage+apim%3Acommon_operation_policy_view+apim%3Adocument_create+apim%3Adocument_manage+apim%3Aep_certificates_add+apim%3Aep_certificates_manage+apim%3Aep_certificates_update+apim%3Aep_certificates_view+apim%3Agateway_policy_manage+apim%3Agateway_policy_view+apim%3Agov_policy_read+apim%3Agov_result_read+apim%3Agov_rule_read+apim%3Allm_provider_read+apim%3Amcp_server_create+apim%3Amcp_server_delete+apim%3Amcp_server_generate_key+apim%3Amcp_server_import_export+apim%3Amcp_server_list_view+apim%3Amcp_server_manage+apim%3Amcp_server_publish+apim%3Amcp_server_view+apim%3Amediation_policy_create+apim%3Amediation_policy_manage+apim%3Amediation_policy_view+apim%3Apolicies_import_export+apim%3Apub_alert_manage+apim%3Apublisher_organization_read+apim%3Apublisher_settings+apim%3Ashared_scope_manage+apim%3Asubscription_approval_manage+apim%3Asubscription_approval_view+apim%3Asubscription_block+apim%3Asubscription_manage+apim%3Asubscription_view+apim%3Athreat_protection_policy_create+apim%3Athreat_protection_policy_manage+apim%3Atier_manage+apim%3Atier_view+openid+apim%3Aapi_view+service_catalog%3Aservice_view+service_catalog%3Aservice_write&state=%2F&tenantDomain=carbon.super&sessionDataKey=d2848316-1dda-4678-beed-faa3785a8126&relyingParty=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&type=oidc&sp=apim_publisher&isSaaSApp=true&authenticators=BasicAuthenticator%3ALOCAL&authFailure=true&authFailureMsg=login.fail.message Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.017
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/site/public/conf/portalSettings.js HTTP/1.1 200 704 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/services/settings/settings.js HTTP/1.1 200 1411 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.021
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /oidc/checksession?client_id=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&redirect_uri=https://localhost:9443/publisher/services/auth/callback/login HTTP/1.1 200 3134 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] POST /oauth2/token HTTP/1.1 415 - - Java-http-client/21.0.6 0.024
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] POST /publisher/services/refresh HTTP/1.1 500 86 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.058
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 401 101 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.033
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/services/auth/callback/logout HTTP/1.1 302 - https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.005
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/site/public/images/robo.png HTTP/1.1 200 4279 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/logout HTTP/1.1 200 1713 https://localhost:9443/publisher/apis/design-assistant Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/site/public/fonts/Open_Sans/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2 HTTP/1.1 200 8732 https://localhost:9443/publisher/site/public/css/main.css Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/site/public/conf/portalSettings.js HTTP/1.1 200 704 https://localhost:9443/publisher/logout Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:43 +0700] GET /publisher/services/settings/settings.js HTTP/1.1 200 1411 https://localhost:9443/publisher/logout Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 2354 - Java-http-client/21.0.6 0.513
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /api/am/service-catalog/v1/settings HTTP/1.1 200 102 - Java-http-client/21.0.6 0.029
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /publisher/services/auth/login HTTP/1.1 302 - https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.549
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /oauth2/authorize?response_type=code&client_id=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&scope=apim:admin%20apim:api_create%20apim:api_definition_view%20apim:api_delete%20apim:api_generate_key%20apim:api_import_export%20apim:api_list_view%20apim:api_manage%20apim:api_mediation_policy_manage%20apim:api_product_import_export%20apim:api_publish%20apim:api_view%20apim:app_import_export%20apim:client_certificates_add%20apim:client_certificates_manage%20apim:client_certificates_update%20apim:client_certificates_view%20apim:comment_manage%20apim:comment_view%20apim:comment_write%20apim:common_operation_policy_manage%20apim:common_operation_policy_view%20apim:document_create%20apim:document_manage%20apim:ep_certificates_add%20apim:ep_certificates_manage%20apim:ep_certificates_update%20apim:ep_certificates_view%20apim:gateway_policy_manage%20apim:gateway_policy_view%20apim:gov_policy_read%20apim:gov_result_read%20apim:gov_rule_read%20apim:llm_provider_read%20apim:mcp_server_create%20apim:mcp_server_delete%20apim:mcp_server_generate_key%20apim:mcp_server_import_export%20apim:mcp_server_list_view%20apim:mcp_server_manage%20apim:mcp_server_publish%20apim:mcp_server_view%20apim:mediation_policy_create%20apim:mediation_policy_manage%20apim:mediation_policy_view%20apim:policies_import_export%20apim:pub_alert_manage%20apim:publisher_organization_read%20apim:publisher_settings%20apim:shared_scope_manage%20apim:subscription_approval_manage%20apim:subscription_approval_view%20apim:subscription_block%20apim:subscription_manage%20apim:subscription_view%20apim:threat_protection_policy_create%20apim:threat_protection_policy_manage%20apim:tier_manage%20apim:tier_view%20openid%20apim:api_view%20service_catalog:service_view%20service_catalog:service_write&state=%2F&redirect_uri=https://localhost:9443/publisher/services/auth/callback/login HTTP/1.1 302 - https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.140
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] POST /oauth2/token HTTP/1.1 200 2921 - Java-http-client/21.0.6 0.009
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /publisher/services/auth/callback/login?code=9f7a174a-1905-36f2-ac11-1728e8cecf41&state=%2F&session_state=e5aba9ce82eb0b838efd5a9ab4ba5746a036d7aa350559169f139066d3348f68.Dtu9sfXDLSrVHuGAF_ausg HTTP/1.1 302 - https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.016
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /publisher/ HTTP/1.1 200 1713 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /publisher/site/public/conf/portalSettings.js HTTP/1.1 200 704 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /publisher/services/settings/settings.js HTTP/1.1 200 1411 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /oauth2/userinfo HTTP/1.1 400 70 - Java-http-client/21.0.6 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] POST /oauth2/introspect HTTP/1.1 200 1725 - Java-http-client/21.0.6 0.005
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /publisher/services/auth/introspect HTTP/1.1 200 1772 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:15:09:44 +0700] GET /oidc/checksession?client_id=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&redirect_uri=https://localhost:9443/publisher/services/auth/callback/login HTTP/1.1 200 3134 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/api-products?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.051
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/apis?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.057
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.254
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/api-products?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.006
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/apis?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.006
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/mcp-servers?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:15:09:45 +0700] GET /api/am/publisher/v4/search?limit=1&offset=0&query=name%3APizzaShackAPI%20version%3A1.0%20context%3Apizzashack HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:15:09:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:09:48 +0700] GET /api/am/publisher/v4/apis?limit=10&offset=0 HTTP/1.1 200 92 https://localhost:9443/publisher/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.015
+127.0.0.1 - - [17/Apr/2026:15:09:48 +0700] GET /api/am/publisher/v4/search?limit=1&offset=0&query=name%3APizzaShackAPI%20version%3A1.0%20context%3Apizzashack HTTP/1.1 200 91 https://localhost:9443/publisher/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.018
+127.0.0.1 - - [17/Apr/2026:15:09:50 +0700] GET /api/am/publisher/v4/mcp-servers?limit=10&offset=0 HTTP/1.1 200 92 https://localhost:9443/publisher/mcp-servers Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.020
+127.0.0.1 - - [17/Apr/2026:15:09:50 +0700] GET /publisher/site/public/images/landing-icons/mcp-server-from-scratch.svg HTTP/1.1 200 20632 https://localhost:9443/publisher/mcp-servers Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.006
+127.0.0.1 - - [17/Apr/2026:15:09:50 +0700] GET /publisher/site/public/images/landing-icons/mcp-server-proxy.svg HTTP/1.1 200 20479 https://localhost:9443/publisher/mcp-servers Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:15:09:50 +0700] GET /publisher/site/public/images/landing-icons/mcp-server-from-existing-api.svg HTTP/1.1 200 18990 https://localhost:9443/publisher/mcp-servers Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:15:09:50 +0700] GET /api/am/publisher/v4/search?limit=1&offset=0&query=name%3APizzaShackServer%20version%3A1.0.0%20context%3Apizzashackserver%20type%3AMCP HTTP/1.1 200 91 https://localhost:9443/publisher/mcp-servers Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.016
+127.0.0.1 - - [17/Apr/2026:15:09:54 +0700] GET /api/am/publisher/v4/api-products?limit=10&offset=0 HTTP/1.1 200 92 https://localhost:9443/publisher/api-products Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.014
+127.0.0.1 - - [17/Apr/2026:15:09:54 +0700] GET /publisher/site/public/images/landing-icons/apiproduct.svg HTTP/1.1 200 3864 https://localhost:9443/publisher/api-products Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:56 +0700] GET /api/am/service-catalog/v1/oas.yaml HTTP/1.1 200 5894 https://localhost:9443/publisher/service-catalog Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.049
+127.0.0.1 - - [17/Apr/2026:15:09:56 +0700] GET /api/am/service-catalog/v1/services?limit=10&offset=0 HTTP/1.1 200 82 https://localhost:9443/publisher/service-catalog Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.053
+127.0.0.1 - - [17/Apr/2026:15:09:56 +0700] GET /publisher/site/public/images/wso2-intg-service-icon.svg HTTP/1.1 200 2990 https://localhost:9443/publisher/service-catalog Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:56 +0700] GET /publisher/site/public/images/wso2-intg-service-sample-icon.svg HTTP/1.1 200 10737 https://localhost:9443/publisher/service-catalog Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:57 +0700] GET /api/am/publisher/v4/scopes?limit=2000&offset=0 HTTP/1.1 200 94 https://localhost:9443/publisher/scopes Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.025
+127.0.0.1 - - [17/Apr/2026:15:09:57 +0700] GET /publisher/site/public/images/landing-icons/scopes.svg HTTP/1.1 200 8268 https://localhost:9443/publisher/scopes Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:15:09:59 +0700] GET /api/am/publisher/v4/operation-policies?limit=500 HTTP/1.1 200 13320 https://localhost:9443/publisher/policies Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.052
+127.0.0.1 - - [17/Apr/2026:15:10:01 +0700] GET /publisher/site/public/images/landing-icons/globalpolicies.svg HTTP/1.1 200 8268 https://localhost:9443/publisher/global-policies Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:15:10:01 +0700] GET /api/am/publisher/v4/gateway-policies?offset=0 HTTP/1.1 200 95 https://localhost:9443/publisher/global-policies Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:15:10:01 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/global-policies Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.110
+127.0.0.1 - - [17/Apr/2026:15:10:03 +0700] GET /api/am/publisher/v4/operation-policies?limit=500 HTTP/1.1 200 13320 https://localhost:9443/publisher/global-policies/create Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:15:10:10 +0700] GET /api/am/publisher/v4/gateway-policies?offset=0 HTTP/1.1 200 95 https://localhost:9443/publisher/global-policies Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:15:10:10 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/global-policies Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.086
+127.0.0.1 - - [17/Apr/2026:15:10:12 +0700] GET /api/am/publisher/v4/workflows?limit=30&workflowType=AM_SUBSCRIPTION_CREATION HTTP/1.1 200 45 https://localhost:9443/publisher/subscription/creation Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.017
+127.0.0.1 - - [17/Apr/2026:15:10:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.020
+127.0.0.1 - - [17/Apr/2026:15:10:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:11:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:11:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:12:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:12:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:13:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:15:13:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:14:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:14:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:15:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:15:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:16:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:16:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.019
+127.0.0.1 - - [17/Apr/2026:15:17:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:17:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:18:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:18:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:19:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:19:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:20:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:20:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:15:21:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:15:21:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:22:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:22:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:23:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:15:23:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:24:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:24:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:15:25:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:25:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:26:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:26:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:27:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:27:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:28:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:28:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:29:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.020
+127.0.0.1 - - [17/Apr/2026:15:29:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:30:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:30:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:15:31:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:31:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:32:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:32:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:33:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:33:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:34:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:34:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:35:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:15:35:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:36:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.016
+127.0.0.1 - - [17/Apr/2026:15:36:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:37:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:37:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:38:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:38:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:39:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:39:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:15:40:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:40:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:41:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:41:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:42:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:42:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:43:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:15:43:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:15:44:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:44:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:15:45:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:45:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:46:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:46:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:47:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:47:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:48:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:48:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:49:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:49:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:50:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:15:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:51:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:15:52:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:15:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:54:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:15:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:15:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:15:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:15:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:15:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:02:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:02:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:16:03:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:03:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:04:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:04:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:04:52 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:04:52 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:05:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:05:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:06:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:06:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:07:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:16:07:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:08:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:08:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:09:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:09:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:10:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:10:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:11:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:11:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:16:12:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:12:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:13:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:13:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:14:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:14:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:15:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:15:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.026
+127.0.0.1 - - [17/Apr/2026:16:16:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:16:16:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:17:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:17:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:18:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:18:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:19:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:19:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:20:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:20:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:21:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:21:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:22:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:22:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:16:23:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:23:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] POST /oauth2/token HTTP/1.1 415 - - Java-http-client/21.0.6 0.010
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] POST /publisher/services/refresh HTTP/1.1 500 86 https://localhost:9443/publisher/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.048
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /api/am/publisher/v4/apis?limit=10&offset=0 HTTP/1.1 401 101 https://localhost:9443/publisher/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.009
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /publisher/services/auth/callback/logout HTTP/1.1 302 - https://localhost:9443/publisher/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /publisher/logout HTTP/1.1 200 1713 https://localhost:9443/publisher/apis Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /publisher/services/settings/settings.js HTTP/1.1 200 1411 https://localhost:9443/publisher/logout Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.006
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /publisher/site/public/conf/portalSettings.js HTTP/1.1 200 704 https://localhost:9443/publisher/logout Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 2354 - Java-http-client/21.0.6 0.140
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /api/am/service-catalog/v1/settings HTTP/1.1 200 102 - Java-http-client/21.0.6 0.010
+127.0.0.1 - - [17/Apr/2026:16:24:10 +0700] GET /publisher/services/auth/login HTTP/1.1 302 - https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.165
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /oauth2/authorize?response_type=code&client_id=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&scope=apim:admin%20apim:api_create%20apim:api_definition_view%20apim:api_delete%20apim:api_generate_key%20apim:api_import_export%20apim:api_list_view%20apim:api_manage%20apim:api_mediation_policy_manage%20apim:api_product_import_export%20apim:api_publish%20apim:api_view%20apim:app_import_export%20apim:client_certificates_add%20apim:client_certificates_manage%20apim:client_certificates_update%20apim:client_certificates_view%20apim:comment_manage%20apim:comment_view%20apim:comment_write%20apim:common_operation_policy_manage%20apim:common_operation_policy_view%20apim:document_create%20apim:document_manage%20apim:ep_certificates_add%20apim:ep_certificates_manage%20apim:ep_certificates_update%20apim:ep_certificates_view%20apim:gateway_policy_manage%20apim:gateway_policy_view%20apim:gov_policy_read%20apim:gov_result_read%20apim:gov_rule_read%20apim:llm_provider_read%20apim:mcp_server_create%20apim:mcp_server_delete%20apim:mcp_server_generate_key%20apim:mcp_server_import_export%20apim:mcp_server_list_view%20apim:mcp_server_manage%20apim:mcp_server_publish%20apim:mcp_server_view%20apim:mediation_policy_create%20apim:mediation_policy_manage%20apim:mediation_policy_view%20apim:policies_import_export%20apim:pub_alert_manage%20apim:publisher_organization_read%20apim:publisher_settings%20apim:shared_scope_manage%20apim:subscription_approval_manage%20apim:subscription_approval_view%20apim:subscription_block%20apim:subscription_manage%20apim:subscription_view%20apim:threat_protection_policy_create%20apim:threat_protection_policy_manage%20apim:tier_manage%20apim:tier_view%20openid%20apim:api_view%20service_catalog:service_view%20service_catalog:service_write&state=%2F&redirect_uri=https://localhost:9443/publisher/services/auth/callback/login HTTP/1.1 302 - https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.054
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] POST /oauth2/token HTTP/1.1 200 2921 - Java-http-client/21.0.6 0.007
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /publisher/services/auth/callback/login?code=05e3bcdc-1fd0-31d8-8b72-460a5d80f3bb&state=%2F&session_state=8aa69d829698a35161b1c799872f4d0db29c996d79ab73e809210137dd4ecbf6.KEdwl7ympay2m4n8B2F4vw HTTP/1.1 302 - https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /publisher/ HTTP/1.1 200 1713 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /publisher/site/public/conf/portalSettings.js HTTP/1.1 200 704 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /publisher/services/settings/settings.js HTTP/1.1 200 1411 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /oauth2/userinfo HTTP/1.1 400 70 - Java-http-client/21.0.6 0.001
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] POST /oauth2/introspect HTTP/1.1 200 1725 - Java-http-client/21.0.6 0.003
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /publisher/services/auth/introspect HTTP/1.1 200 1772 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /oidc/checksession?client_id=b8ndn6FJoyf4Yvzn9bCGCnZsaNca&redirect_uri=https://localhost:9443/publisher/services/auth/callback/login HTTP/1.1 200 3134 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/api-products?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.053
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/apis?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.057
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.101
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/apis?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/api-products?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/mcp-servers?limit=5&offset=0 HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:16:24:11 +0700] GET /api/am/publisher/v4/search?limit=1&offset=0&query=name%3APizzaShackAPI%20version%3A1.0%20context%3Apizzashack HTTP/1.1 200 91 https://localhost:9443/publisher/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.014
+127.0.0.1 - - [17/Apr/2026:16:24:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:16:24:36 +0700] POST /api/am/publisher/v4/apis/validate?query=name%3Arandomuuid&limit=10&offset=0 HTTP/1.1 404 - https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.051
+127.0.0.1 - - [17/Apr/2026:16:24:47 +0700] POST /api/am/publisher/v4/apis/validate?query=name%3Arandomuuid&limit=10&offset=0 HTTP/1.1 404 - https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:16:24:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:24:53 +0700] POST /api/am/publisher/v4/apis/validate?query=context%3A%2Fuuid&limit=10&offset=0 HTTP/1.1 404 - https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.021
+127.0.0.1 - - [17/Apr/2026:16:25:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:25:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:16:26:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:26:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:26:52 +0700] GET /api/am/publisher/v4/throttling-policies/subscription?isAiApi=false HTTP/1.1 200 488 https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.064
+127.0.0.1 - - [17/Apr/2026:16:26:53 +0700] POST /api/am/publisher/v4/apis?openAPIVersion=v3 HTTP/1.1 201 1324 https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.638
+127.0.0.1 - - [17/Apr/2026:16:26:53 +0700] POST /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions HTTP/1.1 201 209 https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.170
+127.0.0.1 - - [17/Apr/2026:16:26:53 +0700] POST /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/deploy-revision?revisionId=df2893af-cfd9-4d88-9328-4a7b5dfa1799 HTTP/1.1 201 265 https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.091
+127.0.0.1 - - [17/Apr/2026:16:26:53 +0700] POST /api/am/publisher/v4/apis/change-lifecycle?action=Publish&apiId=450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 200 298 https://localhost:9443/publisher/apis/create/rest Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.064
+127.0.0.1 - - [17/Apr/2026:16:26:53 +0700] GET /publisher/site/public/dist/DeferredDetails.727aaf55164626bc4a70.bundle.js HTTP/1.1 200 372690 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.039
+127.0.0.1 - - [17/Apr/2026:16:26:53 +0700] GET /publisher/site/public/dist/6257.4146a330ec8573476f59.bundle.js HTTP/1.1 200 1055587 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.105
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/tenants?state=active HTTP/1.1 200 96 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 200 1334 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.010
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions HTTP/1.1 200 493 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions?query=deployed%3Atrue HTTP/1.1 200 493 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.005
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger HTTP/1.1 200 724 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.027
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/me/organization-information HTTP/1.1 200 35 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions?query=deployed%3Atrue HTTP/1.1 200 493 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.0&version=1.0.0&gatewayLabel=Default HTTP/1.1 200 484 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.042
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.0&version=1.0.0&gatewayLabel=Default HTTP/1.1 200 484 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.042
+127.0.0.1 - - [17/Apr/2026:16:26:54 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.114
+127.0.0.1 - - [17/Apr/2026:16:26:59 +0700] GET /internal/data/v1/runtime-artifacts?apiId=450ed7a5-b49e-4101-bbb7-e6f5092b55c7&gatewayLabel=RGVmYXVsdA&type=Synapse HTTP/1.1 200 3069 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.165
+127.0.0.1 - - [17/Apr/2026:16:26:59 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.0&version=1.0.0&gatewayLabel=Default HTTP/1.1 200 484 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:27:00 +0700] POST /internal/data/v1/notify-api-deployment-status HTTP/1.1 200 21 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:16:27:00 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/deployments HTTP/1.1 200 274 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:16:27:00 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger HTTP/1.1 200 724 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:16:27:00 +0700] POST /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/generate-key HTTP/1.1 200 982 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.033
+127.0.0.1 - - [17/Apr/2026:16:27:00 +0700] GET /publisher/site/public/dist/TryoutConsoleSwaggerUI.d3e20cde5ad72d577a77.bundle.js HTTP/1.1 200 1866 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:27:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:27:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:28:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:16:28:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:29:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:29:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:30:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:30:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:31:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:31:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:32:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.017
+127.0.0.1 - - [17/Apr/2026:16:32:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:16:33:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:33:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:16:34:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:34:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:35:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.021
+127.0.0.1 - - [17/Apr/2026:16:35:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:36:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:16:36:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:37:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:37:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:38:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:16:38:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.016
+127.0.0.1 - - [17/Apr/2026:16:39:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:39:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:16:40:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:40:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:41:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:41:40 +0700] GET /api/am/publisher/v4/apis?limit=10&offset=0 HTTP/1.1 200 803 https://localhost:9443/publisher/apis/ Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.129
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/tenants?state=active HTTP/1.1 200 96 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 200 1334 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.028
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions?query=deployed%3Atrue HTTP/1.1 200 502 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.022
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/me/organization-information HTTP/1.1 200 35 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.022
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions HTTP/1.1 200 502 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.006
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger HTTP/1.1 200 724 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.046
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions?query=deployed%3Atrue HTTP/1.1 200 502 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.005
+127.0.0.1 - - [17/Apr/2026:16:41:42 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.152
+127.0.0.1 - - [17/Apr/2026:16:41:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview HTTP/1.1 200 1691 - Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/site/public/theme/userTheme.js HTTP/1.1 200 95 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/services/settings/settings.js HTTP/1.1 200 1666 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/settings HTTP/1.1 200 800 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.079
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/tenants?state=active HTTP/1.1 200 96 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.009
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal HTTP/1.1 302 - https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.000
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/ HTTP/1.1 200 1691 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/settings HTTP/1.1 200 800 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.066
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 200 1098 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.081
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/site/public/dist/APIOverview.fb35c5f4e8528a3bfe3a.bundle.js HTTP/1.1 200 14222 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/site/public/dist/APIComments.b5255b8ac69f52f9a013.bundle.js HTTP/1.1 200 10827 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/site/public/dist/4680.ad286ba6d03469e33455.bundle.js HTTP/1.1 200 23842 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/site/public/images/leftMenuBack.png HTTP/1.1 200 5308 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.001
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /devportal/site/public/dist/2487.20fca869b651dd443d4f.bundle.js HTTP/1.1 200 251726 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.022
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/documents HTTP/1.1 200 92 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/documents HTTP/1.1 200 92 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/throttling-policies/subscription HTTP/1.1 200 751 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.018
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/throttling-policies/subscription HTTP/1.1 200 751 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/thumbnail HTTP/1.1 204 - https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.005
+127.0.0.1 - - [17/Apr/2026:16:42:04 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/comments?limit=5&offset=0 HTTP/1.1 200 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.010
+127.0.0.1 - - [17/Apr/2026:16:42:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:42:21 +0700] GET /devportal/site/public/dist/866.d0a08b92a0746d45eabb.bundle.js HTTP/1.1 200 4858 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.014
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /devportal/site/public/dist/2543.43dfbfaa78fd80b667ef.bundle.js HTTP/1.1 200 25315 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.020
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /devportal/site/public/dist/8874.15a672fb71086a0f5a8a.bundle.js HTTP/1.1 200 6095 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /devportal/site/public/dist/6641.cfebf857d21f6e6da84a.bundle.js HTTP/1.1 200 17917 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.005
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /devportal/site/public/dist/APIConsole.777b7808d2b4818fb97f.bundle.js HTTP/1.1 200 8180 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /devportal/site/public/dist/7492.f178b6d781c3f72c0253.bundle.js HTTP/1.1 200 63846 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.010
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /devportal/site/public/dist/9191.288a4cb2607ab51dec3a.bundle.js HTTP/1.1 200 1189820 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.125
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 200 1098 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.013
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger?environmentName=Default HTTP/1.1 200 394 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.009
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /api/am/devportal/v3/key-managers HTTP/1.1 401 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.014
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /api/am/devportal/v3/subscriptions?apiId=450ed7a5-b49e-4101-bbb7-e6f5092b55c7&limit=25 HTTP/1.1 401 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.014
+127.0.0.1 - - [17/Apr/2026:16:42:22 +0700] GET /api/am/devportal/v3/applications/ HTTP/1.1 401 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.011
+127.0.0.1 - - [17/Apr/2026:16:42:28 +0700] GET /devportal/site/public/fonts/Open_Sans/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2 HTTP/1.1 200 9432 https://localhost:9443/devportal/site/public/css/main.css Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:40 +0700] GET /devportal/site/public/dist/514.f20ceaab39830a436924.bundle.js HTTP/1.1 200 6432 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-chat Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:16:42:40 +0700] GET /devportal/site/public/dist/ApiChat.3a66335a94194e56b064.bundle.js HTTP/1.1 200 14071 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-chat Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:42:40 +0700] GET /devportal/site/public/dist/4436.4be3964be7770222fa8a.bundle.js HTTP/1.1 200 40393 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-chat Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.015
+127.0.0.1 - - [17/Apr/2026:16:42:40 +0700] GET /devportal/site/public/dist/6972.089485c7f33316a6576e.bundle.js HTTP/1.1 200 102527 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-chat Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.025
+127.0.0.1 - - [17/Apr/2026:16:42:40 +0700] GET /devportal/site/public/dist/2617.0f8a9bd0d2575ade80ba.bundle.js HTTP/1.1 200 847380 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-chat Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.102
+127.0.0.1 - - [17/Apr/2026:16:42:41 +0700] GET /devportal/site/public/images/ai/ApiChat.svg HTTP/1.1 200 2702 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-chat Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:42:46 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 200 1098 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.032
+127.0.0.1 - - [17/Apr/2026:16:42:46 +0700] GET /api/am/devportal/v3/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger?environmentName=Default HTTP/1.1 200 394 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:16:42:46 +0700] GET /api/am/devportal/v3/subscriptions?apiId=450ed7a5-b49e-4101-bbb7-e6f5092b55c7&limit=25 HTTP/1.1 401 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:42:46 +0700] GET /api/am/devportal/v3/key-managers HTTP/1.1 401 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:42:46 +0700] GET /api/am/devportal/v3/applications/ HTTP/1.1 401 101 https://localhost:9443/devportal/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/api-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.002
+127.0.0.1 - - [17/Apr/2026:16:42:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.022
+127.0.0.1 - - [17/Apr/2026:16:43:11 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions?query=deployed%3Atrue HTTP/1.1 200 502 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.032
+127.0.0.1 - - [17/Apr/2026:16:43:11 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger HTTP/1.1 200 724 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.044
+127.0.0.1 - - [17/Apr/2026:16:43:11 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.153
+127.0.0.1 - - [17/Apr/2026:16:43:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:16:43:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:43:56 +0700] POST /api/am/publisher/v4/apis/copy-api?newVersion=1.0.1&defaultVersion=false&apiId=450ed7a5-b49e-4101-bbb7-e6f5092b55c7 HTTP/1.1 201 1339 https://localhost:9443/publisher/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/new_version Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.172
+127.0.0.1 - - [17/Apr/2026:16:43:56 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/revisions?query=deployed%3Atrue HTTP/1.1 200 502 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.026
+127.0.0.1 - - [17/Apr/2026:16:43:56 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1 HTTP/1.1 200 1332 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.034
+127.0.0.1 - - [17/Apr/2026:16:43:56 +0700] GET /api/am/publisher/v4/apis/450ed7a5-b49e-4101-bbb7-e6f5092b55c7/swagger HTTP/1.1 200 724 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.035
+127.0.0.1 - - [17/Apr/2026:16:43:56 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.132
+127.0.0.1 - - [17/Apr/2026:16:43:57 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/revisions HTTP/1.1 200 21 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:43:57 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/revisions?query=deployed%3Atrue HTTP/1.1 200 21 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:43:57 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/revisions?query=deployed%3Atrue HTTP/1.1 200 21 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:43:57 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/overview Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.092
+127.0.0.1 - - [17/Apr/2026:16:44:02 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/swagger HTTP/1.1 200 724 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.024
+127.0.0.1 - - [17/Apr/2026:16:44:02 +0700] GET /api/am/publisher/v4/endpoint-certificates?endpoint=https%3A%2F%2Fwww.uuidtools.com%2Fapi%2Fgenerate%2Fv1 HTTP/1.1 200 100 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.010
+127.0.0.1 - - [17/Apr/2026:16:44:12 +0700] POST /api/am/publisher/v4/apis/validate-endpoint?endpointUrl=https%3A%2F%2Fwww.uuidgenerator.net%2Fapi%2Fversion1&apiId=70e24426-2af2-4ee6-a2dd-f81f9006ceb1 HTTP/1.1 200 52 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 1.157
+127.0.0.1 - - [17/Apr/2026:16:44:13 +0700] POST /api/am/publisher/v4/apis/validate-endpoint?endpointUrl=https%3A%2F%2Fwww.uuidgenerator.net%2Fapi%2Fversion1 HTTP/1.1 200 52 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 1.078
+127.0.0.1 - - [17/Apr/2026:16:44:14 +0700] PUT /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1 HTTP/1.1 200 1332 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.105
+127.0.0.1 - - [17/Apr/2026:16:44:15 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.1&version=1.0.1&gatewayLabel=Default HTTP/1.1 200 39 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:44:15 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.1&version=1.0.1&gatewayLabel=Default HTTP/1.1 200 39 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:16:44:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:44:26 +0700] PUT /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1 HTTP/1.1 200 1333 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.090
+127.0.0.1 - - [17/Apr/2026:16:44:27 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.1&version=1.0.1&gatewayLabel=Default HTTP/1.1 200 39 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:16:44:27 +0700] GET /internal/data/v1/apis?context=/uuid/1.0.1&version=1.0.1&gatewayLabel=Default HTTP/1.1 200 39 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.003
+127.0.0.1 - - [17/Apr/2026:16:44:28 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/client-certs/SANDBOX HTTP/1.1 200 104 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.014
+127.0.0.1 - - [17/Apr/2026:16:44:28 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/client-certs/PRODUCTION HTTP/1.1 200 104 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.015
+127.0.0.1 - - [17/Apr/2026:16:44:29 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle-state HTTP/1.1 200 334 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.019
+127.0.0.1 - - [17/Apr/2026:16:44:29 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1 HTTP/1.1 200 1333 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.008
+127.0.0.1 - - [17/Apr/2026:16:44:29 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle-history HTTP/1.1 200 126 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.039
+127.0.0.1 - - [17/Apr/2026:16:44:29 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/revisions?query=deployed%3Atrue HTTP/1.1 200 21 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.007
+127.0.0.1 - - [17/Apr/2026:16:44:29 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.094
+127.0.0.1 - - [17/Apr/2026:16:44:35 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/deployments HTTP/1.1 200 2 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.012
+127.0.0.1 - - [17/Apr/2026:16:44:35 +0700] POST /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/generate-key HTTP/1.1 200 982 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:16:44:35 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/swagger HTTP/1.1 200 723 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.009
+127.0.0.1 - - [17/Apr/2026:16:44:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:44:58 +0700] GET /* HTTP/1.1 302 - https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.010
+127.0.0.1 - - [17/Apr/2026:16:44:58 +0700] GET /carbon/admin/login.jsp HTTP/1.1 200 3681 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/test-console Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.041
+127.0.0.1 - - [17/Apr/2026:16:45:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/client-certs/SANDBOX HTTP/1.1 200 104 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.031
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/client-certs/PRODUCTION HTTP/1.1 200 104 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.031
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle-state HTTP/1.1 200 334 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.022
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle-history HTTP/1.1 200 126 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.023
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1 HTTP/1.1 200 1333 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.027
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/revisions?query=deployed%3Atrue HTTP/1.1 200 21 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.003
+127.0.0.1 - - [17/Apr/2026:16:45:19 +0700] GET /api/am/publisher/v4/settings HTTP/1.1 200 1572 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/lifecycle Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.101
+127.0.0.1 - - [17/Apr/2026:16:45:21 +0700] GET /api/am/publisher/v4/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/swagger HTTP/1.1 200 723 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.029
+127.0.0.1 - - [17/Apr/2026:16:45:21 +0700] GET /api/am/publisher/v4/endpoint-certificates?endpoint=https%3A%2F%2Fwww.uuidgenerator.net%2Fapi%2Fversion1 HTTP/1.1 200 100 https://localhost:9443/publisher/apis/70e24426-2af2-4ee6-a2dd-f81f9006ceb1/endpoints Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0 0.004
+127.0.0.1 - - [17/Apr/2026:16:45:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.018
+127.0.0.1 - - [17/Apr/2026:16:46:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:46:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:47:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:47:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:48:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:48:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.011
+127.0.0.1 - - [17/Apr/2026:16:49:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:16:49:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:50:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:16:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:16:51:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:52:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:52:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:53:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:53:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:16:54:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:54:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:54:53 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:16:55:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:55:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:16:56:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:56:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:16:57:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:57:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:58:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:58:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:16:59:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:16:59:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.008
+127.0.0.1 - - [17/Apr/2026:17:00:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.004
+127.0.0.1 - - [17/Apr/2026:17:00:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.005
+127.0.0.1 - - [17/Apr/2026:17:01:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.009
+127.0.0.1 - - [17/Apr/2026:17:01:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.013
+127.0.0.1 - - [17/Apr/2026:17:04:31 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.058
+127.0.0.1 - - [17/Apr/2026:17:12:46 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.049
+127.0.0.1 - - [17/Apr/2026:17:13:16 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.019
+127.0.0.1 - - [17/Apr/2026:17:23:33 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.048
+127.0.0.1 - - [17/Apr/2026:17:41:34 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.007
+127.0.0.1 - - [17/Apr/2026:17:42:11 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:17:42:17 +0700] POST /usage-data-receiver/deployment-information HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:17:42:17 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.015
+127.0.0.1 - - [17/Apr/2026:17:42:17 +0700] POST /usage-data-receiver/usage-counts HTTP/1.1 201 43 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.006
+127.0.0.1 - - [17/Apr/2026:17:50:47 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.042
+127.0.0.1 - - [17/Apr/2026:17:51:17 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.012
+127.0.0.1 - - [17/Apr/2026:19:02:49 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.046
+127.0.0.1 - - [17/Apr/2026:19:03:19 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.010
+127.0.0.1 - - [17/Apr/2026:19:51:14 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.050
+127.0.0.1 - - [17/Apr/2026:20:04:16 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.053
+127.0.0.1 - - [17/Apr/2026:20:56:29 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 1008.845
+127.0.0.1 - - [17/Apr/2026:21:05:13 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.045
+127.0.0.1 - - [17/Apr/2026:21:39:28 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.028
+127.0.0.1 - - [17/Apr/2026:22:06:10 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.034
+127.0.0.1 - - [17/Apr/2026:22:22:15 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.038
+127.0.0.1 - - [17/Apr/2026:22:27:31 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.046
+127.0.0.1 - - [17/Apr/2026:23:06:51 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.048
+127.0.0.1 - - [17/Apr/2026:23:07:21 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.014
+127.0.0.1 - - [17/Apr/2026:23:56:08 +0700] POST /internal/data/v1/notify-gateway HTTP/1.1 200 76 - Apache-HttpClient/4.5.13 (Java/21.0.6) 0.035

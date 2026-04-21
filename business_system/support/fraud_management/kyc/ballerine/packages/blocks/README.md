@@ -1,3 +1,0 @@
-# @ballerine/blocks
-
-@ballerine/blocks

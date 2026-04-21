@@ -1,6 +1,0 @@
-# Example of a included file
-
----
-- name: Fetch sub comments
-  request:
-    url: /api/subcomments.json

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "173595877623",
+    "project_id": "dibankapp",
+    "storage_bucket": "dibankapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173595877623:android:9a61000d931a75106a33f2",
+        "android_client_info": {
+          "package_name": "com.hiepnh.bankapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfbg-lbq7k4fWTB8xBPzjD8sDtPU63c6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

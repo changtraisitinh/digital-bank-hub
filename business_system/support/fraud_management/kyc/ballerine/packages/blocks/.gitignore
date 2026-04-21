@@ -1,7 +1,0 @@
-.idea
-.vscode
-.env*
-dist
-*.log
-vite.config.ts.timestamp-*.mjs
-node_modules

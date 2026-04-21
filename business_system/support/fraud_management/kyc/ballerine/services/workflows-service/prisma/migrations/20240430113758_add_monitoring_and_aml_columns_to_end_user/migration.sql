@@ -1,3 +1,0 @@
-ALTER TABLE "EndUser"
-  ADD COLUMN "activeMonitorings" JSONB NOT NULL DEFAULT '[]',
-  ADD COLUMN "amlHits" JSONB NOT NULL DEFAULT '[]';

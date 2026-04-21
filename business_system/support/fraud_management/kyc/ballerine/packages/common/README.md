@@ -1,3 +1,0 @@
-# @ballerine/common
-
-@ballerine/common

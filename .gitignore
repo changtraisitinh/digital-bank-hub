@@ -1,0 +1,32 @@
+.DS_Store
+
+# Node and JS tooling
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Java / Gradle
+**/.gradle/
+**/build/
+**/out/
+**/bin/
+
+# IDEs
+**/.idea/
+**/.vscode/
+
+# Logs and temp state
+**/logs/
+**/tmp/
+*.log
+
+# Local databases and runtime artifacts
+**/*.mv.db
+**/*.h2.db
+**/diagnostics-tool/data/
+**/repository/logs/
+**/solr/data/
+**/lib/tomcat/work/
+
+# OS / generated bundles
+*.zip

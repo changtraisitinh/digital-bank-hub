@@ -6,13 +6,12 @@ Digital Bank Hub is a modular, enterprise-grade platform for building modern dig
 
 ## Project Structure
 
-The repository is organized into several key domains:
-
+The repository is organized by engineering ownership and deployable units.
 
 ### Components
 
-- **architecture/**  
-  Contains high-level system architecture, design documents, and reference diagrams.
+- **docs/**  
+  Architecture, deployment, and development documentation.
 
 <!-- Galaxy panel style for images -->
 <div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
@@ -25,14 +24,9 @@ The repository is organized into several key domains:
 </div>
 
 
-- **business_system/**  
-  Houses the business logic and domain-driven modules:
-  - `core/`: Account management, transactions, customer info, product management, etc.
-  - `support/`: Auxiliary services such as fraud management, KYC, analytics, and more.
-
-- **channels/**  
-  Implements various customer interaction channels:
-  - `mobile/`: Mobile banking app source code.
+- **apps/**  
+  Customer-facing applications.
+  - `mobile/bank-app/`: Expo/React Native mobile banking app.
 
 <!-- Galaxy panel style for images -->
 <div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
@@ -45,25 +39,28 @@ The repository is organized into several key domains:
 
 </div>
 
-  - `web_online/`, `private_portal/`: Web-based banking portals.
-  - `atm/`, `bank_teller/`, `call_center/`, `kiosk/`: Other banking channels.
+- **services/**  
+  First-party backend services grouped by domain.
+  - `core-banking/`
+  - `security/`
+  - `communications/`
 
-- **core_banking/**  
-  The heart of the platform, including:
-  - [Midaz](https://github.com/LerianStudio/midaz): The open-source ledger and transaction enginemi.
-  - `midaz-console/`: Management and monitoring tools for the core banking engine.
+- **platforms/**  
+  Embedded or externally maintained platform code kept intact.
+  - [Midaz](https://github.com/LerianStudio/midaz): open-source ledger and transaction engine.
+  - Ballerine: KYC/KYB workflow and risk platform.
 
-- **technical_system/**  
-  Infrastructure management, deployment scripts, and technical utilities.
+- **infrastructure/**  
+  Deployment, gateway, Docker, Kubernetes, monitoring, and Terraform assets.
 
-  - Infastructure
-    - [Nginx](https://nginx.org/)
-    - [Nginx UI](https://nginxui.com/)
-    - [K8s]
-    - [K9s]
-  - Third Partners
-    - [Stripe](https://docs.stripe.com/)
-    - [Stripe React Native](https://stripe.dev/stripe-react-native/api-reference/index.html)
+- **shared/**  
+  Shared contracts, configs, libraries, and utilities.
+
+- **tests/**  
+  Cross-system test suites.
+
+- **scripts/**  
+  Repository-level setup and maintenance automation.
 
 ---
 
@@ -75,15 +72,15 @@ The repository is organized into several key domains:
    cd digital-bank-hub
 2. **Explore the core banking engine**
 
-- See core_banking/midaz/README.md for setup and usage instructions.
+- See `platforms/midaz/README.md` for setup and usage instructions.
 
 3. **Run a channel app**
 
-- For example, to run the mobile app, see channels/mobile/BankApp/README.md.
+- For example, to run the mobile app, see `apps/mobile/bank-app/README.md`.
 
-4. **Review business modules**
+4. **Review first-party services**
 
-- Explore business logic in business_system/core/ and supporting services in business_system/support/.
+- Explore first-party service code in `services/` and platform integrations in `platforms/`.
 
 
 # About 

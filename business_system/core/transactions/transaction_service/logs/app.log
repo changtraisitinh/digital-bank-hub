@@ -1,4 +1,0 @@
-2025-06-11 13:39:26.642 [Test worker] INFO  c.h.t.TransactionServiceApplicationTests - Starting TransactionServiceApplicationTests using Java 21.0.6 with PID 16764 (started by mac in /Users/mac/Engineering/GitHub/digital-bank-hub/business_system/core/transactions/transaction_service)
-2025-06-11 13:39:26.644 [Test worker] DEBUG c.h.t.TransactionServiceApplicationTests - Running with Spring Boot v3.4.5, Spring v6.2.6
-2025-06-11 13:39:26.647 [Test worker] INFO  c.h.t.TransactionServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2025-06-11 13:39:27.152 [Test worker] INFO  c.h.t.TransactionServiceApplicationTests - Started TransactionServiceApplicationTests in 0.687 seconds (process running for 1.215)

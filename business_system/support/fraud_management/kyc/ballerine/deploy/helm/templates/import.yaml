@@ -1,5 +1,0 @@
-{{- /* Import all "templates/*.yaml" files found in the repo */ -}}
-{{ range $path, $_ :=  .Files.Glob  "services/**/templates/*.yaml" }}
-{{ tpl (print "#      -> " $path "\n" ((print "--- \n #      -> " $path "\n") | regexReplaceAll "---" ($.Files.Get $path))) $ }}
----
-{{ end }}
