@@ -1,0 +1,33 @@
+# deploy/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dibank-services
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: dibank.local
+      http:
+        paths:
+          - path: /transaction
+            pathType: Prefix
+            backend:
+              service:
+                name: dibank-transaction-service
+                port:
+                  number: 8102
+          - path: /account
+            pathType: Prefix
+            backend:
+              service:
+                name: dibank-account-service
+                port:
+                  number: 8103
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: dibank-auth-service
+                port:
+                  number: 8104

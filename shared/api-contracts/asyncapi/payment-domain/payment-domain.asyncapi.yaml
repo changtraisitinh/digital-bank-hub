@@ -1,0 +1,216 @@
+asyncapi: 2.6.0
+info:
+  title: Payment Domain Events
+  version: 0.1.0
+  description: Canonical event contract for resilient payment workflows.
+defaultContentType: application/json
+channels:
+  payment.requested:
+    publish:
+      operationId: publishPaymentRequested
+      message:
+        $ref: '#/components/messages/PaymentRequested'
+  payment.autocomplete-requested:
+    publish:
+      operationId: publishPaymentAutocompleteRequested
+      message:
+        $ref: '#/components/messages/PaymentAutocompleteRequested'
+  payment.validated:
+    publish:
+      operationId: publishPaymentValidated
+      message:
+        $ref: '#/components/messages/PaymentValidated'
+  payment.funds-reserved:
+    publish:
+      operationId: publishFundsReserved
+      message:
+        $ref: '#/components/messages/FundsReserved'
+  payment.submitted:
+    publish:
+      operationId: publishPaymentSubmitted
+      message:
+        $ref: '#/components/messages/PaymentSubmitted'
+  payment.completed:
+    publish:
+      operationId: publishPaymentCompleted
+      message:
+        $ref: '#/components/messages/PaymentCompleted'
+  payment.posting-requested:
+    publish:
+      operationId: publishPaymentPostingRequested
+      message:
+        $ref: '#/components/messages/PaymentPostingRequested'
+  payment.posted:
+    publish:
+      operationId: publishPaymentPosted
+      message:
+        $ref: '#/components/messages/PaymentPosted'
+  payment.failed:
+    publish:
+      operationId: publishPaymentFailed
+      message:
+        $ref: '#/components/messages/PaymentFailed'
+  payment.reversed:
+    publish:
+      operationId: publishPaymentReversed
+      message:
+        $ref: '#/components/messages/PaymentReversed'
+  payment.reconciliation-mismatch-detected:
+    publish:
+      operationId: publishReconciliationMismatchDetected
+      message:
+        $ref: '#/components/messages/ReconciliationMismatchDetected'
+components:
+  messages:
+    PaymentRequested:
+      name: PaymentRequested
+      payload:
+        $ref: '#/components/schemas/PaymentEvent'
+    PaymentAutocompleteRequested:
+      name: PaymentAutocompleteRequested
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            properties:
+              autocompleteReason:
+                type: string
+                enum: [CALLBACK_TIMEOUT, PROVIDER_TIMEOUT, RECONCILIATION_WINDOW, MANUAL_RETRY]
+    PaymentValidated:
+      name: PaymentValidated
+      payload:
+        $ref: '#/components/schemas/PaymentEvent'
+    FundsReserved:
+      name: FundsReserved
+      payload:
+        $ref: '#/components/schemas/PaymentEvent'
+    PaymentSubmitted:
+      name: PaymentSubmitted
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            properties:
+              providerReference:
+                type: string
+                nullable: true
+    PaymentCompleted:
+      name: PaymentCompleted
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            properties:
+              ledgerReference:
+                type: string
+                nullable: true
+    PaymentPostingRequested:
+      name: PaymentPostingRequested
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            properties:
+              postingAction:
+                type: string
+                enum: [RESERVE, SETTLE, RELEASE, REVERSE]
+    PaymentPosted:
+      name: PaymentPosted
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            properties:
+              ledgerReference:
+                type: string
+              postingAction:
+                type: string
+                enum: [RESERVE, SETTLE, RELEASE, REVERSE]
+    PaymentFailed:
+      name: PaymentFailed
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            required:
+              - failureCode
+            properties:
+              failureCode:
+                type: string
+              failureReason:
+                type: string
+    PaymentReversed:
+      name: PaymentReversed
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/PaymentEvent'
+          - type: object
+            properties:
+              reversalReason:
+                type: string
+    ReconciliationMismatchDetected:
+      name: ReconciliationMismatchDetected
+      payload:
+        type: object
+        required:
+          - eventId
+          - paymentId
+          - mismatchType
+          - detectedAt
+        properties:
+          eventId:
+            type: string
+            format: uuid
+          paymentId:
+            type: string
+            format: uuid
+          mismatchType:
+            type: string
+            enum: [LEDGER_MISSING, PROVIDER_MISSING, AMOUNT_MISMATCH, STATUS_MISMATCH]
+          detectedAt:
+            type: string
+            format: date-time
+          details:
+            type: object
+            additionalProperties: true
+  schemas:
+    PaymentEvent:
+      type: object
+      required:
+        - eventId
+        - paymentId
+        - paymentType
+        - status
+        - amount
+        - currency
+        - occurredAt
+      properties:
+        eventId:
+          type: string
+          format: uuid
+        paymentId:
+          type: string
+          format: uuid
+        paymentType:
+          type: string
+          enum: [TRANSFER, BILL_PAYMENT]
+        status:
+          type: string
+          enum: [RECEIVED, VALIDATED, FUNDS_RESERVED, SUBMITTED, SETTLING, COMPLETED, FAILED, REVERSED]
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+        correlationId:
+          type: string
+          nullable: true
+        idempotencyKey:
+          type: string
+          nullable: true
+        occurredAt:
+          type: string
+          format: date-time
+        metadata:
+          type: object
+          additionalProperties: true

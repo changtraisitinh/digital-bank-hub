@@ -44,6 +44,7 @@ The repository is organized by engineering ownership and deployable units.
   - `core-banking/`
   - `security/`
   - `communications/`
+  - `payment-domain/`
 
 - **platforms/**  
   Embedded or externally maintained platform code kept intact.
@@ -81,6 +82,11 @@ The repository is organized by engineering ownership and deployable units.
 4. **Review first-party services**
 
 - Explore first-party service code in `services/` and platform integrations in `platforms/`.
+
+5. **Review the payment architecture**
+
+- See `services/payment-domain/README.md` for the payment domain layout.
+- See `docs/architecture/resilient-payment-processing.md` for the resilient payment processing target architecture.
 
 
 # About 

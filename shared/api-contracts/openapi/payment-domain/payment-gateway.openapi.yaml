@@ -1,0 +1,247 @@
+openapi: 3.0.3
+info:
+  title: Payment Gateway API
+  version: 0.1.0
+  description: Edge API for initiating and querying resilient payment workflows.
+servers:
+  - url: https://api.digital-bank.local/payment-gateway
+tags:
+  - name: Payments
+  - name: Webhooks
+paths:
+  /v1/payments:
+    post:
+      tags: [Payments]
+      summary: Initiate a payment workflow
+      operationId: createPayment
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatePaymentRequest'
+      responses:
+        '202':
+          description: Payment accepted for orchestration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          description: Idempotency key reused with mismatched payload
+  /v1/payments/{paymentId}:
+    get:
+      tags: [Payments]
+      summary: Get current payment status
+      operationId: getPayment
+      parameters:
+        - $ref: '#/components/parameters/PaymentId'
+      responses:
+        '200':
+          description: Current workflow status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        '404':
+          description: Payment not found
+  /v1/payments/{paymentId}/reversal:
+    post:
+      tags: [Payments]
+      summary: Request reversal of a payment
+      operationId: reversePayment
+      parameters:
+        - $ref: '#/components/parameters/PaymentId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReversalRequest'
+      responses:
+        '202':
+          description: Reversal accepted for orchestration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          description: Payment is not in a reversible state
+  /v1/providers/{provider}/webhooks:
+    post:
+      tags: [Webhooks]
+      summary: Receive normalized provider callbacks
+      operationId: receiveProviderWebhook
+      parameters:
+        - name: provider
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [stripe, vietqr, bank-rail, card-processor]
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProviderWebhookRequest'
+      responses:
+        '202':
+          description: Webhook accepted and queued for verification
+        '400':
+          $ref: '#/components/responses/BadRequest'
+components:
+  parameters:
+    PaymentId:
+      name: paymentId
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 8
+        maxLength: 128
+    CorrelationId:
+      name: X-Correlation-Id
+      in: header
+      required: false
+      schema:
+        type: string
+        maxLength: 128
+  responses:
+    BadRequest:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    CreatePaymentRequest:
+      type: object
+      required:
+        - paymentType
+        - amount
+        - currency
+        - sourceAccountId
+        - destination
+      properties:
+        paymentType:
+          type: string
+          enum: [TRANSFER, BILL_PAYMENT]
+        amount:
+          type: number
+          format: double
+          minimum: 0.01
+        currency:
+          type: string
+          example: VND
+        sourceAccountId:
+          type: string
+        destination:
+          type: object
+          additionalProperties: true
+        providerHint:
+          type: string
+          nullable: true
+        metadata:
+          type: object
+          additionalProperties: true
+    ReversalRequest:
+      type: object
+      required:
+        - reason
+      properties:
+        reason:
+          type: string
+        metadata:
+          type: object
+          additionalProperties: true
+    PaymentResponse:
+      type: object
+      required:
+        - paymentId
+        - paymentType
+        - status
+        - amount
+        - currency
+        - createdAt
+      properties:
+        paymentId:
+          type: string
+          format: uuid
+        paymentType:
+          type: string
+          enum: [TRANSFER, BILL_PAYMENT]
+        status:
+          type: string
+          enum: [RECEIVED, VALIDATED, FUNDS_RESERVED, SUBMITTED, SETTLING, COMPLETED, FAILED, REVERSED]
+        amount:
+          type: number
+          format: double
+        currency:
+          type: string
+        ledgerReference:
+          type: string
+          nullable: true
+        providerReference:
+          type: string
+          nullable: true
+        failureCode:
+          type: string
+          nullable: true
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    ProviderWebhookRequest:
+      type: object
+      required:
+        - eventId
+        - eventType
+        - occurredAt
+        - payload
+      properties:
+        eventId:
+          type: string
+        eventType:
+          type: string
+        occurredAt:
+          type: string
+          format: date-time
+        signature:
+          type: string
+          nullable: true
+        payload:
+          type: object
+          additionalProperties: true
+    ErrorResponse:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        correlationId:
+          type: string
+          nullable: true

@@ -1,32 +1,54 @@
 .DS_Store
 
+# Environment and local secrets
+**/.env
+**/.env.*
+!**/.env.example
+
 # Node and JS tooling
 node_modules/
 **/node_modules/
 .pnpm-store/
+**/.expo/
+**/.turbo/
+coverage/
+**/coverage/
 
 # Java / Gradle
 **/.gradle/
 **/build/
 **/out/
 **/bin/
+**/*.class
 
 # IDEs
 **/.idea/
 **/.vscode/
+**/.settings/
+**/.classpath
+**/.project
 
 # Logs and temp state
 **/logs/
 **/tmp/
+**/temp/
 *.log
+**/infrastructure/gateway/wso2am-4.6.0/repository/logs
 
 # Local databases and runtime artifacts
 **/*.mv.db
 **/*.h2.db
 **/diagnostics-tool/data/
+**/diagnostics-tool/logs/
+**/diagnostics-tool/temp/
+**/repository/database/
 **/repository/logs/
+**/repository/components/default/configuration/org.eclipse.osgi/
 **/solr/data/
 **/lib/tomcat/work/
 
 # OS / generated bundles
 *.zip
+
+
+
